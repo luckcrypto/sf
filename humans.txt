@@ -1,0 +1,9 @@
+/* TEAM */
+  Built by: ships.fyi
+  Contact: business@luck.fyi
+  Site: https://ships.fyi
+
+/* SITE */
+  Standards: HTML5, CSS3, vanilla JavaScript
+  Components: none. No frameworks, no trackers, no cookies.
+  Silhouettes: original works, generated parametrically and drawn to true scale.

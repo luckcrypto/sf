@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>ships.fyi</title>
+  <link>https://ships.fyi</link>
+  <description>Every giant of the sea, at true scale. Long-form maritime writing, sourced and dated.</description>
+  <language>en-US</language>
+  <lastBuildDate>Wed, 15 Jul 2026 23:27:20 GMT</lastBuildDate>
+  <atom:link href="https://ships.fyi/feed.xml" rel="self" type="application/rss+xml"/>
+  <item>
+    <title>The six days that stopped world trade</title>
+    <link>https://ships.fyi/blog/ever-given-six-days</link>
+    <guid isPermaLink="true">https://ships.fyi/blog/ever-given-six-days</guid>
+    <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
+    <description>In March 2021 one ordinary container ship turned sideways in the Suez Canal — and showed exactly how thin the arteries of the world economy are.</description>
+  </item>
+  <item>
+    <title>Why the biggest ships stopped growing</title>
+    <link>https://ships.fyi/blog/why-ships-stopped-growing</link>
+    <guid isPermaLink="true">https://ships.fyi/blog/why-ships-stopped-growing</guid>
+    <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+    <description>For fifty years ships doubled and doubled again. Then the curve went flat. The reasons are carved into canals, ports — and one graveyard of half-million-tonne tankers.</description>
+  </item>
+</channel>
+</rss>
