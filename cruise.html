@@ -5,8 +5,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-<!-- One color, three places: this meta, html{background} in CSS, .mn-shell background. -->
-<meta name="theme-color" content="#0F766E">
+<!-- One color, three places: this meta, html{background} in CSS, and .mn-shell nav background — all #ffffff so the mobile browser bar reads as one continuous surface with the white nav, no seam. -->
+<meta name="theme-color" content="#ffffff">
 <link rel="alternate" type="application/rss+xml" title="ships.fyi" href="/feed.xml">
 <meta name="color-scheme" content="light only">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -49,10 +49,10 @@
 <div class="mn-bar">
 <a class="mn-logo" href="/" aria-label="ships.fyi home"><span class="mn-mark" aria-hidden="true"><span class="mm-b">LOA</span></span><span class="lw">ships<b><i class="ld">.</i><span class="fw"><span class="fwt">fyi</span></span></b></span></a>
 <div class="mn-groups">
-<div class="mn-group" data-key="ships">
-<button class="mn-top" type="button" aria-expanded="false" aria-haspopup="true"><svg class="gi" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12h15l-2.2 4H4.7zM5.5 12V7.5h9V12M10 7.5V4.5"/></svg>Ships<i class="caret"></i></button>
+<div class="mn-group" data-key="menu">
+<button class="mn-top" type="button" aria-expanded="false" aria-haspopup="true"><svg class="gi" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h14M3 10h14M3 15h9"/></svg>Explore<i class="caret"></i></button>
 <div class="mn-panel" role="menu">
-<div class="mn-panel-inner" style="grid-template-columns:1.05fr 1fr 1fr">
+<div class="mn-panel-inner" style="grid-template-columns:1.05fr 1fr 1.15fr 1fr">
 <div>
 <div class="mn-col-h">Cruise ships &amp; liners</div>
 <div class="mn-sub-h">Royal Caribbean</div>
@@ -63,28 +63,125 @@
 <a class="mn-link" href="/ships/wonder-of-the-seas"><span class="lbl">Wonder of the Seas</span><span class="cc">BS</span></a>
 <a class="mn-link" href="/ships/symphony-of-the-seas"><span class="lbl">Symphony of the Seas</span><span class="cc">BS</span></a>
 <a class="mn-link" href="/ships/oasis-of-the-seas"><span class="lbl">Oasis of the Seas</span><span class="cc">BS</span></a>
-<div class="mn-sub-h">MSC Cruises</div>
-<a class="mn-link" href="/ships/msc-world-europa"><span class="lbl">MSC World Europa</span><span class="cc">MT</span></a>
-<div class="mn-sub-h">Carnival Cruise Line</div>
-<a class="mn-link" href="/ships/carnival-jubilee"><span class="lbl">Carnival Jubilee</span><span class="cc">PA</span></a>
-<div class="mn-sub-h">Norwegian Cruise Line</div>
-<a class="mn-link" href="/ships/norwegian-aqua"><span class="lbl">Norwegian Aqua</span><span class="cc">BS</span></a>
-<div class="mn-sub-h">Princess Cruises</div>
-<a class="mn-link" href="/ships/star-princess"><span class="lbl">Star Princess</span><span class="cc">BM</span></a>
-<div class="mn-sub-h">Celebrity Cruises</div>
-<a class="mn-link" href="/ships/celebrity-xcel"><span class="lbl">Celebrity Xcel</span><span class="cc">MT</span></a>
-<div class="mn-sub-h">Disney Cruise Line</div>
-<a class="mn-link" href="/ships/disney-wish"><span class="lbl">Disney Wish</span><span class="cc">BS</span></a>
-<div class="mn-sub-h">P&amp;O Cruises</div>
-<a class="mn-link" href="/ships/arvia"><span class="lbl">Arvia</span><span class="cc">BM</span></a>
-<div class="mn-sub-h">Holland America Line</div>
-<a class="mn-link" href="/ships/rotterdam"><span class="lbl">Rotterdam</span><span class="cc">NL</span></a>
-<div class="mn-sub-h">AIDA Cruises</div>
-<a class="mn-link" href="/ships/aidanova"><span class="lbl">AIDA Nova</span><span class="cc">IT</span></a>
-<div class="mn-sub-h">Costa Cruises</div>
-<a class="mn-link" href="/ships/costa-smeralda"><span class="lbl">Costa Smeralda</span><span class="cc">IT</span></a>
 <div class="mn-sub-h">Cunard</div>
 <a class="mn-link" href="/ships/queen-mary-2"><span class="lbl">Queen Mary 2</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/queen-anne"><span class="lbl">Queen Anne</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/queen-elizabeth"><span class="lbl">Queen Elizabeth</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/queen-victoria"><span class="lbl">Queen Victoria</span><span class="cc">BM</span></a>
+<div class="mn-sub-h">MSC Cruises</div>
+<a class="mn-link" href="/ships/msc-seascape"><span class="lbl">MSC Seascape</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/msc-seashore"><span class="lbl">MSC Seashore</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/msc-world-europa"><span class="lbl">MSC World Europa</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/msc-world-america"><span class="lbl">MSC World America</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/msc-virtuosa"><span class="lbl">MSC Virtuosa</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/msc-grandiosa"><span class="lbl">MSC Grandiosa</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/msc-euribia"><span class="lbl">MSC Euribia</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/msc-seaview"><span class="lbl">MSC Seaview</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/msc-seaside"><span class="lbl">MSC Seaside</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/msc-meraviglia"><span class="lbl">MSC Meraviglia</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/msc-bellissima"><span class="lbl">MSC Bellissima</span><span class="cc">MT</span></a>
+<div class="mn-sub-h">Carnival Cruise Line</div>
+<a class="mn-link" href="/ships/carnival-jubilee"><span class="lbl">Carnival Jubilee</span><span class="cc">PA</span></a>
+<a class="mn-link" href="/ships/carnival-celebration"><span class="lbl">Carnival Celebration</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/mardi-gras"><span class="lbl">Mardi Gras</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/carnival-vista"><span class="lbl">Carnival Vista</span><span class="cc">PA</span></a>
+<a class="mn-link" href="/ships/carnival-horizon"><span class="lbl">Carnival Horizon</span><span class="cc">PA</span></a>
+<a class="mn-link" href="/ships/carnival-panorama"><span class="lbl">Carnival Panorama</span><span class="cc">PA</span></a>
+<a class="mn-link" href="/ships/carnival-dream"><span class="lbl">Carnival Dream</span><span class="cc">PA</span></a>
+<a class="mn-link" href="/ships/carnival-magic"><span class="lbl">Carnival Magic</span><span class="cc">PA</span></a>
+<a class="mn-link" href="/ships/carnival-breeze"><span class="lbl">Carnival Breeze</span><span class="cc">PA</span></a>
+<div class="mn-sub-h">Norwegian Cruise Line</div>
+<a class="mn-link" href="/ships/norwegian-encore"><span class="lbl">Norwegian Encore</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/norwegian-bliss"><span class="lbl">Norwegian Bliss</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/norwegian-joy"><span class="lbl">Norwegian Joy</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/norwegian-epic"><span class="lbl">Norwegian Epic</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/norwegian-escape"><span class="lbl">Norwegian Escape</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/norwegian-getaway"><span class="lbl">Norwegian Getaway</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/norwegian-breakaway"><span class="lbl">Norwegian Breakaway</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/norwegian-aqua"><span class="lbl">Norwegian Aqua</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/norwegian-luna"><span class="lbl">Norwegian Luna</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/norwegian-viva"><span class="lbl">Norwegian Viva</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/norwegian-prima"><span class="lbl">Norwegian Prima</span><span class="cc">BS</span></a>
+<div class="mn-sub-h">Princess Cruises</div>
+<a class="mn-link" href="/ships/sun-princess"><span class="lbl">Sun Princess</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/star-princess"><span class="lbl">Star Princess</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/discovery-princess"><span class="lbl">Discovery Princess</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/enchanted-princess"><span class="lbl">Enchanted Princess</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/sky-princess"><span class="lbl">Sky Princess</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/majestic-princess"><span class="lbl">Majestic Princess</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/regal-princess"><span class="lbl">Regal Princess</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/royal-princess"><span class="lbl">Royal Princess</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/diamond-princess"><span class="lbl">Diamond Princess</span><span class="cc">GB</span></a>
+<a class="mn-link" href="/ships/sapphire-princess"><span class="lbl">Sapphire Princess</span><span class="cc">GB</span></a>
+<a class="mn-link" href="/ships/ruby-princess"><span class="lbl">Ruby Princess</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/caribbean-princess"><span class="lbl">Caribbean Princess</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/grand-princess"><span class="lbl">Grand Princess</span><span class="cc">BM</span></a>
+<div class="mn-sub-h">Celebrity Cruises</div>
+<a class="mn-link" href="/ships/celebrity-ascent"><span class="lbl">Celebrity Ascent</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/celebrity-beyond"><span class="lbl">Celebrity Beyond</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/celebrity-xcel"><span class="lbl">Celebrity Xcel</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/celebrity-reflection"><span class="lbl">Celebrity Reflection</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/celebrity-silhouette"><span class="lbl">Celebrity Silhouette</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/celebrity-eclipse"><span class="lbl">Celebrity Eclipse</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/celebrity-equinox"><span class="lbl">Celebrity Equinox</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/celebrity-solstice"><span class="lbl">Celebrity Solstice</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/celebrity-apex"><span class="lbl">Celebrity Apex</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/celebrity-edge"><span class="lbl">Celebrity Edge</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/celebrity-constellation"><span class="lbl">Celebrity Constellation</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/celebrity-summit"><span class="lbl">Celebrity Summit</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/celebrity-infinity"><span class="lbl">Celebrity Infinity</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/celebrity-millennium"><span class="lbl">Celebrity Millennium</span><span class="cc">MT</span></a>
+<div class="mn-sub-h">Disney Cruise Line</div>
+<a class="mn-link" href="/ships/disney-adventure"><span class="lbl">Disney Adventure</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/disney-wish"><span class="lbl">Disney Wish</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/disney-destiny"><span class="lbl">Disney Destiny</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/disney-treasure"><span class="lbl">Disney Treasure</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/disney-fantasy"><span class="lbl">Disney Fantasy</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/disney-dream"><span class="lbl">Disney Dream</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/disney-magic"><span class="lbl">Disney Magic</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/disney-wonder"><span class="lbl">Disney Wonder</span><span class="cc">BS</span></a>
+<div class="mn-sub-h">P&amp;O Cruises</div>
+<a class="mn-link" href="/ships/arvia"><span class="lbl">Arvia</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/iona"><span class="lbl">Iona</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/britannia"><span class="lbl">Britannia</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/azura"><span class="lbl">Azura</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/arcadia"><span class="lbl">Arcadia</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/ventura"><span class="lbl">Ventura</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/aurora"><span class="lbl">Aurora</span><span class="cc">BM</span></a>
+<div class="mn-sub-h">Holland America Line</div>
+<a class="mn-link" href="/ships/koningsdam"><span class="lbl">Koningsdam</span><span class="cc">NL</span></a>
+<a class="mn-link" href="/ships/rotterdam"><span class="lbl">Rotterdam</span><span class="cc">NL</span></a>
+<a class="mn-link" href="/ships/nieuw-statendam"><span class="lbl">Nieuw Statendam</span><span class="cc">NL</span></a>
+<a class="mn-link" href="/ships/nieuw-amsterdam"><span class="lbl">Nieuw Amsterdam</span><span class="cc">NL</span></a>
+<a class="mn-link" href="/ships/eurodam"><span class="lbl">Eurodam</span><span class="cc">NL</span></a>
+<a class="mn-link" href="/ships/noordam"><span class="lbl">Noordam</span><span class="cc">NL</span></a>
+<a class="mn-link" href="/ships/westerdam"><span class="lbl">Westerdam</span><span class="cc">NL</span></a>
+<a class="mn-link" href="/ships/oosterdam"><span class="lbl">Oosterdam</span><span class="cc">NL</span></a>
+<a class="mn-link" href="/ships/zuiderdam"><span class="lbl">Zuiderdam</span><span class="cc">NL</span></a>
+<a class="mn-link" href="/ships/volendam"><span class="lbl">Volendam</span><span class="cc">NL</span></a>
+<a class="mn-link" href="/ships/zaandam"><span class="lbl">Zaandam</span><span class="cc">NL</span></a>
+<div class="mn-sub-h">AIDA Cruises</div>
+<a class="mn-link" href="/ships/aidanova"><span class="lbl">AIDAnova</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/aidacosma"><span class="lbl">AIDAcosma</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/aidaperla"><span class="lbl">AIDAperla</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/aidaprima"><span class="lbl">AIDAprima</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/aidasol"><span class="lbl">AIDAsol</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/aidamar"><span class="lbl">AIDAmar</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/aidablu"><span class="lbl">AIDAblu</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/aidastella"><span class="lbl">AIDAstella</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/aidaluna"><span class="lbl">AIDAluna</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/aidabella"><span class="lbl">AIDAbella</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/aidadiva"><span class="lbl">AIDAdiva</span><span class="cc">IT</span></a>
+<div class="mn-sub-h">Costa Cruises</div>
+<a class="mn-link" href="/ships/costa-smeralda"><span class="lbl">Costa Smeralda</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/costa-toscana"><span class="lbl">Costa Toscana</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/costa-diadema"><span class="lbl">Costa Diadema</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/costa-deliziosa"><span class="lbl">Costa Deliziosa</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/costa-fascinosa"><span class="lbl">Costa Fascinosa</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/costa-favolosa"><span class="lbl">Costa Favolosa</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/costa-pacifica"><span class="lbl">Costa Pacifica</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/costa-serena"><span class="lbl">Costa Serena</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/costa-fortuna"><span class="lbl">Costa Fortuna</span><span class="cc">IT</span></a>
 <div class="mn-sub-h">White Star Line</div>
 <a class="mn-link" href="/ships/titanic"><span class="lbl">RMS Titanic</span><span class="cc">GB</span></a>
 </div>
@@ -113,9 +210,7 @@
 <a class="mn-link" href="/ships/barzan"><span class="lbl">Barzan</span><span class="cc">MT</span></a>
 <div class="mn-sub-h">Pan-Atlantic Steamship (Sea-Land)</div>
 <a class="mn-link" href="/ships/ideal-x"><span class="lbl">SS Ideal X</span><span class="cc">US</span></a>
-</div>
-<div>
-<div class="mn-col-h">Tankers &amp; giants</div>
+<div class="mn-col-h mt">Tankers &amp; giants</div>
 <a class="mn-link" href="/ships/seawise-giant"><span class="lbl">Seawise Giant</span><span class="cc">LR</span></a>
 <a class="mn-link" href="/ships/pioneering-spirit"><span class="lbl">Pioneering Spirit</span><span class="cc">MT</span></a>
 <a class="mn-link" href="/ships/prelude-flng"><span class="lbl">Prelude FLNG</span><span class="cc">AU</span></a>
@@ -128,16 +223,8 @@
 <a class="mn-link" href="/ships/mozah"><span class="lbl">Mozah</span><span class="cc">MH</span></a>
 <a class="mn-link" href="/ships/berge-stahl"><span class="lbl">Berge Stahl</span><span class="cc">NO</span></a>
 <a class="mn-link" href="/ships/exxon-valdez"><span class="lbl">Exxon Valdez</span><span class="cc">US</span></a>
-<div class="mn-col-h mt">Categories</div>
 <a class="mn-link" href="/categories"><span class="lbl">All ship categories</span><span class="arr">&rarr;</span></a>
 </div>
-</div>
-</div>
-</div>
-<div class="mn-group" data-key="lines">
-<button class="mn-top" type="button" aria-expanded="false" aria-haspopup="true"><svg class="gi" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="10" cy="10" r="7.2"/><path d="M2.8 10h14.4M10 2.8c2.6 2.2 2.6 12.2 0 14.4M10 2.8c-2.6 2.2-2.6 12.2 0 14.4"/></svg>Lines<i class="caret"></i></button>
-<div class="mn-panel" role="menu">
-<div class="mn-panel-inner" style="grid-template-columns:1fr 1.45fr 1fr">
 <div>
 <div class="mn-col-h">Cruise lines</div>
 <a class="mn-link" href="/lines/royal-caribbean"><span class="lbl">Royal Caribbean</span><span class="cc">US</span></a>
@@ -153,9 +240,7 @@
 <a class="mn-link" href="/lines/p-and-o"><span class="lbl">P&amp;O Cruises</span><span class="cc">GB</span></a>
 <a class="mn-link" href="/lines/celebrity"><span class="lbl">Celebrity Cruises</span><span class="cc">US</span></a>
 <a class="mn-link" href="/lines/holland-america"><span class="lbl">Holland America Line</span><span class="cc">US</span></a>
-</div>
-<div>
-<div class="mn-col-h">Shipping lines</div>
+<div class="mn-col-h mt">Shipping lines</div>
 <div class="mn-2col">
 <a class="mn-link" href="/lines/msc"><span class="lbl">MSC</span><span class="cc">CH</span></a>
 <a class="mn-link" href="/lines/maersk"><span class="lbl">Maersk</span><span class="cc">DK</span></a>
@@ -168,27 +253,38 @@
 <a class="mn-link" href="/lines/yang-ming"><span class="lbl">Yang Ming</span><span class="cc">TW</span></a>
 <a class="mn-link" href="/lines/zim"><span class="lbl">ZIM</span><span class="cc">IL</span></a>
 </div>
-</div>
-<div>
-<div class="mn-col-h">Specialists</div>
+<div class="mn-col-h mt">Specialists</div>
 <a class="mn-link" href="/lines/cmb-tech"><span class="lbl">CMB.TECH (Euronav)</span><span class="cc">BE</span></a>
 <a class="mn-link" href="/lines/nakilat"><span class="lbl">Nakilat</span><span class="cc">QA</span></a>
 <a class="mn-link" href="/lines/allseas"><span class="lbl">Allseas</span><span class="cc">CH</span></a>
 <a class="mn-link" href="/lines/berge-bulk"><span class="lbl">Berge Bulk</span><span class="cc">SG</span></a>
-<div class="mn-col-h mt">Reference</div>
+</div>
+<div>
+<div class="mn-col-h">Guides</div>
 <a class="mn-link" href="/cruise"><span class="lbl">Get cruise-ready</span><span class="arr">&rarr;</span></a>
-<a class="mn-link" href="/canal-fit"><span class="lbl">Canal-Fit Checker</span><span class="arr">&rarr;</span></a>
+<a class="mn-link" href="/cruise/first-cruise-guide"><span class="lbl">First cruise guide</span><span class="arr">&rarr;</span></a>
+<a class="mn-link" href="/cruise/packing-list"><span class="lbl">Cruise packing list</span><span class="arr">&rarr;</span></a>
+<a class="mn-link" href="/cruise/seasickness"><span class="lbl">Beat seasickness</span><span class="arr">&rarr;</span></a>
+<a class="mn-link" href="/cruise/fear-of-cruising"><span class="lbl">Scared to cruise?</span><span class="arr">&rarr;</span></a>
+<a class="mn-link" href="/cruise/port-safety"><span class="lbl">Port safety</span><span class="arr">&rarr;</span></a>
+<a class="mn-link" href="/cruise/how-big-is-a-cruise-ship"><span class="lbl">How big is a cruise ship?</span><span class="arr">&rarr;</span></a>
+<div class="mn-col-h mt">Explore &amp; learn</div>
+<a class="mn-link" href="/ships-in-storm"><span class="lbl">Ships in storm</span><span class="arr">&rarr;</span></a>
 <a class="mn-link" href="/records"><span class="lbl">Records board</span><span class="arr">&rarr;</span></a>
+<a class="mn-link" href="/explained"><span class="lbl">Explained</span><span class="arr">&rarr;</span></a>
+<a class="mn-link" href="/canal-fit"><span class="lbl">Canal-Fit Checker</span><span class="arr">&rarr;</span></a>
+<a class="mn-link" href="/quiz"><span class="lbl">Silhouette quiz</span><span class="arr">&rarr;</span></a>
+<div class="mn-col-h mt">Latest</div>
+<a class="mn-link" href="/blog/ever-given-six-days"><span class="lbl">The six days that stopped world trade</span><span class="arr">&rarr;</span></a>
+<a class="mn-link" href="/blog/why-ships-stopped-growing"><span class="lbl">Why the biggest ships stopped growing</span><span class="arr">&rarr;</span></a>
+<a class="mn-link" href="/blog"><span class="lbl">All blog posts</span><span class="arr">&rarr;</span></a>
+<a class="mn-link" href="/methodology"><span class="lbl">Methodology</span><span class="arr">&rarr;</span></a>
 </div>
 </div>
 </div>
 </div>
 </div>
 
-<a class="mn-plain" href="/cruise" aria-current="page">Cruise ready</a>
-<a class="mn-plain" href="/ships-in-storm">Ships in storm</a>
-<a class="mn-plain" href="/records">Records</a>
-<a class="mn-plain" href="/blog">Blog</a>
 <button class="mn-search" type="button" id="mnSearchBtn" aria-label="Search the site" aria-haspopup="dialog"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="9" r="5.4"/><path d="m13.2 13.2 3.3 3.3"/></svg><span>Search</span><kbd>/</kbd></button>
 <a class="mn-cta" href="/compare">Compare</a>
 <button class="mn-search-icon" type="button" id="mnSearchBtn2" aria-label="Search the site"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="9" r="5.4"/><path d="m13.2 13.2 3.3 3.3"/></svg></button>
@@ -196,15 +292,13 @@
 </div>
 </div>
 <aside class="mn-drawer" id="mnDrawer" aria-label="Menu">
-<div class="mn-drawer-top">
-<a class="mn-logo" href="/" aria-label="ships.fyi home"><span class="mn-mark" aria-hidden="true"><span class="mm-b">LOA</span></span><span class="lw">ships<b><i class="ld">.</i><span class="fw"><span class="fwt">fyi</span></span></b></span></a>
-<button class="mn-burger" id="mnBurger2" type="button" aria-label="Close menu" style="display:block;margin-left:0"><span></span></button>
-</div>
 <div class="mn-drawer-scroll">
 <div class="mn-acc">
 <button class="mn-acc-top" type="button" aria-expanded="false"><span class="lhs">Cruise ships &amp; liners</span><i class="caret"></i></button>
 <div class="mn-acc-body"><div class="mn-acc-in">
-<div class="mn-sub-h">Royal Caribbean</div>
+<div class="mn-acc2">
+<button class="mn-acc2-top" type="button" aria-expanded="false"><span class="lhs">Royal Caribbean</span><span class="rhs"><span class="n">7</span><i class="caret"></i></span></button>
+<div class="mn-acc2-body"><div class="mn-acc2-in">
 <a class="mn-mlink" href="/ships/legend-of-the-seas"><span>Legend of the Seas</span><span class="cc">BS</span></a>
 <a class="mn-mlink" href="/ships/icon-of-the-seas"><span>Icon of the Seas</span><span class="cc">BS</span></a>
 <a class="mn-mlink" href="/ships/star-of-the-seas"><span>Star of the Seas</span><span class="cc">BS</span></a>
@@ -212,30 +306,177 @@
 <a class="mn-mlink" href="/ships/wonder-of-the-seas"><span>Wonder of the Seas</span><span class="cc">BS</span></a>
 <a class="mn-mlink" href="/ships/symphony-of-the-seas"><span>Symphony of the Seas</span><span class="cc">BS</span></a>
 <a class="mn-mlink" href="/ships/oasis-of-the-seas"><span>Oasis of the Seas</span><span class="cc">BS</span></a>
-<div class="mn-sub-h">MSC Cruises</div>
-<a class="mn-mlink" href="/ships/msc-world-europa"><span>MSC World Europa</span><span class="cc">MT</span></a>
-<div class="mn-sub-h">Carnival Cruise Line</div>
-<a class="mn-mlink" href="/ships/carnival-jubilee"><span>Carnival Jubilee</span><span class="cc">PA</span></a>
-<div class="mn-sub-h">Norwegian Cruise Line</div>
-<a class="mn-mlink" href="/ships/norwegian-aqua"><span>Norwegian Aqua</span><span class="cc">BS</span></a>
-<div class="mn-sub-h">Princess Cruises</div>
-<a class="mn-mlink" href="/ships/star-princess"><span>Star Princess</span><span class="cc">BM</span></a>
-<div class="mn-sub-h">Celebrity Cruises</div>
-<a class="mn-mlink" href="/ships/celebrity-xcel"><span>Celebrity Xcel</span><span class="cc">MT</span></a>
-<div class="mn-sub-h">Disney Cruise Line</div>
-<a class="mn-mlink" href="/ships/disney-wish"><span>Disney Wish</span><span class="cc">BS</span></a>
-<div class="mn-sub-h">P&amp;O Cruises</div>
-<a class="mn-mlink" href="/ships/arvia"><span>Arvia</span><span class="cc">BM</span></a>
-<div class="mn-sub-h">Holland America Line</div>
-<a class="mn-mlink" href="/ships/rotterdam"><span>Rotterdam</span><span class="cc">NL</span></a>
-<div class="mn-sub-h">AIDA Cruises</div>
-<a class="mn-mlink" href="/ships/aidanova"><span>AIDA Nova</span><span class="cc">IT</span></a>
-<div class="mn-sub-h">Costa Cruises</div>
-<a class="mn-mlink" href="/ships/costa-smeralda"><span>Costa Smeralda</span><span class="cc">IT</span></a>
-<div class="mn-sub-h">Cunard</div>
+</div></div>
+</div>
+<div class="mn-acc2">
+<button class="mn-acc2-top" type="button" aria-expanded="false"><span class="lhs">Cunard</span><span class="rhs"><span class="n">4</span><i class="caret"></i></span></button>
+<div class="mn-acc2-body"><div class="mn-acc2-in">
 <a class="mn-mlink" href="/ships/queen-mary-2"><span>Queen Mary 2</span><span class="cc">BM</span></a>
-<div class="mn-sub-h">White Star Line</div>
+<a class="mn-mlink" href="/ships/queen-anne"><span>Queen Anne</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/queen-elizabeth"><span>Queen Elizabeth</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/queen-victoria"><span>Queen Victoria</span><span class="cc">BM</span></a>
+</div></div>
+</div>
+<div class="mn-acc2">
+<button class="mn-acc2-top" type="button" aria-expanded="false"><span class="lhs">MSC Cruises</span><span class="rhs"><span class="n">11</span><i class="caret"></i></span></button>
+<div class="mn-acc2-body"><div class="mn-acc2-in">
+<a class="mn-mlink" href="/ships/msc-seascape"><span>MSC Seascape</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/msc-seashore"><span>MSC Seashore</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/msc-world-europa"><span>MSC World Europa</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/msc-world-america"><span>MSC World America</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/msc-virtuosa"><span>MSC Virtuosa</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/msc-grandiosa"><span>MSC Grandiosa</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/msc-euribia"><span>MSC Euribia</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/msc-seaview"><span>MSC Seaview</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/msc-seaside"><span>MSC Seaside</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/msc-meraviglia"><span>MSC Meraviglia</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/msc-bellissima"><span>MSC Bellissima</span><span class="cc">MT</span></a>
+</div></div>
+</div>
+<div class="mn-acc2">
+<button class="mn-acc2-top" type="button" aria-expanded="false"><span class="lhs">Carnival Cruise Line</span><span class="rhs"><span class="n">9</span><i class="caret"></i></span></button>
+<div class="mn-acc2-body"><div class="mn-acc2-in">
+<a class="mn-mlink" href="/ships/carnival-jubilee"><span>Carnival Jubilee</span><span class="cc">PA</span></a>
+<a class="mn-mlink" href="/ships/carnival-celebration"><span>Carnival Celebration</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/mardi-gras"><span>Mardi Gras</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/carnival-vista"><span>Carnival Vista</span><span class="cc">PA</span></a>
+<a class="mn-mlink" href="/ships/carnival-horizon"><span>Carnival Horizon</span><span class="cc">PA</span></a>
+<a class="mn-mlink" href="/ships/carnival-panorama"><span>Carnival Panorama</span><span class="cc">PA</span></a>
+<a class="mn-mlink" href="/ships/carnival-dream"><span>Carnival Dream</span><span class="cc">PA</span></a>
+<a class="mn-mlink" href="/ships/carnival-magic"><span>Carnival Magic</span><span class="cc">PA</span></a>
+<a class="mn-mlink" href="/ships/carnival-breeze"><span>Carnival Breeze</span><span class="cc">PA</span></a>
+</div></div>
+</div>
+<div class="mn-acc2">
+<button class="mn-acc2-top" type="button" aria-expanded="false"><span class="lhs">Norwegian Cruise Line</span><span class="rhs"><span class="n">11</span><i class="caret"></i></span></button>
+<div class="mn-acc2-body"><div class="mn-acc2-in">
+<a class="mn-mlink" href="/ships/norwegian-encore"><span>Norwegian Encore</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/norwegian-bliss"><span>Norwegian Bliss</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/norwegian-joy"><span>Norwegian Joy</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/norwegian-epic"><span>Norwegian Epic</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/norwegian-escape"><span>Norwegian Escape</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/norwegian-getaway"><span>Norwegian Getaway</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/norwegian-breakaway"><span>Norwegian Breakaway</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/norwegian-aqua"><span>Norwegian Aqua</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/norwegian-luna"><span>Norwegian Luna</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/norwegian-viva"><span>Norwegian Viva</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/norwegian-prima"><span>Norwegian Prima</span><span class="cc">BS</span></a>
+</div></div>
+</div>
+<div class="mn-acc2">
+<button class="mn-acc2-top" type="button" aria-expanded="false"><span class="lhs">Princess Cruises</span><span class="rhs"><span class="n">13</span><i class="caret"></i></span></button>
+<div class="mn-acc2-body"><div class="mn-acc2-in">
+<a class="mn-mlink" href="/ships/sun-princess"><span>Sun Princess</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/star-princess"><span>Star Princess</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/discovery-princess"><span>Discovery Princess</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/enchanted-princess"><span>Enchanted Princess</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/sky-princess"><span>Sky Princess</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/majestic-princess"><span>Majestic Princess</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/regal-princess"><span>Regal Princess</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/royal-princess"><span>Royal Princess</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/diamond-princess"><span>Diamond Princess</span><span class="cc">GB</span></a>
+<a class="mn-mlink" href="/ships/sapphire-princess"><span>Sapphire Princess</span><span class="cc">GB</span></a>
+<a class="mn-mlink" href="/ships/ruby-princess"><span>Ruby Princess</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/caribbean-princess"><span>Caribbean Princess</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/grand-princess"><span>Grand Princess</span><span class="cc">BM</span></a>
+</div></div>
+</div>
+<div class="mn-acc2">
+<button class="mn-acc2-top" type="button" aria-expanded="false"><span class="lhs">Celebrity Cruises</span><span class="rhs"><span class="n">14</span><i class="caret"></i></span></button>
+<div class="mn-acc2-body"><div class="mn-acc2-in">
+<a class="mn-mlink" href="/ships/celebrity-ascent"><span>Celebrity Ascent</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/celebrity-beyond"><span>Celebrity Beyond</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/celebrity-xcel"><span>Celebrity Xcel</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/celebrity-reflection"><span>Celebrity Reflection</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/celebrity-silhouette"><span>Celebrity Silhouette</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/celebrity-eclipse"><span>Celebrity Eclipse</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/celebrity-equinox"><span>Celebrity Equinox</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/celebrity-solstice"><span>Celebrity Solstice</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/celebrity-apex"><span>Celebrity Apex</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/celebrity-edge"><span>Celebrity Edge</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/celebrity-constellation"><span>Celebrity Constellation</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/celebrity-summit"><span>Celebrity Summit</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/celebrity-infinity"><span>Celebrity Infinity</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/celebrity-millennium"><span>Celebrity Millennium</span><span class="cc">MT</span></a>
+</div></div>
+</div>
+<div class="mn-acc2">
+<button class="mn-acc2-top" type="button" aria-expanded="false"><span class="lhs">Disney Cruise Line</span><span class="rhs"><span class="n">8</span><i class="caret"></i></span></button>
+<div class="mn-acc2-body"><div class="mn-acc2-in">
+<a class="mn-mlink" href="/ships/disney-adventure"><span>Disney Adventure</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/disney-wish"><span>Disney Wish</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/disney-destiny"><span>Disney Destiny</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/disney-treasure"><span>Disney Treasure</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/disney-fantasy"><span>Disney Fantasy</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/disney-dream"><span>Disney Dream</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/disney-magic"><span>Disney Magic</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/disney-wonder"><span>Disney Wonder</span><span class="cc">BS</span></a>
+</div></div>
+</div>
+<div class="mn-acc2">
+<button class="mn-acc2-top" type="button" aria-expanded="false"><span class="lhs">P&amp;O Cruises</span><span class="rhs"><span class="n">7</span><i class="caret"></i></span></button>
+<div class="mn-acc2-body"><div class="mn-acc2-in">
+<a class="mn-mlink" href="/ships/arvia"><span>Arvia</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/iona"><span>Iona</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/britannia"><span>Britannia</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/azura"><span>Azura</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/arcadia"><span>Arcadia</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/ventura"><span>Ventura</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/aurora"><span>Aurora</span><span class="cc">BM</span></a>
+</div></div>
+</div>
+<div class="mn-acc2">
+<button class="mn-acc2-top" type="button" aria-expanded="false"><span class="lhs">Holland America Line</span><span class="rhs"><span class="n">11</span><i class="caret"></i></span></button>
+<div class="mn-acc2-body"><div class="mn-acc2-in">
+<a class="mn-mlink" href="/ships/koningsdam"><span>Koningsdam</span><span class="cc">NL</span></a>
+<a class="mn-mlink" href="/ships/rotterdam"><span>Rotterdam</span><span class="cc">NL</span></a>
+<a class="mn-mlink" href="/ships/nieuw-statendam"><span>Nieuw Statendam</span><span class="cc">NL</span></a>
+<a class="mn-mlink" href="/ships/nieuw-amsterdam"><span>Nieuw Amsterdam</span><span class="cc">NL</span></a>
+<a class="mn-mlink" href="/ships/eurodam"><span>Eurodam</span><span class="cc">NL</span></a>
+<a class="mn-mlink" href="/ships/noordam"><span>Noordam</span><span class="cc">NL</span></a>
+<a class="mn-mlink" href="/ships/westerdam"><span>Westerdam</span><span class="cc">NL</span></a>
+<a class="mn-mlink" href="/ships/oosterdam"><span>Oosterdam</span><span class="cc">NL</span></a>
+<a class="mn-mlink" href="/ships/zuiderdam"><span>Zuiderdam</span><span class="cc">NL</span></a>
+<a class="mn-mlink" href="/ships/volendam"><span>Volendam</span><span class="cc">NL</span></a>
+<a class="mn-mlink" href="/ships/zaandam"><span>Zaandam</span><span class="cc">NL</span></a>
+</div></div>
+</div>
+<div class="mn-acc2">
+<button class="mn-acc2-top" type="button" aria-expanded="false"><span class="lhs">AIDA Cruises</span><span class="rhs"><span class="n">11</span><i class="caret"></i></span></button>
+<div class="mn-acc2-body"><div class="mn-acc2-in">
+<a class="mn-mlink" href="/ships/aidanova"><span>AIDAnova</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/aidacosma"><span>AIDAcosma</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/aidaperla"><span>AIDAperla</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/aidaprima"><span>AIDAprima</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/aidasol"><span>AIDAsol</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/aidamar"><span>AIDAmar</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/aidablu"><span>AIDAblu</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/aidastella"><span>AIDAstella</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/aidaluna"><span>AIDAluna</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/aidabella"><span>AIDAbella</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/aidadiva"><span>AIDAdiva</span><span class="cc">IT</span></a>
+</div></div>
+</div>
+<div class="mn-acc2">
+<button class="mn-acc2-top" type="button" aria-expanded="false"><span class="lhs">Costa Cruises</span><span class="rhs"><span class="n">9</span><i class="caret"></i></span></button>
+<div class="mn-acc2-body"><div class="mn-acc2-in">
+<a class="mn-mlink" href="/ships/costa-smeralda"><span>Costa Smeralda</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/costa-toscana"><span>Costa Toscana</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/costa-diadema"><span>Costa Diadema</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/costa-deliziosa"><span>Costa Deliziosa</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/costa-fascinosa"><span>Costa Fascinosa</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/costa-favolosa"><span>Costa Favolosa</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/costa-pacifica"><span>Costa Pacifica</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/costa-serena"><span>Costa Serena</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/costa-fortuna"><span>Costa Fortuna</span><span class="cc">IT</span></a>
+</div></div>
+</div>
+<div class="mn-acc2">
+<button class="mn-acc2-top" type="button" aria-expanded="false"><span class="lhs">White Star Line</span><span class="rhs"><span class="n">1</span><i class="caret"></i></span></button>
+<div class="mn-acc2-body"><div class="mn-acc2-in">
 <a class="mn-mlink" href="/ships/titanic"><span>RMS Titanic</span><span class="cc">GB</span></a>
+</div></div>
+</div>
 </div></div>
 </div>
 <div class="mn-acc">
@@ -328,7 +569,7 @@
 <div class="mn-acc">
 <button class="mn-acc-top" type="button" aria-expanded="false"><span class="lhs">Shipyards &amp; categories</span><i class="caret"></i></button>
 <div class="mn-acc-body"><div class="mn-acc-in">
-<a class="mn-mlink" href="/categories/cruise-ships"><span>Cruise ships &amp; liners</span><span class="cc">19</span></a>
+<a class="mn-mlink" href="/categories/cruise-ships"><span>Cruise ships &amp; liners</span><span class="cc">116</span></a>
 <a class="mn-mlink" href="/categories/container-ships"><span>Container ships</span><span class="cc">14</span></a>
 <a class="mn-mlink" href="/categories/tankers"><span>Tankers</span><span class="cc">7</span></a>
 <a class="mn-mlink" href="/categories/gas-carriers"><span>Gas carriers</span><span class="cc">2</span></a>
@@ -350,9 +591,11 @@
 </div></div>
 </div>
 <a class="mn-acc-direct" href="/cruise">Get cruise-ready</a>
+<a class="mn-acc-direct" href="/ships-in-storm">Ships in storm</a>
 <a class="mn-acc-direct" href="/records/longest-ships">Records</a>
 <a class="mn-acc-direct" href="/compare">Compare ships</a>
 <a class="mn-acc-direct" href="/canal-fit">Canal-Fit Checker</a>
+<a class="mn-acc-direct" href="/quiz">Silhouette quiz</a>
 <a class="mn-acc-direct" href="/blog">Blog</a>
 <a class="mn-acc-direct" href="/explained">Explained</a>
 </div>
@@ -380,7 +623,7 @@
 <h1>Get <span class="em">cruise-ready</span>.</h1>
 <p class="lead">The adventure starts before you board. Pack like a regular, know your ship like an enthusiast, and step up the gangway ready for the best week of the year.</p>
 <div class="heroChips">
-<span class="chip"><b class="num">19</b><span>cruise giants profiled</span></span>
+<span class="chip"><b class="num">116</b><span>cruise giants profiled</span></span>
 <span class="chip"><b class="num">25</b><span>checklist items</span></span>
 <span class="chip"><b class="num">248,663 GT</b><span>the biggest afloat</span></span>
 </div>
@@ -402,123 +645,712 @@
 <span class="eyebrow">Know your ship</span>
 <h2 class="title">The giants you can actually board</h2>
 <p class="sub">Every cruise giant on this site — tap yours and know her better than the cruise director does.</p>
-<div class="allineup"><a class="lu" href="/ships/legend-of-the-seas" style="flex:365.1 1 0"><span class="lu-s"><div class="silbox" title="Length overall 365.1 m — drawn at 88% of the longest hull ever floated"><svg viewBox="0 22 480 111" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 88%);color:#5FB8B0">
+<div class="allineup"><a class="lu" href="/ships/legend-of-the-seas" style="flex:365.1 1 0"><span class="lu-s"><div class="silbox" title="Length overall 365.1 m — drawn at 88% of the longest hull ever floated"><svg viewBox="0 22 480 111" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 88%);color:#5FB8B0;--sil-funnel:#CBD5E0">
 <g fill="currentColor"><path d="M464 130L470 115.2L468 104.1L56 101.4L20 99.1L16 115.9L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
 <path d="M62 73.5L62.3 70.9L63.3 68.5L64.9 66.4L67 64.9L69.4 63.9L72 63.5L444 63.5L444 104.1L62 104.1Z"/>
 <path d="M82 47.6L82.3 45.3L83.2 43.1L84.6 41.3L86.5 39.8L88.7 38.9L91 38.6L436 38.6L436 64.5L82 64.5Z"/>
 <path d="M75 45.6L86 45.6L86 51.6L75 51.6Z"/>
-<path d="M318.1 27.8L333.1 27.8L329.1 40.6L314.1 40.6Z"/>
-<path d="M344.1 27.8L359.1 27.8L355.1 40.6L340.1 40.6Z"/>
-<path d="M92 28.5L93.6 28.5L93.6 38.6L92 38.6Z"/></g></svg></div></span><span class="lu-n">Legend</span></a><a class="lu" href="/ships/icon-of-the-seas" style="flex:364.75 1 0"><span class="lu-s"><div class="silbox" title="Length overall 364.75 m — drawn at 88% of the longest hull ever floated"><svg viewBox="0 22 480 111" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 88%);color:#5FB8B0">
+<path fill="var(--sil-funnel,inherit)" d="M318.1 27.8L333.1 27.8L329.1 40.6L314.1 40.6Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M344.1 27.8L359.1 27.8L355.1 40.6L340.1 40.6Z"/>
+<path d="M92 28.5L93.6 28.5L93.6 38.6L92 38.6Z"/></g></svg></div></span><span class="lu-n">Legend</span></a><a class="lu" href="/ships/icon-of-the-seas" style="flex:364.75 1 0"><span class="lu-s"><div class="silbox" title="Length overall 364.75 m — drawn at 88% of the longest hull ever floated"><svg viewBox="0 22 480 111" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 88%);color:#5FB8B0;--sil-funnel:#CBD5E0">
 <g fill="currentColor"><path d="M464 130L470 115.2L468 104.1L56 101.4L20 99.1L16 115.9L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
 <path d="M62 73.5L62.3 70.9L63.3 68.5L64.9 66.4L67 64.8L69.4 63.8L72 63.5L444 63.5L444 104.1L62 104.1Z"/>
 <path d="M82 47.5L82.3 45.2L83.2 43L84.6 41.2L86.5 39.8L88.7 38.9L91 38.5L436 38.5L436 64.5L82 64.5Z"/>
 <path d="M75 45.5L86 45.5L86 51.5L75 51.5Z"/>
-<path d="M318.1 27.7L333.1 27.7L329.1 40.5L314.1 40.5Z"/>
-<path d="M344.1 27.7L359.1 27.7L355.1 40.5L340.1 40.5Z"/>
-<path d="M92 28.5L93.6 28.5L93.6 38.5L92 38.5Z"/></g></svg></div></span><span class="lu-n">Icon</span></a><a class="lu" href="/ships/star-of-the-seas" style="flex:364.75 1 0"><span class="lu-s"><div class="silbox" title="Length overall 364.75 m — drawn at 88% of the longest hull ever floated"><svg viewBox="0 22 480 111" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 88%);color:#5FB8B0">
+<path fill="var(--sil-funnel,inherit)" d="M318.1 27.7L333.1 27.7L329.1 40.5L314.1 40.5Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M344.1 27.7L359.1 27.7L355.1 40.5L340.1 40.5Z"/>
+<path d="M92 28.5L93.6 28.5L93.6 38.5L92 38.5Z"/></g></svg></div></span><span class="lu-n">Icon</span></a><a class="lu" href="/ships/star-of-the-seas" style="flex:364.75 1 0"><span class="lu-s"><div class="silbox" title="Length overall 364.75 m — drawn at 88% of the longest hull ever floated"><svg viewBox="0 22 480 111" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 88%);color:#5FB8B0;--sil-funnel:#CBD5E0">
 <g fill="currentColor"><path d="M464 130L470 115.2L468 104.1L56 101.4L20 99.1L16 115.9L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
 <path d="M62 73.5L62.3 70.9L63.3 68.5L64.9 66.4L67 64.8L69.4 63.8L72 63.5L444 63.5L444 104.1L62 104.1Z"/>
 <path d="M82 47.5L82.3 45.2L83.2 43L84.6 41.2L86.5 39.8L88.7 38.9L91 38.5L436 38.5L436 64.5L82 64.5Z"/>
 <path d="M75 45.5L86 45.5L86 51.5L75 51.5Z"/>
-<path d="M318.1 27.7L333.1 27.7L329.1 40.5L314.1 40.5Z"/>
-<path d="M344.1 27.7L359.1 27.7L355.1 40.5L340.1 40.5Z"/>
-<path d="M92 28.5L93.6 28.5L93.6 38.5L92 38.5Z"/></g></svg></div></span><span class="lu-n">Star</span></a><a class="lu" href="/ships/wonder-of-the-seas" style="flex:362.04 1 0"><span class="lu-s"><div class="silbox" title="Length overall 362.04 m — drawn at 87% of the longest hull ever floated"><svg viewBox="0 26 480 107" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 87%);color:#5FB8B0">
+<path fill="var(--sil-funnel,inherit)" d="M318.1 27.7L333.1 27.7L329.1 40.5L314.1 40.5Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M344.1 27.7L359.1 27.7L355.1 40.5L340.1 40.5Z"/>
+<path d="M92 28.5L93.6 28.5L93.6 38.5L92 38.5Z"/></g></svg></div></span><span class="lu-n">Star</span></a><a class="lu" href="/ships/wonder-of-the-seas" style="flex:362.04 1 0"><span class="lu-s"><div class="silbox" title="Length overall 362.04 m — drawn at 87% of the longest hull ever floated"><svg viewBox="0 26 480 107" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 87%);color:#5FB8B0;--sil-funnel:#CBD5E0">
 <g fill="currentColor"><path d="M464 130L470 115.2L468 104L56 101.2L20 98.9L16 115.9L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
 <path d="M62 75.4L62.3 72.8L63.3 70.4L64.9 68.4L67 66.8L69.4 65.8L72 65.4L444 65.4L444 104L62 104Z"/>
 <path d="M78 50.8L78.3 48.4L79.2 46.3L80.6 44.4L82.5 43L84.7 42.1L87 41.8L436 41.8L436 66.4L78 66.4Z"/>
 <path d="M71 48.4L82 48.4L82 54.1L71 54.1Z"/>
-<path d="M318.1 32.1L333.1 32.1L329.1 43.8L314.1 43.8Z"/>
-<path d="M344.1 32.1L359.1 32.1L355.1 43.8L340.1 43.8Z"/>
-<path d="M88 31.6L89.6 31.6L89.6 41.8L88 41.8Z"/></g></svg></div></span><span class="lu-n">Wonder</span></a><a class="lu" href="/ships/symphony-of-the-seas" style="flex:361.011 1 0"><span class="lu-s"><div class="silbox" title="Length overall 361.011 m — drawn at 87% of the longest hull ever floated"><svg viewBox="0 26 480 107" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 87%);color:#5FB8B0">
+<path fill="var(--sil-funnel,inherit)" d="M318.1 32.1L333.1 32.1L329.1 43.8L314.1 43.8Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M344.1 32.1L359.1 32.1L355.1 43.8L340.1 43.8Z"/>
+<path d="M88 31.6L89.6 31.6L89.6 41.8L88 41.8Z"/></g></svg></div></span><span class="lu-n">Wonder</span></a><a class="lu" href="/ships/symphony-of-the-seas" style="flex:361.011 1 0"><span class="lu-s"><div class="silbox" title="Length overall 361.011 m — drawn at 87% of the longest hull ever floated"><svg viewBox="0 26 480 107" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 87%);color:#5FB8B0;--sil-funnel:#CBD5E0">
 <g fill="currentColor"><path d="M464 130L470 115.2L468 104L56 101.2L20 98.9L16 115.9L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
 <path d="M62 75.3L62.3 72.7L63.3 70.3L64.9 68.2L67 66.6L69.4 65.6L72 65.3L444 65.3L444 104L62 104Z"/>
 <path d="M78 50.5L78.3 48.2L79.2 46L80.6 44.2L82.5 42.8L84.7 41.9L87 41.5L436 41.5L436 66.3L78 66.3Z"/>
 <path d="M71 48.2L82 48.2L82 53.9L71 53.9Z"/>
-<path d="M318.1 31.9L333.1 31.9L329.1 43.5L314.1 43.5Z"/>
-<path d="M344.1 31.9L359.1 31.9L355.1 43.5L340.1 43.5Z"/>
-<path d="M88 31.4L89.6 31.4L89.6 41.5L88 41.5Z"/></g></svg></div></span><span class="lu-n">Symphony</span></a><a class="lu" href="/ships/harmony-of-the-seas" style="flex:362.12 1 0"><span class="lu-s"><div class="silbox" title="Length overall 362.12 m — drawn at 87% of the longest hull ever floated"><svg viewBox="0 26 480 107" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 87%);color:#5FB8B0">
+<path fill="var(--sil-funnel,inherit)" d="M318.1 31.9L333.1 31.9L329.1 43.5L314.1 43.5Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M344.1 31.9L359.1 31.9L355.1 43.5L340.1 43.5Z"/>
+<path d="M88 31.4L89.6 31.4L89.6 41.5L88 41.5Z"/></g></svg></div></span><span class="lu-n">Symphony</span></a><a class="lu" href="/ships/harmony-of-the-seas" style="flex:362.12 1 0"><span class="lu-s"><div class="silbox" title="Length overall 362.12 m — drawn at 87% of the longest hull ever floated"><svg viewBox="0 26 480 107" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 87%);color:#5FB8B0;--sil-funnel:#CBD5E0">
 <g fill="currentColor"><path d="M464 130L470 115.2L468 104L56 101.2L20 98.9L16 115.9L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
 <path d="M62 75.4L62.3 72.8L63.3 70.4L64.9 68.4L67 66.8L69.4 65.8L72 65.4L444 65.4L444 104L62 104Z"/>
 <path d="M78 50.8L78.3 48.5L79.2 46.3L80.6 44.4L82.5 43L84.7 42.1L87 41.8L436 41.8L436 66.4L78 66.4Z"/>
 <path d="M71 48.4L82 48.4L82 54.1L71 54.1Z"/>
-<path d="M318.1 32.2L333.1 32.2L329.1 43.8L314.1 43.8Z"/>
-<path d="M344.1 32.2L359.1 32.2L355.1 43.8L340.1 43.8Z"/>
-<path d="M88 31.6L89.6 31.6L89.6 41.8L88 41.8Z"/></g></svg></div></span><span class="lu-n">Harmony</span></a><a class="lu" href="/ships/oasis-of-the-seas" style="flex:360 1 0"><span class="lu-s"><div class="silbox" title="Length overall 360 m — drawn at 87% of the longest hull ever floated"><svg viewBox="0 26 480 107" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 87%);color:#5FB8B0">
+<path fill="var(--sil-funnel,inherit)" d="M318.1 32.2L333.1 32.2L329.1 43.8L314.1 43.8Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M344.1 32.2L359.1 32.2L355.1 43.8L340.1 43.8Z"/>
+<path d="M88 31.6L89.6 31.6L89.6 41.8L88 41.8Z"/></g></svg></div></span><span class="lu-n">Harmony</span></a><a class="lu" href="/ships/oasis-of-the-seas" style="flex:360 1 0"><span class="lu-s"><div class="silbox" title="Length overall 360 m — drawn at 87% of the longest hull ever floated"><svg viewBox="0 26 480 107" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 87%);color:#5FB8B0;--sil-funnel:#CBD5E0">
 <g fill="currentColor"><path d="M464 130L470 115.2L468 103.9L56 101.1L20 98.8L16 115.9L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
 <path d="M62 75.1L62.3 72.5L63.3 70.1L64.9 68.1L67 66.5L69.4 65.5L72 65.1L444 65.1L444 103.9L62 103.9Z"/>
 <path d="M78 50.3L78.3 48L79.2 45.8L80.6 44L82.5 42.5L84.7 41.6L87 41.3L436 41.3L436 66.1L78 66.1Z"/>
 <path d="M71 48L82 48L82 53.7L71 53.7Z"/>
-<path d="M318.1 32.9L333.1 32.9L329.1 43.3L314.1 43.3Z"/>
-<path d="M344.1 32.9L359.1 32.9L355.1 43.3L340.1 43.3Z"/>
-<path d="M88 31.1L89.6 31.1L89.6 41.3L88 41.3Z"/></g></svg></div></span><span class="lu-n">Oasis</span></a><a class="lu" href="/ships/msc-world-europa" style="flex:333.3 1 0"><span class="lu-s"><div class="silbox" title="Length overall 333.3 m — drawn at 85% of the longest hull ever floated"><svg viewBox="0 16 480 117" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 85%);color:#7FB3D5">
+<path fill="var(--sil-funnel,inherit)" d="M318.1 32.9L333.1 32.9L329.1 43.3L314.1 43.3Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M344.1 32.9L359.1 32.9L355.1 43.3L340.1 43.3Z"/>
+<path d="M88 31.1L89.6 31.1L89.6 41.3L88 41.3Z"/></g></svg></div></span><span class="lu-n">Oasis</span></a><a class="lu" href="/ships/msc-world-america" style="flex:333.3 1 0"><span class="lu-s"><div class="silbox" title="Length overall 333.3 m — drawn at 85% of the longest hull ever floated"><svg viewBox="0 16 480 117" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 85%);color:#7FB3D5;--sil-funnel:#CBD5E0">
 <g fill="currentColor"><path d="M464 130L470 115L468 102.8L56 99.8L20 97.3L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
 <path d="M62 69.2L62.3 66.6L63.3 64.2L64.9 62.1L67 60.5L69.4 59.5L72 59.2L444 59.2L444 102.8L62 102.8Z"/>
 <path d="M76 41.4L76.3 39.1L77.2 36.9L78.6 35.1L80.5 33.6L82.7 32.7L85 32.4L436 32.4L436 60.2L76 60.2Z"/>
 <path d="M69 39.9L80 39.9L80 46.3L69 46.3Z"/>
-<path d="M318.1 23.5L333.1 23.5L329.1 34.4L314.1 34.4Z"/>
-<path d="M86 21.4L87.6 21.4L87.6 32.4L86 32.4Z"/></g></svg></div></span><span class="lu-n">MSC World Europa</span></a><a class="lu" href="/ships/arvia" style="flex:345 1 0"><span class="lu-s"><div class="silbox" title="Length overall 345 m — drawn at 86% of the longest hull ever floated"><svg viewBox="0 29 480 104" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 86%);color:#A9CCE3">
+<path fill="var(--sil-funnel,inherit)" d="M318.1 23.5L333.1 23.5L329.1 34.4L314.1 34.4Z"/>
+<path d="M86 21.4L87.6 21.4L87.6 32.4L86 32.4Z"/></g></svg></div></span><span class="lu-n">MSC World America</span></a><a class="lu" href="/ships/msc-world-europa" style="flex:333.3 1 0"><span class="lu-s"><div class="silbox" title="Length overall 333.3 m — drawn at 85% of the longest hull ever floated"><svg viewBox="0 16 480 117" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 85%);color:#7FB3D5;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 115L468 102.8L56 99.8L20 97.3L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 69.2L62.3 66.6L63.3 64.2L64.9 62.1L67 60.5L69.4 59.5L72 59.2L444 59.2L444 102.8L62 102.8Z"/>
+<path d="M76 41.4L76.3 39.1L77.2 36.9L78.6 35.1L80.5 33.6L82.7 32.7L85 32.4L436 32.4L436 60.2L76 60.2Z"/>
+<path d="M69 39.9L80 39.9L80 46.3L69 46.3Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 23.5L333.1 23.5L329.1 34.4L314.1 34.4Z"/>
+<path d="M86 21.4L87.6 21.4L87.6 32.4L86 32.4Z"/></g></svg></div></span><span class="lu-n">MSC World Europa</span></a><a class="lu" href="/ships/disney-adventure" style="flex:342 1 0"><span class="lu-s"><div class="silbox" title="Length overall 342 m — drawn at 86% of the longest hull ever floated"><svg viewBox="0 22 480 111" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 86%);color:#F8A5C2;--sil-funnel:#D8232A">
+<g fill="currentColor"><path d="M464 130L470 115L468 103.2L56 100.2L20 97.8L16 115.8L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 74L62.3 71.4L63.3 69L64.9 66.9L67 65.4L69.4 64.4L72 64L444 64L444 103.2L62 103.2Z"/>
+<path d="M80 49L80.3 46.7L81.2 44.5L82.6 42.6L84.5 41.2L86.7 40.3L89 40L436 40L436 65L80 65Z"/>
+<path d="M73 46.7L84 46.7L84 52.5L73 52.5Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 27.2L333.1 27.2L329.1 42L314.1 42Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M344.1 27.2L359.1 27.2L355.1 42L340.1 42Z"/>
+<path d="M90 29.2L91.6 29.2L91.6 40L90 40Z"/></g></svg></div></span><span class="lu-n">Disney Adventure</span></a><a class="lu" href="/ships/arvia" style="flex:345 1 0"><span class="lu-s"><div class="silbox" title="Length overall 345 m — drawn at 86% of the longest hull ever floated"><svg viewBox="0 29 480 104" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 86%);color:#A9CCE3;--sil-funnel:#1B5FA8">
 <g fill="currentColor"><path d="M464 130L470 115.1L468 103.3L56 100.4L20 98L16 115.8L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
 <path d="M62 77L62.3 74.4L63.3 72L64.9 69.9L67 68.3L69.4 67.3L72 67L444 67L444 103.3L62 103.3Z"/>
 <path d="M83 53.7L83.3 51.3L84.2 49.2L85.6 47.3L87.5 45.9L89.7 45L92 44.7L436 44.7L436 68L83 68Z"/>
 <path d="M76 50.9L87 50.9L87 56.3L76 56.3Z"/>
-<path d="M318.1 34.7L333.1 34.7L329.1 46.7L314.1 46.7Z"/>
-<path d="M93 34L94.6 34L94.6 44.7L93 44.7Z"/></g></svg></div></span><span class="lu-n">Arvia</span></a><a class="lu" href="/ships/costa-smeralda" style="flex:337 1 0"><span class="lu-s"><div class="silbox" title="Length overall 337 m — drawn at 85% of the longest hull ever floated"><svg viewBox="0 25 480 108" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 85%);color:#F0B27A">
+<path fill="var(--sil-funnel,inherit)" d="M318.1 34.7L333.1 34.7L329.1 46.7L314.1 46.7Z"/>
+<path d="M93 34L94.6 34L94.6 44.7L93 44.7Z"/></g></svg></div></span><span class="lu-n">Arvia</span></a><a class="lu" href="/ships/costa-smeralda" style="flex:337 1 0"><span class="lu-s"><div class="silbox" title="Length overall 337 m — drawn at 85% of the longest hull ever floated"><svg viewBox="0 25 480 108" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 85%);color:#1F5C9E;--sil-funnel:#F2C230">
 <g fill="currentColor"><path d="M464 130L470 115L468 103L56 100L20 97.5L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
 <path d="M62 74.9L62.3 72.3L63.3 69.9L64.9 67.8L67 66.2L69.4 65.2L72 64.9L444 64.9L444 103L62 103Z"/>
 <path d="M77 50.6L77.3 48.2L78.2 46.1L79.6 44.2L81.5 42.8L83.7 41.9L86 41.6L436 41.6L436 65.9L77 65.9Z"/>
 <path d="M70 48.1L81 48.1L81 53.7L70 53.7Z"/>
-<path d="M318.1 30L333.1 30L329.1 43.6L314.1 43.6Z"/>
-<path d="M87 30.6L88.6 30.6L88.6 41.6L87 41.6Z"/></g></svg></div></span><span class="lu-n">Costa Smeralda</span></a><a class="lu" href="/ships/aidanova" style="flex:337 1 0"><span class="lu-s"><div class="silbox" title="Length overall 337 m — drawn at 85% of the longest hull ever floated"><svg viewBox="0 25 480 108" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 85%);color:#C39BD3">
+<path fill="var(--sil-funnel,inherit)" d="M318.1 30L333.1 30L329.1 43.6L314.1 43.6Z"/>
+<path d="M87 30.6L88.6 30.6L88.6 41.6L87 41.6Z"/></g></svg></div></span><span class="lu-n">Costa Smeralda</span></a><a class="lu" href="/ships/costa-toscana" style="flex:337 1 0"><span class="lu-s"><div class="silbox" title="Length overall 337 m — drawn at 85% of the longest hull ever floated"><svg viewBox="0 25 480 108" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 85%);color:#1F5C9E;--sil-funnel:#F2C230">
 <g fill="currentColor"><path d="M464 130L470 115L468 103L56 100L20 97.5L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
 <path d="M62 74.9L62.3 72.3L63.3 69.9L64.9 67.8L67 66.2L69.4 65.2L72 64.9L444 64.9L444 103L62 103Z"/>
 <path d="M77 50.6L77.3 48.2L78.2 46.1L79.6 44.2L81.5 42.8L83.7 41.9L86 41.6L436 41.6L436 65.9L77 65.9Z"/>
 <path d="M70 48.1L81 48.1L81 53.7L70 53.7Z"/>
-<path d="M318.1 31.4L333.1 31.4L329.1 43.6L314.1 43.6Z"/>
-<path d="M87 30.6L88.6 30.6L88.6 41.6L87 41.6Z"/></g></svg></div></span><span class="lu-n">AIDA Nova</span></a><a class="lu" href="/ships/carnival-jubilee" style="flex:344.5 1 0"><span class="lu-s"><div class="silbox" title="Length overall 344.5 m — drawn at 86% of the longest hull ever floated"><svg viewBox="0 22 480 111" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 86%);color:#F1948A">
+<path fill="var(--sil-funnel,inherit)" d="M318.1 30L333.1 30L329.1 43.6L314.1 43.6Z"/>
+<path d="M87 30.6L88.6 30.6L88.6 41.6L87 41.6Z"/></g></svg></div></span><span class="lu-n">Costa Toscana</span></a><a class="lu" href="/ships/iona" style="flex:344.5 1 0"><span class="lu-s"><div class="silbox" title="Length overall 344.5 m — drawn at 86% of the longest hull ever floated"><svg viewBox="0 28 480 105" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 86%);color:#A9CCE3;--sil-funnel:#1B5FA8">
+<g fill="currentColor"><path d="M464 130L470 115.1L468 103.3L56 100.4L20 98L16 115.8L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 76.9L62.3 74.3L63.3 71.9L64.9 69.8L67 68.2L69.4 67.2L72 66.9L444 66.9L444 103.3L62 103.3Z"/>
+<path d="M83 53.6L83.3 51.2L84.2 49.1L85.6 47.2L87.5 45.8L89.7 44.9L92 44.6L436 44.6L436 67.9L83 67.9Z"/>
+<path d="M76 50.8L87 50.8L87 56.2L76 56.2Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 34.5L333.1 34.5L329.1 46.6L314.1 46.6Z"/>
+<path d="M93 33.9L94.6 33.9L94.6 44.6L93 44.6Z"/></g></svg></div></span><span class="lu-n">Iona</span></a><a class="lu" href="/ships/msc-euribia" style="flex:331.4 1 0"><span class="lu-s"><div class="silbox" title="Length overall 331.4 m — drawn at 85% of the longest hull ever floated"><svg viewBox="0 20 480 113" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 85%);color:#7FB3D5;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.9L468 102.7L56 99.7L20 97.2L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 73.1L62.3 70.6L63.3 68.1L64.9 66.1L67 64.5L69.4 63.5L72 63.1L444 63.1L444 102.7L62 102.7Z"/>
+<path d="M78 47.9L78.3 45.6L79.2 43.4L80.6 41.5L82.5 40.1L84.7 39.2L87 38.9L436 38.9L436 64.1L78 64.1Z"/>
+<path d="M71 45.7L82 45.7L82 51.5L71 51.5Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 25.8L333.1 25.8L329.1 40.9L314.1 40.9Z"/>
+<path d="M88 27.8L89.6 27.8L89.6 38.9L88 38.9Z"/></g></svg></div></span><span class="lu-n">MSC Euribia</span></a><a class="lu" href="/ships/aidanova" style="flex:337 1 0"><span class="lu-s"><div class="silbox" title="Length overall 337 m — drawn at 85% of the longest hull ever floated"><svg viewBox="0 25 480 108" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 85%);color:#9B72C4;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 115L468 103L56 100L20 97.5L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 74.9L62.3 72.3L63.3 69.9L64.9 67.8L67 66.2L69.4 65.2L72 64.9L444 64.9L444 103L62 103Z"/>
+<path d="M77 50.6L77.3 48.2L78.2 46.1L79.6 44.2L81.5 42.8L83.7 41.9L86 41.6L436 41.6L436 65.9L77 65.9Z"/>
+<path d="M70 48.1L81 48.1L81 53.7L70 53.7Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 31.4L333.1 31.4L329.1 43.6L314.1 43.6Z"/>
+<path d="M87 30.6L88.6 30.6L88.6 41.6L87 41.6Z"/></g></svg></div></span><span class="lu-n">AIDAnova</span></a><a class="lu" href="/ships/aidacosma" style="flex:337 1 0"><span class="lu-s"><div class="silbox" title="Length overall 337 m — drawn at 85% of the longest hull ever floated"><svg viewBox="0 25 480 108" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 85%);color:#9B72C4;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 115L468 103L56 100L20 97.5L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 74.9L62.3 72.3L63.3 69.9L64.9 67.8L67 66.2L69.4 65.2L72 64.9L444 64.9L444 103L62 103Z"/>
+<path d="M77 50.6L77.3 48.2L78.2 46.1L79.6 44.2L81.5 42.8L83.7 41.9L86 41.6L436 41.6L436 65.9L77 65.9Z"/>
+<path d="M70 48.1L81 48.1L81 53.7L70 53.7Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 31.4L333.1 31.4L329.1 43.6L314.1 43.6Z"/>
+<path d="M87 30.6L88.6 30.6L88.6 41.6L87 41.6Z"/></g></svg></div></span><span class="lu-n">AIDAcosma</span></a><a class="lu" href="/ships/carnival-jubilee" style="flex:344.5 1 0"><span class="lu-s"><div class="silbox" title="Length overall 344.5 m — drawn at 86% of the longest hull ever floated"><svg viewBox="0 22 480 111" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 86%);color:#F1948A;--sil-funnel:#E11B22">
 <g fill="currentColor"><path d="M464 130L470 115.1L468 103.3L56 100.4L20 98L16 115.8L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
 <path d="M62 74.4L62.3 71.8L63.3 69.4L64.9 67.3L67 65.7L69.4 64.7L72 64.4L444 64.4L444 103.3L62 103.3Z"/>
 <path d="M78 49.6L78.3 47.2L79.2 45.1L80.6 43.2L82.5 41.8L84.7 40.9L87 40.6L436 40.6L436 65.4L78 65.4Z"/>
 <path d="M71 47.2L82 47.2L82 53L71 53Z"/>
-<path d="M304 27.9L319 27.9L315 42.6L300 42.6Z"/>
-<path d="M88 29.9L89.6 29.9L89.6 40.6L88 40.6Z"/></g></svg></div></span><span class="lu-n">Carnival Jubilee</span></a><a class="lu" href="/ships/star-princess" style="flex:345 1 0"><span class="lu-s"><div class="silbox" title="Length overall 345 m — drawn at 86% of the longest hull ever floated"><svg viewBox="0 27 480 106" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 86%);color:#B39DDB">
+<path fill="var(--sil-funnel,inherit)" d="M304 27.9L319 27.9L315 42.6L300 42.6Z"/>
+<path d="M88 29.9L89.6 29.9L89.6 40.6L88 40.6Z"/></g></svg></div></span><span class="lu-n">Carnival Jubilee</span></a><a class="lu" href="/ships/carnival-celebration" style="flex:344.5 1 0"><span class="lu-s"><div class="silbox" title="Length overall 344.5 m — drawn at 86% of the longest hull ever floated"><svg viewBox="0 22 480 111" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 86%);color:#F1948A;--sil-funnel:#E11B22">
+<g fill="currentColor"><path d="M464 130L470 115.1L468 103.3L56 100.4L20 98L16 115.8L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 74.4L62.3 71.8L63.3 69.4L64.9 67.3L67 65.7L69.4 64.7L72 64.4L444 64.4L444 103.3L62 103.3Z"/>
+<path d="M78 49.6L78.3 47.2L79.2 45.1L80.6 43.2L82.5 41.8L84.7 40.9L87 40.6L436 40.6L436 65.4L78 65.4Z"/>
+<path d="M71 47.2L82 47.2L82 53L71 53Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M304 27.9L319 27.9L315 42.6L300 42.6Z"/>
+<path d="M88 29.9L89.6 29.9L89.6 40.6L88 40.6Z"/></g></svg></div></span><span class="lu-n">Carnival Celebration</span></a><a class="lu" href="/ships/mardi-gras" style="flex:344.5 1 0"><span class="lu-s"><div class="silbox" title="Length overall 344.5 m — drawn at 86% of the longest hull ever floated"><svg viewBox="0 22 480 111" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 86%);color:#F1948A;--sil-funnel:#E11B22">
+<g fill="currentColor"><path d="M464 130L470 115.1L468 103.3L56 100.4L20 98L16 115.8L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 74.4L62.3 71.8L63.3 69.4L64.9 67.3L67 65.7L69.4 64.7L72 64.4L444 64.4L444 103.3L62 103.3Z"/>
+<path d="M78 49.6L78.3 47.2L79.2 45.1L80.6 43.2L82.5 41.8L84.7 40.9L87 40.6L436 40.6L436 65.4L78 65.4Z"/>
+<path d="M71 47.2L82 47.2L82 53L71 53Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M304 27.9L319 27.9L315 42.6L300 42.6Z"/>
+<path d="M88 29.9L89.6 29.9L89.6 40.6L88 40.6Z"/></g></svg></div></span><span class="lu-n">Mardi Gras</span></a><a class="lu" href="/ships/msc-virtuosa" style="flex:331.43 1 0"><span class="lu-s"><div class="silbox" title="Length overall 331.43 m — drawn at 85% of the longest hull ever floated"><svg viewBox="0 20 480 113" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 85%);color:#7FB3D5;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.9L468 102.7L56 99.7L20 97.2L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 73.1L62.3 70.6L63.3 68.1L64.9 66.1L67 64.5L69.4 63.5L72 63.1L444 63.1L444 102.7L62 102.7Z"/>
+<path d="M78 47.9L78.3 45.6L79.2 43.4L80.6 41.5L82.5 40.1L84.7 39.2L87 38.9L436 38.9L436 64.1L78 64.1Z"/>
+<path d="M71 45.7L82 45.7L82 51.5L71 51.5Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 25.8L333.1 25.8L329.1 40.9L314.1 40.9Z"/>
+<path d="M88 27.8L89.6 27.8L89.6 38.9L88 38.9Z"/></g></svg></div></span><span class="lu-n">MSC Virtuosa</span></a><a class="lu" href="/ships/msc-grandiosa" style="flex:331.43 1 0"><span class="lu-s"><div class="silbox" title="Length overall 331.43 m — drawn at 85% of the longest hull ever floated"><svg viewBox="0 20 480 113" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 85%);color:#7FB3D5;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.9L468 102.7L56 99.7L20 97.2L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 73.1L62.3 70.6L63.3 68.1L64.9 66.1L67 64.5L69.4 63.5L72 63.1L444 63.1L444 102.7L62 102.7Z"/>
+<path d="M78 47.9L78.3 45.6L79.2 43.4L80.6 41.5L82.5 40.1L84.7 39.2L87 38.9L436 38.9L436 64.1L78 64.1Z"/>
+<path d="M71 45.7L82 45.7L82 51.5L71 51.5Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 25.8L333.1 25.8L329.1 40.9L314.1 40.9Z"/>
+<path d="M88 27.8L89.6 27.8L89.6 38.9L88 38.9Z"/></g></svg></div></span><span class="lu-n">MSC Grandiosa</span></a><a class="lu" href="/ships/star-princess" style="flex:345 1 0"><span class="lu-s"><div class="silbox" title="Length overall 345 m — drawn at 86% of the longest hull ever floated"><svg viewBox="0 27 480 106" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 86%);color:#B39DDB;--sil-funnel:#CBD5E0">
 <g fill="currentColor"><path d="M464 130L470 115.1L468 103.3L56 100.4L20 98L16 115.8L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
 <path d="M62 76.1L62.3 73.5L63.3 71.1L64.9 69.1L67 67.5L69.4 66.5L72 66.1L444 66.1L444 103.3L62 103.3Z"/>
 <path d="M84 52.3L84.3 50L85.2 47.8L86.6 46L88.5 44.5L90.7 43.6L93 43.3L436 43.3L436 67.1L84 67.1Z"/>
 <path d="M77 49.7L88 49.7L88 55.2L77 55.2Z"/>
-<path d="M318.1 33.3L333.1 33.3L329.1 45.3L314.1 45.3Z"/>
-<path d="M94 32.7L95.6 32.7L95.6 43.3L94 43.3Z"/></g></svg></div></span><span class="lu-n">Star Princess</span></a><a class="lu" href="/ships/norwegian-aqua" style="flex:322 1 0"><span class="lu-s"><div class="silbox" title="Length overall 322 m — drawn at 84% of the longest hull ever floated"><svg viewBox="0 23 480 110" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 84%);color:#85C1C9">
+<path fill="var(--sil-funnel,inherit)" d="M318.1 33.3L333.1 33.3L329.1 45.3L314.1 45.3Z"/>
+<path d="M94 32.7L95.6 32.7L95.6 43.3L94 43.3Z"/></g></svg></div></span><span class="lu-n">Star Princess</span></a><a class="lu" href="/ships/sun-princess" style="flex:345.3 1 0"><span class="lu-s"><div class="silbox" title="Length overall 345.3 m — drawn at 86% of the longest hull ever floated"><svg viewBox="0 27 480 106" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 86%);color:#B39DDB;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 115.1L468 103.3L56 100.4L20 98L16 115.8L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 76.2L62.3 73.6L63.3 71.2L64.9 69.1L67 67.5L69.4 66.5L72 66.2L444 66.2L444 103.3L62 103.3Z"/>
+<path d="M84 52.4L84.3 50.1L85.2 47.9L86.6 46L88.5 44.6L90.7 43.7L93 43.4L436 43.4L436 67.2L84 67.2Z"/>
+<path d="M77 49.8L88 49.8L88 55.2L77 55.2Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 33.4L333.1 33.4L329.1 45.4L314.1 45.4Z"/>
+<path d="M94 32.7L95.6 32.7L95.6 43.4L94 43.4Z"/></g></svg></div></span><span class="lu-n">Sun Princess</span></a><a class="lu" href="/ships/msc-meraviglia" style="flex:315.83 1 0"><span class="lu-s"><div class="silbox" title="Length overall 315.83 m — drawn at 83% of the longest hull ever floated"><svg viewBox="0 17 480 116" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 83%);color:#7FB3D5;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.8L468 102L56 98.8L20 96.2L16 115.6L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 71.3L62.3 68.8L63.3 66.3L64.9 64.3L67 62.7L69.4 61.7L72 61.3L444 61.3L444 102L62 102Z"/>
+<path d="M77 45.4L77.3 43.1L78.2 40.9L79.6 39.1L81.5 37.6L83.7 36.7L86 36.4L436 36.4L436 62.3L77 62.3Z"/>
+<path d="M70 43.4L81 43.4L81 49.4L70 49.4Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 22.8L333.1 22.8L329.1 38.4L314.1 38.4Z"/>
+<path d="M87 24.8L88.6 24.8L88.6 36.4L87 36.4Z"/></g></svg></div></span><span class="lu-n">MSC Meraviglia</span></a><a class="lu" href="/ships/msc-bellissima" style="flex:315.83 1 0"><span class="lu-s"><div class="silbox" title="Length overall 315.83 m — drawn at 83% of the longest hull ever floated"><svg viewBox="0 17 480 116" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 83%);color:#7FB3D5;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.8L468 102L56 98.8L20 96.2L16 115.6L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 71.3L62.3 68.8L63.3 66.3L64.9 64.3L67 62.7L69.4 61.7L72 61.3L444 61.3L444 102L62 102Z"/>
+<path d="M77 45.4L77.3 43.1L78.2 40.9L79.6 39.1L81.5 37.6L83.7 36.7L86 36.4L436 36.4L436 62.3L77 62.3Z"/>
+<path d="M70 43.4L81 43.4L81 49.4L70 49.4Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 22.8L333.1 22.8L329.1 38.4L314.1 38.4Z"/>
+<path d="M87 24.8L88.6 24.8L88.6 36.4L87 36.4Z"/></g></svg></div></span><span class="lu-n">MSC Bellissima</span></a><a class="lu" href="/ships/msc-seascape" style="flex:339 1 0"><span class="lu-s"><div class="silbox" title="Length overall 339 m — drawn at 85% of the longest hull ever floated"><svg viewBox="0 26 480 107" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 85%);color:#7FB3D5;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 115L468 103.1L56 100.1L20 97.6L16 115.8L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 76.9L62.3 74.3L63.3 71.9L64.9 69.8L67 68.2L69.4 67.2L72 66.9L444 66.9L444 103.1L62 103.1Z"/>
+<path d="M81 53.7L81.3 51.4L82.2 49.2L83.6 47.4L85.5 45.9L87.7 45L90 44.7L436 44.7L436 67.9L81 67.9Z"/>
+<path d="M74 50.9L85 50.9L85 56.3L74 56.3Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 31.9L333.1 31.9L329.1 46.7L314.1 46.7Z"/>
+<path d="M91 33.9L92.6 33.9L92.6 44.7L91 44.7Z"/></g></svg></div></span><span class="lu-n">MSC Seascape</span></a><a class="lu" href="/ships/msc-seashore" style="flex:339 1 0"><span class="lu-s"><div class="silbox" title="Length overall 339 m — drawn at 85% of the longest hull ever floated"><svg viewBox="0 26 480 107" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 85%);color:#7FB3D5;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 115L468 103.1L56 100.1L20 97.6L16 115.8L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 76.9L62.3 74.3L63.3 71.9L64.9 69.8L67 68.2L69.4 67.2L72 66.9L444 66.9L444 103.1L62 103.1Z"/>
+<path d="M81 53.7L81.3 51.4L82.2 49.2L83.6 47.4L85.5 45.9L87.7 45L90 44.7L436 44.7L436 67.9L81 67.9Z"/>
+<path d="M74 50.9L85 50.9L85 56.3L74 56.3Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 31.9L333.1 31.9L329.1 46.7L314.1 46.7Z"/>
+<path d="M91 33.9L92.6 33.9L92.6 44.7L91 44.7Z"/></g></svg></div></span><span class="lu-n">MSC Seashore</span></a><a class="lu" href="/ships/norwegian-encore" style="flex:333.44 1 0"><span class="lu-s"><div class="silbox" title="Length overall 333.44 m — drawn at 85% of the longest hull ever floated"><svg viewBox="0 25 480 108" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 85%);color:#3D8FA6;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 115L468 102.8L56 99.8L20 97.3L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 76L62.3 73.5L63.3 71L64.9 69L67 67.4L69.4 66.4L72 66L444 66L444 102.8L62 102.8Z"/>
+<path d="M78 52.5L78.3 50.2L79.2 48L80.6 46.1L82.5 44.7L84.7 43.8L87 43.5L436 43.5L436 67L78 67Z"/>
+<path d="M71 49.8L82 49.8L82 55.2L71 55.2Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 30.5L333.1 30.5L329.1 45.5L314.1 45.5Z"/>
+<path d="M88 32.5L89.6 32.5L89.6 43.5L88 43.5Z"/></g></svg></div></span><span class="lu-n">Norwegian Encore</span></a><a class="lu" href="/ships/norwegian-bliss" style="flex:333.4 1 0"><span class="lu-s"><div class="silbox" title="Length overall 333.4 m — drawn at 85% of the longest hull ever floated"><svg viewBox="0 25 480 108" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 85%);color:#3D8FA6;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 115L468 102.8L56 99.8L20 97.3L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 76L62.3 73.5L63.3 71L64.9 69L67 67.4L69.4 66.4L72 66L444 66L444 102.8L62 102.8Z"/>
+<path d="M78 52.5L78.3 50.2L79.2 48L80.6 46.1L82.5 44.7L84.7 43.8L87 43.5L436 43.5L436 67L78 67Z"/>
+<path d="M71 49.8L82 49.8L82 55.2L71 55.2Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 30.5L333.1 30.5L329.1 45.5L314.1 45.5Z"/>
+<path d="M88 32.5L89.6 32.5L89.6 43.5L88 43.5Z"/></g></svg></div></span><span class="lu-n">Norwegian Bliss</span></a><a class="lu" href="/ships/norwegian-joy" style="flex:333.4 1 0"><span class="lu-s"><div class="silbox" title="Length overall 333.4 m — drawn at 85% of the longest hull ever floated"><svg viewBox="0 25 480 108" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 85%);color:#3D8FA6;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 115L468 102.8L56 99.8L20 97.3L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 76L62.3 73.5L63.3 71L64.9 69L67 67.4L69.4 66.4L72 66L444 66L444 102.8L62 102.8Z"/>
+<path d="M78 52.5L78.3 50.2L79.2 48L80.6 46.1L82.5 44.7L84.7 43.8L87 43.5L436 43.5L436 67L78 67Z"/>
+<path d="M71 49.8L82 49.8L82 55.2L71 55.2Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 30.5L333.1 30.5L329.1 45.5L314.1 45.5Z"/>
+<path d="M88 32.5L89.6 32.5L89.6 43.5L88 43.5Z"/></g></svg></div></span><span class="lu-n">Norwegian Joy</span></a><a class="lu" href="/ships/norwegian-escape" style="flex:325.9 1 0"><span class="lu-s"><div class="silbox" title="Length overall 325.9 m — drawn at 84% of the longest hull ever floated"><svg viewBox="0 24 480 109" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 84%);color:#3D8FA6;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.9L468 102.5L56 99.4L20 96.8L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 75.7L62.3 73.1L63.3 70.7L64.9 68.6L67 67.1L69.4 66.1L72 65.7L444 65.7L444 102.5L62 102.5Z"/>
+<path d="M78 52.2L78.3 49.9L79.2 47.7L80.6 45.8L82.5 44.4L84.7 43.5L87 43.2L436 43.2L436 66.7L78 66.7Z"/>
+<path d="M71 49.5L82 49.5L82 54.9L71 54.9Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 29.9L333.1 29.9L329.1 45.2L314.1 45.2Z"/>
+<path d="M88 31.9L89.6 31.9L89.6 43.2L88 43.2Z"/></g></svg></div></span><span class="lu-n">Norwegian Escape</span></a><a class="lu" href="/ships/norwegian-aqua" style="flex:322 1 0"><span class="lu-s"><div class="silbox" title="Length overall 322 m — drawn at 84% of the longest hull ever floated"><svg viewBox="0 23 480 110" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 84%);color:#3D8FA6;--sil-funnel:#CBD5E0">
 <g fill="currentColor"><path d="M464 130L470 114.9L468 102.3L56 99.1L20 96.6L16 115.6L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
 <path d="M62 73.3L62.3 70.7L63.3 68.3L64.9 66.2L67 64.7L69.4 63.7L72 63.3L444 63.3L444 102.3L62 102.3Z"/>
 <path d="M76 48.4L76.3 46.1L77.2 43.9L78.6 42.1L80.5 40.6L82.7 39.7L85 39.4L436 39.4L436 64.3L76 64.3Z"/>
 <path d="M69 46.1L80 46.1L80 51.8L69 51.8Z"/>
-<path d="M318.1 28.9L333.1 28.9L329.1 41.4L314.1 41.4Z"/>
-<path d="M86 28L87.6 28L87.6 39.4L86 39.4Z"/></g></svg></div></span><span class="lu-n">Norwegian Aqua</span></a><a class="lu" href="/ships/disney-wish" style="flex:341.1 1 0"><span class="lu-s"><div class="silbox" title="Length overall 341.1 m — drawn at 86% of the longest hull ever floated"><svg viewBox="0 27 480 106" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 86%);color:#F8A5C2">
+<path fill="var(--sil-funnel,inherit)" d="M318.1 28.9L333.1 28.9L329.1 41.4L314.1 41.4Z"/>
+<path d="M86 28L87.6 28L87.6 39.4L86 39.4Z"/></g></svg></div></span><span class="lu-n">Norwegian Aqua</span></a><a class="lu" href="/ships/norwegian-luna" style="flex:322 1 0"><span class="lu-s"><div class="silbox" title="Length overall 322 m — drawn at 84% of the longest hull ever floated"><svg viewBox="0 23 480 110" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 84%);color:#3D8FA6;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.9L468 102.3L56 99.1L20 96.6L16 115.6L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 73.3L62.3 70.7L63.3 68.3L64.9 66.2L67 64.7L69.4 63.7L72 63.3L444 63.3L444 102.3L62 102.3Z"/>
+<path d="M76 48.4L76.3 46.1L77.2 43.9L78.6 42.1L80.5 40.6L82.7 39.7L85 39.4L436 39.4L436 64.3L76 64.3Z"/>
+<path d="M69 46.1L80 46.1L80 51.8L69 51.8Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 28.9L333.1 28.9L329.1 41.4L314.1 41.4Z"/>
+<path d="M86 28L87.6 28L87.6 39.4L86 39.4Z"/></g></svg></div></span><span class="lu-n">Norwegian Luna</span></a><a class="lu" href="/ships/norwegian-epic" style="flex:329.4 1 0"><span class="lu-s"><div class="silbox" title="Length overall 329.4 m — drawn at 84% of the longest hull ever floated"><svg viewBox="0 23 480 110" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 84%);color:#3D8FA6;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.9L468 102.6L56 99.6L20 97.1L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 74.5L62.3 72L63.3 69.5L64.9 67.5L67 65.9L69.4 64.9L72 64.5L444 64.5L444 102.6L62 102.6Z"/>
+<path d="M80 50.2L80.3 47.9L81.2 45.7L82.6 43.8L84.5 42.4L86.7 41.5L89 41.2L436 41.2L436 65.5L80 65.5Z"/>
+<path d="M73 47.7L84 47.7L84 53.3L73 53.3Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 28L333.1 28L329.1 43.2L314.1 43.2Z"/>
+<path d="M90 30L91.6 30L91.6 41.2L90 41.2Z"/></g></svg></div></span><span class="lu-n">Norwegian Epic</span></a><a class="lu" href="/ships/msc-seaview" style="flex:323 1 0"><span class="lu-s"><div class="silbox" title="Length overall 323 m — drawn at 84% of the longest hull ever floated"><svg viewBox="0 25 480 108" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 84%);color:#7FB3D5;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.9L468 102.3L56 99.2L20 96.6L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 76.1L62.3 73.5L63.3 71.1L64.9 69.1L67 67.5L69.4 66.5L72 66.1L444 66.1L444 102.3L62 102.3Z"/>
+<path d="M80 52.9L80.3 50.6L81.2 48.4L82.6 46.6L84.5 45.2L86.7 44.3L89 43.9L436 43.9L436 67.1L80 67.1Z"/>
+<path d="M73 50.2L84 50.2L84 55.5L73 55.5Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 30.6L333.1 30.6L329.1 45.9L314.1 45.9Z"/>
+<path d="M90 32.6L91.6 32.6L91.6 43.9L90 43.9Z"/></g></svg></div></span><span class="lu-n">MSC Seaview</span></a><a class="lu" href="/ships/msc-seaside" style="flex:323 1 0"><span class="lu-s"><div class="silbox" title="Length overall 323 m — drawn at 84% of the longest hull ever floated"><svg viewBox="0 25 480 108" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 84%);color:#7FB3D5;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.9L468 102.3L56 99.2L20 96.6L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 76.1L62.3 73.5L63.3 71.1L64.9 69.1L67 67.5L69.4 66.5L72 66.1L444 66.1L444 102.3L62 102.3Z"/>
+<path d="M80 52.9L80.3 50.6L81.2 48.4L82.6 46.6L84.5 45.2L86.7 44.3L89 43.9L436 43.9L436 67.1L80 67.1Z"/>
+<path d="M73 50.2L84 50.2L84 55.5L73 55.5Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 30.6L333.1 30.6L329.1 45.9L314.1 45.9Z"/>
+<path d="M90 32.6L91.6 32.6L91.6 43.9L90 43.9Z"/></g></svg></div></span><span class="lu-n">MSC Seaside</span></a><a class="lu" href="/ships/norwegian-getaway" style="flex:324 1 0"><span class="lu-s"><div class="silbox" title="Length overall 324 m — drawn at 84% of the longest hull ever floated"><svg viewBox="0 25 480 108" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 84%);color:#3D8FA6;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.9L468 102.4L56 99.3L20 96.7L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 76.3L62.3 73.7L63.3 71.3L64.9 69.2L67 67.6L69.4 66.6L72 66.3L444 66.3L444 102.4L62 102.4Z"/>
+<path d="M77 53.2L77.3 50.8L78.2 48.7L79.6 46.8L81.5 45.4L83.7 44.5L86 44.2L436 44.2L436 67.3L77 67.3Z"/>
+<path d="M70 50.4L81 50.4L81 55.7L70 55.7Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 30.8L333.1 30.8L329.1 46.2L314.1 46.2Z"/>
+<path d="M87 32.8L88.6 32.8L88.6 44.2L87 44.2Z"/></g></svg></div></span><span class="lu-n">Norwegian Getaway</span></a><a class="lu" href="/ships/norwegian-breakaway" style="flex:324 1 0"><span class="lu-s"><div class="silbox" title="Length overall 324 m — drawn at 84% of the longest hull ever floated"><svg viewBox="0 25 480 108" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 84%);color:#3D8FA6;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.9L468 102.4L56 99.3L20 96.7L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 76.3L62.3 73.7L63.3 71.3L64.9 69.2L67 67.6L69.4 66.6L72 66.3L444 66.3L444 102.4L62 102.4Z"/>
+<path d="M77 53.2L77.3 50.8L78.2 48.7L79.6 46.8L81.5 45.4L83.7 44.5L86 44.2L436 44.2L436 67.3L77 67.3Z"/>
+<path d="M70 50.4L81 50.4L81 55.7L70 55.7Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 30.8L333.1 30.8L329.1 46.2L314.1 46.2Z"/>
+<path d="M87 32.8L88.6 32.8L88.6 44.2L87 44.2Z"/></g></svg></div></span><span class="lu-n">Norwegian Breakaway</span></a><a class="lu" href="/ships/discovery-princess" style="flex:330 1 0"><span class="lu-s"><div class="silbox" title="Length overall 330 m — drawn at 84% of the longest hull ever floated"><svg viewBox="0 28 480 105" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 84%);color:#B39DDB;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.9L468 102.7L56 99.6L20 97.1L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 77.2L62.3 74.6L63.3 72.2L64.9 70.2L67 68.6L69.4 67.6L72 67.2L444 67.2L444 102.7L62 102.7Z"/>
+<path d="M80 54.5L80.3 52.2L81.2 50L82.6 48.2L84.5 46.7L86.7 45.8L89 45.5L436 45.5L436 68.2L80 68.2Z"/>
+<path d="M73 51.6L84 51.6L84 56.8L73 56.8Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 33.8L333.1 33.8L329.1 47.5L314.1 47.5Z"/>
+<path d="M90 34.4L91.6 34.4L91.6 45.5L90 45.5Z"/></g></svg></div></span><span class="lu-n">Discovery Princess</span></a><a class="lu" href="/ships/enchanted-princess" style="flex:330 1 0"><span class="lu-s"><div class="silbox" title="Length overall 330 m — drawn at 84% of the longest hull ever floated"><svg viewBox="0 28 480 105" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 84%);color:#B39DDB;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.9L468 102.7L56 99.6L20 97.1L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 77.2L62.3 74.6L63.3 72.2L64.9 70.2L67 68.6L69.4 67.6L72 67.2L444 67.2L444 102.7L62 102.7Z"/>
+<path d="M80 54.5L80.3 52.2L81.2 50L82.6 48.2L84.5 46.7L86.7 45.8L89 45.5L436 45.5L436 68.2L80 68.2Z"/>
+<path d="M73 51.6L84 51.6L84 56.8L73 56.8Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 33.8L333.1 33.8L329.1 47.5L314.1 47.5Z"/>
+<path d="M90 34.4L91.6 34.4L91.6 45.5L90 45.5Z"/></g></svg></div></span><span class="lu-n">Enchanted Princess</span></a><a class="lu" href="/ships/sky-princess" style="flex:330 1 0"><span class="lu-s"><div class="silbox" title="Length overall 330 m — drawn at 84% of the longest hull ever floated"><svg viewBox="0 28 480 105" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 84%);color:#B39DDB;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.9L468 102.7L56 99.6L20 97.1L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 77.2L62.3 74.6L63.3 72.2L64.9 70.2L67 68.6L69.4 67.6L72 67.2L444 67.2L444 102.7L62 102.7Z"/>
+<path d="M80 54.5L80.3 52.2L81.2 50L82.6 48.2L84.5 46.7L86.7 45.8L89 45.5L436 45.5L436 68.2L80 68.2Z"/>
+<path d="M73 51.6L84 51.6L84 56.8L73 56.8Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 33.8L333.1 33.8L329.1 47.5L314.1 47.5Z"/>
+<path d="M90 34.4L91.6 34.4L91.6 45.5L90 45.5Z"/></g></svg></div></span><span class="lu-n">Sky Princess</span></a><a class="lu" href="/ships/disney-wish" style="flex:341.1 1 0"><span class="lu-s"><div class="silbox" title="Length overall 341.1 m — drawn at 86% of the longest hull ever floated"><svg viewBox="0 27 480 106" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 86%);color:#F8A5C2;--sil-funnel:#D8232A">
 <g fill="currentColor"><path d="M464 130L470 115L468 103.2L56 100.2L20 97.8L16 115.8L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
 <path d="M62 78L62.3 75.5L63.3 73L64.9 71L67 69.4L69.4 68.4L72 68L444 68L444 103.2L62 103.2Z"/>
 <path d="M80 55.5L80.3 53.2L81.2 51L82.6 49.2L84.5 47.7L86.7 46.8L89 46.5L436 46.5L436 69L80 69Z"/>
 <path d="M73 52.6L84 52.6L84 57.7L73 57.7Z"/>
-<path d="M318.1 32.4L333.1 32.4L329.1 48.5L314.1 48.5Z"/>
-<path d="M344.1 32.4L359.1 32.4L355.1 48.5L340.1 48.5Z"/>
-<path d="M90 35.7L91.6 35.7L91.6 46.5L90 46.5Z"/></g></svg></div></span><span class="lu-n">Disney Wish</span></a><a class="lu" href="/ships/celebrity-xcel" style="flex:326.4 1 0"><span class="lu-s"><div class="silbox" title="Length overall 326.4 m — drawn at 84% of the longest hull ever floated"><svg viewBox="0 28 480 105" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 84%);color:#82C7A5">
+<path fill="var(--sil-funnel,inherit)" d="M318.1 32.4L333.1 32.4L329.1 48.5L314.1 48.5Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M344.1 32.4L359.1 32.4L355.1 48.5L340.1 48.5Z"/>
+<path d="M90 35.7L91.6 35.7L91.6 46.5L90 46.5Z"/></g></svg></div></span><span class="lu-n">Disney Wish</span></a><a class="lu" href="/ships/disney-destiny" style="flex:341.1 1 0"><span class="lu-s"><div class="silbox" title="Length overall 341.1 m — drawn at 86% of the longest hull ever floated"><svg viewBox="0 27 480 106" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 86%);color:#F8A5C2;--sil-funnel:#D8232A">
+<g fill="currentColor"><path d="M464 130L470 115L468 103.2L56 100.2L20 97.8L16 115.8L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 78L62.3 75.5L63.3 73L64.9 71L67 69.4L69.4 68.4L72 68L444 68L444 103.2L62 103.2Z"/>
+<path d="M80 55.5L80.3 53.2L81.2 51L82.6 49.2L84.5 47.7L86.7 46.8L89 46.5L436 46.5L436 69L80 69Z"/>
+<path d="M73 52.6L84 52.6L84 57.7L73 57.7Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 32.4L333.1 32.4L329.1 48.5L314.1 48.5Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M344.1 32.4L359.1 32.4L355.1 48.5L340.1 48.5Z"/>
+<path d="M90 35.7L91.6 35.7L91.6 46.5L90 46.5Z"/></g></svg></div></span><span class="lu-n">Disney Destiny</span></a><a class="lu" href="/ships/disney-treasure" style="flex:341.1 1 0"><span class="lu-s"><div class="silbox" title="Length overall 341.1 m — drawn at 86% of the longest hull ever floated"><svg viewBox="0 27 480 106" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 86%);color:#F8A5C2;--sil-funnel:#D8232A">
+<g fill="currentColor"><path d="M464 130L470 115L468 103.2L56 100.2L20 97.8L16 115.8L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 78L62.3 75.5L63.3 73L64.9 71L67 69.4L69.4 68.4L72 68L444 68L444 103.2L62 103.2Z"/>
+<path d="M80 55.5L80.3 53.2L81.2 51L82.6 49.2L84.5 47.7L86.7 46.8L89 46.5L436 46.5L436 69L80 69Z"/>
+<path d="M73 52.6L84 52.6L84 57.7L73 57.7Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 32.4L333.1 32.4L329.1 48.5L314.1 48.5Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M344.1 32.4L359.1 32.4L355.1 48.5L340.1 48.5Z"/>
+<path d="M90 35.7L91.6 35.7L91.6 46.5L90 46.5Z"/></g></svg></div></span><span class="lu-n">Disney Treasure</span></a><a class="lu" href="/ships/britannia" style="flex:330 1 0"><span class="lu-s"><div class="silbox" title="Length overall 330 m — drawn at 84% of the longest hull ever floated"><svg viewBox="0 28 480 105" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 84%);color:#A9CCE3;--sil-funnel:#1B5FA8">
+<g fill="currentColor"><path d="M464 130L470 114.9L468 102.7L56 99.6L20 97.1L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 77.2L62.3 74.6L63.3 72.2L64.9 70.2L67 68.6L69.4 67.6L72 67.2L444 67.2L444 102.7L62 102.7Z"/>
+<path d="M80 54.5L80.3 52.2L81.2 50L82.6 48.2L84.5 46.7L86.7 45.8L89 45.5L436 45.5L436 68.2L80 68.2Z"/>
+<path d="M73 51.6L84 51.6L84 56.8L73 56.8Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 33.8L333.1 33.8L329.1 47.5L314.1 47.5Z"/>
+<path d="M90 34.4L91.6 34.4L91.6 45.5L90 45.5Z"/></g></svg></div></span><span class="lu-n">Britannia</span></a><a class="lu" href="/ships/majestic-princess" style="flex:330 1 0"><span class="lu-s"><div class="silbox" title="Length overall 330 m — drawn at 84% of the longest hull ever floated"><svg viewBox="0 28 480 105" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 84%);color:#B39DDB;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.9L468 102.7L56 99.6L20 97.1L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 77.2L62.3 74.6L63.3 72.2L64.9 70.2L67 68.6L69.4 67.6L72 67.2L444 67.2L444 102.7L62 102.7Z"/>
+<path d="M80 54.5L80.3 52.2L81.2 50L82.6 48.2L84.5 46.7L86.7 45.8L89 45.5L436 45.5L436 68.2L80 68.2Z"/>
+<path d="M73 51.6L84 51.6L84 56.8L73 56.8Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 33.8L333.1 33.8L329.1 47.5L314.1 47.5Z"/>
+<path d="M90 34.4L91.6 34.4L91.6 45.5L90 45.5Z"/></g></svg></div></span><span class="lu-n">Majestic Princess</span></a><a class="lu" href="/ships/regal-princess" style="flex:330 1 0"><span class="lu-s"><div class="silbox" title="Length overall 330 m — drawn at 84% of the longest hull ever floated"><svg viewBox="0 28 480 105" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 84%);color:#B39DDB;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.9L468 102.7L56 99.6L20 97.1L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 77.2L62.3 74.6L63.3 72.2L64.9 70.2L67 68.6L69.4 67.6L72 67.2L444 67.2L444 102.7L62 102.7Z"/>
+<path d="M80 54.5L80.3 52.2L81.2 50L82.6 48.2L84.5 46.7L86.7 45.8L89 45.5L436 45.5L436 68.2L80 68.2Z"/>
+<path d="M73 51.6L84 51.6L84 56.8L73 56.8Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 33.8L333.1 33.8L329.1 47.5L314.1 47.5Z"/>
+<path d="M90 34.4L91.6 34.4L91.6 45.5L90 45.5Z"/></g></svg></div></span><span class="lu-n">Regal Princess</span></a><a class="lu" href="/ships/royal-princess" style="flex:330 1 0"><span class="lu-s"><div class="silbox" title="Length overall 330 m — drawn at 84% of the longest hull ever floated"><svg viewBox="0 28 480 105" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 84%);color:#B39DDB;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.9L468 102.7L56 99.6L20 97.1L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 77.2L62.3 74.6L63.3 72.2L64.9 70.2L67 68.6L69.4 67.6L72 67.2L444 67.2L444 102.7L62 102.7Z"/>
+<path d="M80 54.5L80.3 52.2L81.2 50L82.6 48.2L84.5 46.7L86.7 45.8L89 45.5L436 45.5L436 68.2L80 68.2Z"/>
+<path d="M73 51.6L84 51.6L84 56.8L73 56.8Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 33.8L333.1 33.8L329.1 47.5L314.1 47.5Z"/>
+<path d="M90 34.4L91.6 34.4L91.6 45.5L90 45.5Z"/></g></svg></div></span><span class="lu-n">Royal Princess</span></a><a class="lu" href="/ships/norwegian-viva" style="flex:294 1 0"><span class="lu-s"><div class="silbox" title="Length overall 294 m — drawn at 81% of the longest hull ever floated"><svg viewBox="0 20 480 113" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 81%);color:#3D8FA6;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.6L468 100.8L56 97.3L20 94.5L16 115.4L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 73L62.3 70.4L63.3 68L64.9 65.9L67 64.3L69.4 63.3L72 63L444 63L444 100.8L62 100.8Z"/>
+<path d="M75 48.8L75.3 46.4L76.2 44.3L77.6 42.4L79.5 41L81.7 40.1L84 39.8L436 39.8L436 64L75 64Z"/>
+<path d="M68 46.3L79 46.3L79 51.8L68 51.8Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 25.3L333.1 25.3L329.1 41.8L314.1 41.8Z"/>
+<path d="M85 27.3L86.6 27.3L86.6 39.8L85 39.8Z"/></g></svg></div></span><span class="lu-n">Norwegian Viva</span></a><a class="lu" href="/ships/norwegian-prima" style="flex:294 1 0"><span class="lu-s"><div class="silbox" title="Length overall 294 m — drawn at 81% of the longest hull ever floated"><svg viewBox="0 20 480 113" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 81%);color:#3D8FA6;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.6L468 100.8L56 97.3L20 94.5L16 115.4L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 73L62.3 70.4L63.3 68L64.9 65.9L67 64.3L69.4 63.3L72 63L444 63L444 100.8L62 100.8Z"/>
+<path d="M75 48.8L75.3 46.4L76.2 44.3L77.6 42.4L79.5 41L81.7 40.1L84 39.8L436 39.8L436 64L75 64Z"/>
+<path d="M68 46.3L79 46.3L79 51.8L68 51.8Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 25.3L333.1 25.3L329.1 41.8L314.1 41.8Z"/>
+<path d="M85 27.3L86.6 27.3L86.6 39.8L85 39.8Z"/></g></svg></div></span><span class="lu-n">Norwegian Prima</span></a><a class="lu" href="/ships/celebrity-xcel" style="flex:326.4 1 0"><span class="lu-s"><div class="silbox" title="Length overall 326.4 m — drawn at 84% of the longest hull ever floated"><svg viewBox="0 28 480 105" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 84%);color:#82C7A5;--sil-funnel:#16263D">
 <g fill="currentColor"><path d="M464 130L470 114.9L468 102.5L56 99.4L20 96.9L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
 <path d="M62 76.7L62.3 74.1L63.3 71.7L64.9 69.6L67 68L69.4 67L72 66.7L444 66.7L444 102.5L62 102.5Z"/>
 <path d="M86 53.7L86.3 51.4L87.2 49.2L88.6 47.4L90.5 45.9L92.7 45L95 44.7L436 44.7L436 67.7L86 67.7Z"/>
 <path d="M79 50.9L90 50.9L90 56.1L79 56.1Z"/>
-<path d="M318.1 34.3L333.1 34.3L329.1 46.7L314.1 46.7Z"/>
-<path d="M96 33.4L97.6 33.4L97.6 44.7L96 44.7Z"/></g></svg></div></span><span class="lu-n">Celebrity Xcel</span></a><a class="lu" href="/ships/rotterdam" style="flex:299.8 1 0"><span class="lu-s"><div class="silbox" title="Length overall 299.8 m — drawn at 81% of the longest hull ever floated"><svg viewBox="0 28 480 105" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 81%);color:#7DCEA0">
+<path fill="var(--sil-funnel,inherit)" d="M318.1 34.3L333.1 34.3L329.1 46.7L314.1 46.7Z"/>
+<path d="M96 33.4L97.6 33.4L97.6 44.7L96 44.7Z"/></g></svg></div></span><span class="lu-n">Celebrity Xcel</span></a><a class="lu" href="/ships/celebrity-ascent" style="flex:327 1 0"><span class="lu-s"><div class="silbox" title="Length overall 327 m — drawn at 84% of the longest hull ever floated"><svg viewBox="0 28 480 105" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 84%);color:#82C7A5;--sil-funnel:#16263D">
+<g fill="currentColor"><path d="M464 130L470 114.9L468 102.5L56 99.4L20 96.9L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 76.8L62.3 74.2L63.3 71.8L64.9 69.7L67 68.1L69.4 67.1L72 66.8L444 66.8L444 102.5L62 102.5Z"/>
+<path d="M86 53.9L86.3 51.5L87.2 49.4L88.6 47.5L90.5 46.1L92.7 45.2L95 44.9L436 44.9L436 67.8L86 67.8Z"/>
+<path d="M79 51L90 51L90 56.2L79 56.2Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 34.4L333.1 34.4L329.1 46.9L314.1 46.9Z"/>
+<path d="M96 33.6L97.6 33.6L97.6 44.9L96 44.9Z"/></g></svg></div></span><span class="lu-n">Celebrity Ascent</span></a><a class="lu" href="/ships/celebrity-beyond" style="flex:327 1 0"><span class="lu-s"><div class="silbox" title="Length overall 327 m — drawn at 84% of the longest hull ever floated"><svg viewBox="0 28 480 105" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 84%);color:#82C7A5;--sil-funnel:#16263D">
+<g fill="currentColor"><path d="M464 130L470 114.9L468 102.5L56 99.4L20 96.9L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 76.8L62.3 74.2L63.3 71.8L64.9 69.7L67 68.1L69.4 67.1L72 66.8L444 66.8L444 102.5L62 102.5Z"/>
+<path d="M86 53.9L86.3 51.5L87.2 49.4L88.6 47.5L90.5 46.1L92.7 45.2L95 44.9L436 44.9L436 67.8L86 67.8Z"/>
+<path d="M79 51L90 51L90 56.2L79 56.2Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 34.4L333.1 34.4L329.1 46.9L314.1 46.9Z"/>
+<path d="M96 33.6L97.6 33.6L97.6 44.9L96 44.9Z"/></g></svg></div></span><span class="lu-n">Celebrity Beyond</span></a><a class="lu" href="/ships/carnival-vista" style="flex:323.6 1 0"><span class="lu-s"><div class="silbox" title="Length overall 323.6 m — drawn at 84% of the longest hull ever floated"><svg viewBox="0 25 480 108" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 84%);color:#F1948A;--sil-funnel:#E11B22">
+<g fill="currentColor"><path d="M464 130L470 114.9L468 102.4L56 99.2L20 96.7L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 76.2L62.3 73.6L63.3 71.2L64.9 69.2L67 67.6L69.4 66.6L72 66.2L444 66.2L444 102.4L62 102.4Z"/>
+<path d="M76 53.1L76.3 50.8L77.2 48.6L78.6 46.7L80.5 45.3L82.7 44.4L85 44.1L436 44.1L436 67.2L76 67.2Z"/>
+<path d="M69 50.3L80 50.3L80 55.6L69 55.6Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 30.7L333.1 30.7L329.1 46.1L314.1 46.1Z"/>
+<path d="M86 32.7L87.6 32.7L87.6 44.1L86 44.1Z"/></g></svg></div></span><span class="lu-n">Carnival Vista</span></a><a class="lu" href="/ships/carnival-horizon" style="flex:323.6 1 0"><span class="lu-s"><div class="silbox" title="Length overall 323.6 m — drawn at 84% of the longest hull ever floated"><svg viewBox="0 25 480 108" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 84%);color:#F1948A;--sil-funnel:#E11B22">
+<g fill="currentColor"><path d="M464 130L470 114.9L468 102.4L56 99.2L20 96.7L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 76.2L62.3 73.6L63.3 71.2L64.9 69.2L67 67.6L69.4 66.6L72 66.2L444 66.2L444 102.4L62 102.4Z"/>
+<path d="M76 53.1L76.3 50.8L77.2 48.6L78.6 46.7L80.5 45.3L82.7 44.4L85 44.1L436 44.1L436 67.2L76 67.2Z"/>
+<path d="M69 50.3L80 50.3L80 55.6L69 55.6Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 30.7L333.1 30.7L329.1 46.1L314.1 46.1Z"/>
+<path d="M86 32.7L87.6 32.7L87.6 44.1L86 44.1Z"/></g></svg></div></span><span class="lu-n">Carnival Horizon</span></a><a class="lu" href="/ships/carnival-panorama" style="flex:323.6 1 0"><span class="lu-s"><div class="silbox" title="Length overall 323.6 m — drawn at 84% of the longest hull ever floated"><svg viewBox="0 25 480 108" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 84%);color:#F1948A;--sil-funnel:#E11B22">
+<g fill="currentColor"><path d="M464 130L470 114.9L468 102.4L56 99.2L20 96.7L16 115.7L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 76.2L62.3 73.6L63.3 71.2L64.9 69.2L67 67.6L69.4 66.6L72 66.2L444 66.2L444 102.4L62 102.4Z"/>
+<path d="M76 53.1L76.3 50.8L77.2 48.6L78.6 46.7L80.5 45.3L82.7 44.4L85 44.1L436 44.1L436 67.2L76 67.2Z"/>
+<path d="M69 50.3L80 50.3L80 55.6L69 55.6Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 30.7L333.1 30.7L329.1 46.1L314.1 46.1Z"/>
+<path d="M86 32.7L87.6 32.7L87.6 44.1L86 44.1Z"/></g></svg></div></span><span class="lu-n">Carnival Panorama</span></a><a class="lu" href="/ships/costa-diadema" style="flex:306 1 0"><span class="lu-s"><div class="silbox" title="Length overall 306 m — drawn at 82% of the longest hull ever floated"><svg viewBox="0 28 480 105" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 82%);color:#1F5C9E;--sil-funnel:#F2C230">
+<g fill="currentColor"><path d="M464 130L470 114.7L468 101.5L56 98.2L20 95.5L16 115.5L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 77L62.3 74.4L63.3 72L64.9 69.9L67 68.3L69.4 67.3L72 67L444 67L444 101.5L62 101.5Z"/>
+<path d="M79 54.8L79.3 52.5L80.2 50.3L81.6 48.5L83.5 47L85.7 46.1L88 45.8L436 45.8L436 68L79 68Z"/>
+<path d="M72 51.8L83 51.8L83 56.8L72 56.8Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 33.3L333.1 33.3L329.1 47.8L314.1 47.8Z"/>
+<path d="M89 33.8L90.6 33.8L90.6 45.8L89 45.8Z"/></g></svg></div></span><span class="lu-n">Costa Diadema</span></a><a class="lu" href="/ships/celebrity-apex" style="flex:306 1 0"><span class="lu-s"><div class="silbox" title="Length overall 306 m — drawn at 82% of the longest hull ever floated"><svg viewBox="0 25 480 108" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 82%);color:#82C7A5;--sil-funnel:#16263D">
+<g fill="currentColor"><path d="M464 130L470 114.7L468 101.5L56 98.2L20 95.5L16 115.5L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 75.1L62.3 72.5L63.3 70.1L64.9 68L67 66.5L69.4 65.5L72 65.1L444 65.1L444 101.5L62 101.5Z"/>
+<path d="M84 51.8L84.3 49.5L85.2 47.3L86.6 45.5L88.5 44L90.7 43.1L93 42.8L436 42.8L436 66.1L84 66.1Z"/>
+<path d="M77 49.1L88 49.1L88 54.4L77 54.4Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 31.8L333.1 31.8L329.1 44.8L314.1 44.8Z"/>
+<path d="M94 30.8L95.6 30.8L95.6 42.8L94 42.8Z"/></g></svg></div></span><span class="lu-n">Celebrity Apex</span></a><a class="lu" href="/ships/celebrity-edge" style="flex:306 1 0"><span class="lu-s"><div class="silbox" title="Length overall 306 m — drawn at 82% of the longest hull ever floated"><svg viewBox="0 25 480 108" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 82%);color:#82C7A5;--sil-funnel:#16263D">
+<g fill="currentColor"><path d="M464 130L470 114.7L468 101.5L56 98.2L20 95.5L16 115.5L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 75.1L62.3 72.5L63.3 70.1L64.9 68L67 66.5L69.4 65.5L72 65.1L444 65.1L444 101.5L62 101.5Z"/>
+<path d="M84 51.8L84.3 49.5L85.2 47.3L86.6 45.5L88.5 44L90.7 43.1L93 42.8L436 42.8L436 66.1L84 66.1Z"/>
+<path d="M77 49.1L88 49.1L88 54.4L77 54.4Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 31.8L333.1 31.8L329.1 44.8L314.1 44.8Z"/>
+<path d="M94 30.8L95.6 30.8L95.6 42.8L94 42.8Z"/></g></svg></div></span><span class="lu-n">Celebrity Edge</span></a><a class="lu" href="/ships/disney-fantasy" style="flex:340 1 0"><span class="lu-s"><div class="silbox" title="Length overall 340 m — drawn at 85% of the longest hull ever floated"><svg viewBox="0 28 480 105" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 85%);color:#F8A5C2;--sil-funnel:#D8232A">
+<g fill="currentColor"><path d="M464 130L470 115L468 103.1L56 100.1L20 97.7L16 115.8L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 78.7L62.3 76.1L63.3 73.7L64.9 71.7L67 70.1L69.4 69.1L72 68.7L444 68.7L444 103.1L62 103.1Z"/>
+<path d="M78 56.6L78.3 54.3L79.2 52.1L80.6 50.3L82.5 48.9L84.7 48L87 47.6L436 47.6L436 69.7L78 69.7Z"/>
+<path d="M71 53.5L82 53.5L82 58.6L71 58.6Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 33.5L333.1 33.5L329.1 49.6L314.1 49.6Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M344.1 33.5L359.1 33.5L355.1 49.6L340.1 49.6Z"/>
+<path d="M88 36.8L89.6 36.8L89.6 47.6L88 47.6Z"/></g></svg></div></span><span class="lu-n">Disney Fantasy</span></a><a class="lu" href="/ships/disney-dream" style="flex:340 1 0"><span class="lu-s"><div class="silbox" title="Length overall 340 m — drawn at 85% of the longest hull ever floated"><svg viewBox="0 28 480 105" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 85%);color:#F8A5C2;--sil-funnel:#D8232A">
+<g fill="currentColor"><path d="M464 130L470 115L468 103.1L56 100.1L20 97.7L16 115.8L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 78.7L62.3 76.1L63.3 73.7L64.9 71.7L67 70.1L69.4 69.1L72 68.7L444 68.7L444 103.1L62 103.1Z"/>
+<path d="M78 56.6L78.3 54.3L79.2 52.1L80.6 50.3L82.5 48.9L84.7 48L87 47.6L436 47.6L436 69.7L78 69.7Z"/>
+<path d="M71 53.5L82 53.5L82 58.6L71 58.6Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 33.5L333.1 33.5L329.1 49.6L314.1 49.6Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M344.1 33.5L359.1 33.5L355.1 49.6L340.1 49.6Z"/>
+<path d="M88 36.8L89.6 36.8L89.6 47.6L88 47.6Z"/></g></svg></div></span><span class="lu-n">Disney Dream</span></a><a class="lu" href="/ships/carnival-dream" style="flex:306.02 1 0"><span class="lu-s"><div class="silbox" title="Length overall 306.02 m — drawn at 82% of the longest hull ever floated"><svg viewBox="0 23 480 110" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 82%);color:#F1948A;--sil-funnel:#E11B22">
+<g fill="currentColor"><path d="M464 130L470 114.7L468 101.5L56 98.2L20 95.5L16 115.5L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 75.1L62.3 72.5L63.3 70.1L64.9 68L67 66.5L69.4 65.5L72 65.1L444 65.1L444 101.5L62 101.5Z"/>
+<path d="M75 51.8L75.3 49.5L76.2 47.3L77.6 45.5L79.5 44L81.7 43.1L84 42.8L436 42.8L436 66.1L75 66.1Z"/>
+<path d="M68 49.1L79 49.1L79 54.4L68 54.4Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 28.8L333.1 28.8L329.1 44.8L314.1 44.8Z"/>
+<path d="M85 30.8L86.6 30.8L86.6 42.8L85 42.8Z"/></g></svg></div></span><span class="lu-n">Carnival Dream</span></a><a class="lu" href="/ships/carnival-magic" style="flex:306.02 1 0"><span class="lu-s"><div class="silbox" title="Length overall 306.02 m — drawn at 82% of the longest hull ever floated"><svg viewBox="0 23 480 110" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 82%);color:#F1948A;--sil-funnel:#E11B22">
+<g fill="currentColor"><path d="M464 130L470 114.7L468 101.5L56 98.2L20 95.5L16 115.5L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 75.1L62.3 72.5L63.3 70.1L64.9 68L67 66.5L69.4 65.5L72 65.1L444 65.1L444 101.5L62 101.5Z"/>
+<path d="M75 51.8L75.3 49.5L76.2 47.3L77.6 45.5L79.5 44L81.7 43.1L84 42.8L436 42.8L436 66.1L75 66.1Z"/>
+<path d="M68 49.1L79 49.1L79 54.4L68 54.4Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 28.8L333.1 28.8L329.1 44.8L314.1 44.8Z"/>
+<path d="M85 30.8L86.6 30.8L86.6 42.8L85 42.8Z"/></g></svg></div></span><span class="lu-n">Carnival Magic</span></a><a class="lu" href="/ships/carnival-breeze" style="flex:306.02 1 0"><span class="lu-s"><div class="silbox" title="Length overall 306.02 m — drawn at 82% of the longest hull ever floated"><svg viewBox="0 23 480 110" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 82%);color:#F1948A;--sil-funnel:#E11B22">
+<g fill="currentColor"><path d="M464 130L470 114.7L468 101.5L56 98.2L20 95.5L16 115.5L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 75.1L62.3 72.5L63.3 70.1L64.9 68L67 66.5L69.4 65.5L72 65.1L444 65.1L444 101.5L62 101.5Z"/>
+<path d="M75 51.8L75.3 49.5L76.2 47.3L77.6 45.5L79.5 44L81.7 43.1L84 42.8L436 42.8L436 66.1L75 66.1Z"/>
+<path d="M68 49.1L79 49.1L79 54.4L68 54.4Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 28.8L333.1 28.8L329.1 44.8L314.1 44.8Z"/>
+<path d="M85 30.8L86.6 30.8L86.6 42.8L85 42.8Z"/></g></svg></div></span><span class="lu-n">Carnival Breeze</span></a><a class="lu" href="/ships/celebrity-reflection" style="flex:319 1 0"><span class="lu-s"><div class="silbox" title="Length overall 319 m — drawn at 83% of the longest hull ever floated"><svg viewBox="0 30 480 103" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 83%);color:#82C7A5;--sil-funnel:#16263D">
+<g fill="currentColor"><path d="M464 130L470 114.8L468 102.1L56 99L20 96.4L16 115.6L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 78.2L62.3 75.6L63.3 73.2L64.9 71.1L67 69.5L69.4 68.5L72 68.2L444 68.2L444 102.1L62 102.1Z"/>
+<path d="M78 56.3L78.3 54L79.2 51.8L80.6 50L82.5 48.5L84.7 47.6L87 47.3L436 47.3L436 69.2L78 69.2Z"/>
+<path d="M71 53.2L82 53.2L82 58.2L71 58.2Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 35.2L333.1 35.2L329.1 49.3L314.1 49.3Z"/>
+<path d="M88 35.8L89.6 35.8L89.6 47.3L88 47.3Z"/></g></svg></div></span><span class="lu-n">Celebrity Reflection</span></a><a class="lu" href="/ships/aidaperla" style="flex:300 1 0"><span class="lu-s"><div class="silbox" title="Length overall 300 m — drawn at 81% of the longest hull ever floated"><svg viewBox="0 23 480 110" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 81%);color:#9B72C4;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.6L468 101.1L56 97.8L20 95L16 115.5L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 74.1L62.3 71.5L63.3 69.1L64.9 67L67 65.4L69.4 64.4L72 64.1L444 64.1L444 101.1L62 101.1Z"/>
+<path d="M80 50.3L80.3 48L81.2 45.8L82.6 44L84.5 42.5L86.7 41.6L89 41.3L436 41.3L436 65.1L80 65.1Z"/>
+<path d="M73 47.7L84 47.7L84 53.1L73 53.1Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 28.6L333.1 28.6L329.1 43.3L314.1 43.3Z"/>
+<path d="M90 29.1L91.6 29.1L91.6 41.3L90 41.3Z"/></g></svg></div></span><span class="lu-n">AIDAperla</span></a><a class="lu" href="/ships/aidaprima" style="flex:300 1 0"><span class="lu-s"><div class="silbox" title="Length overall 300 m — drawn at 81% of the longest hull ever floated"><svg viewBox="0 23 480 110" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 81%);color:#9B72C4;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.6L468 101.1L56 97.8L20 95L16 115.5L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 74.1L62.3 71.5L63.3 69.1L64.9 67L67 65.4L69.4 64.4L72 64.1L444 64.1L444 101.1L62 101.1Z"/>
+<path d="M80 50.3L80.3 48L81.2 45.8L82.6 44L84.5 42.5L86.7 41.6L89 41.3L436 41.3L436 65.1L80 65.1Z"/>
+<path d="M73 47.7L84 47.7L84 53.1L73 53.1Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 28.6L333.1 28.6L329.1 43.3L314.1 43.3Z"/>
+<path d="M90 29.1L91.6 29.1L91.6 41.3L90 41.3Z"/></g></svg></div></span><span class="lu-n">AIDAprima</span></a><a class="lu" href="/ships/celebrity-silhouette" style="flex:317.2 1 0"><span class="lu-s"><div class="silbox" title="Length overall 317.2 m — drawn at 83% of the longest hull ever floated"><svg viewBox="0 31 480 102" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 83%);color:#82C7A5;--sil-funnel:#16263D">
+<g fill="currentColor"><path d="M464 130L470 114.8L468 102L56 98.9L20 96.2L16 115.6L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 78.8L62.3 76.2L63.3 73.8L64.9 71.7L67 70.1L69.4 69.1L72 68.8L444 68.8L444 102L62 102Z"/>
+<path d="M77 57.4L77.3 55.1L78.2 52.9L79.6 51L81.5 49.6L83.7 48.7L86 48.4L436 48.4L436 69.8L77 69.8Z"/>
+<path d="M70 54.1L81 54.1L81 59L70 59Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 36.2L333.1 36.2L329.1 50.4L314.1 50.4Z"/>
+<path d="M87 36.8L88.6 36.8L88.6 48.4L87 48.4Z"/></g></svg></div></span><span class="lu-n">Celebrity Silhouette</span></a><a class="lu" href="/ships/celebrity-eclipse" style="flex:317.2 1 0"><span class="lu-s"><div class="silbox" title="Length overall 317.2 m — drawn at 83% of the longest hull ever floated"><svg viewBox="0 31 480 102" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 83%);color:#82C7A5;--sil-funnel:#16263D">
+<g fill="currentColor"><path d="M464 130L470 114.8L468 102L56 98.9L20 96.2L16 115.6L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 78.8L62.3 76.2L63.3 73.8L64.9 71.7L67 70.1L69.4 69.1L72 68.8L444 68.8L444 102L62 102Z"/>
+<path d="M77 57.4L77.3 55.1L78.2 52.9L79.6 51L81.5 49.6L83.7 48.7L86 48.4L436 48.4L436 69.8L77 69.8Z"/>
+<path d="M70 54.1L81 54.1L81 59L70 59Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 36.2L333.1 36.2L329.1 50.4L314.1 50.4Z"/>
+<path d="M87 36.8L88.6 36.8L88.6 48.4L87 48.4Z"/></g></svg></div></span><span class="lu-n">Celebrity Eclipse</span></a><a class="lu" href="/ships/celebrity-equinox" style="flex:317.2 1 0"><span class="lu-s"><div class="silbox" title="Length overall 317.2 m — drawn at 83% of the longest hull ever floated"><svg viewBox="0 31 480 102" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 83%);color:#82C7A5;--sil-funnel:#16263D">
+<g fill="currentColor"><path d="M464 130L470 114.8L468 102L56 98.9L20 96.2L16 115.6L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 78.8L62.3 76.2L63.3 73.8L64.9 71.7L67 70.1L69.4 69.1L72 68.8L444 68.8L444 102L62 102Z"/>
+<path d="M77 57.4L77.3 55.1L78.2 52.9L79.6 51L81.5 49.6L83.7 48.7L86 48.4L436 48.4L436 69.8L77 69.8Z"/>
+<path d="M70 54.1L81 54.1L81 59L70 59Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 36.2L333.1 36.2L329.1 50.4L314.1 50.4Z"/>
+<path d="M87 36.8L88.6 36.8L88.6 48.4L87 48.4Z"/></g></svg></div></span><span class="lu-n">Celebrity Equinox</span></a><a class="lu" href="/ships/celebrity-solstice" style="flex:317.2 1 0"><span class="lu-s"><div class="silbox" title="Length overall 317.2 m — drawn at 83% of the longest hull ever floated"><svg viewBox="0 31 480 102" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 83%);color:#82C7A5;--sil-funnel:#16263D">
+<g fill="currentColor"><path d="M464 130L470 114.8L468 102L56 98.9L20 96.2L16 115.6L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 78.8L62.3 76.2L63.3 73.8L64.9 71.7L67 70.1L69.4 69.1L72 68.8L444 68.8L444 102L62 102Z"/>
+<path d="M77 57.4L77.3 55.1L78.2 52.9L79.6 51L81.5 49.6L83.7 48.7L86 48.4L436 48.4L436 69.8L77 69.8Z"/>
+<path d="M70 54.1L81 54.1L81 59L70 59Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 36.2L333.1 36.2L329.1 50.4L314.1 50.4Z"/>
+<path d="M87 36.8L88.6 36.8L88.6 48.4L87 48.4Z"/></g></svg></div></span><span class="lu-n">Celebrity Solstice</span></a><a class="lu" href="/ships/ventura" style="flex:288.6 1 0"><span class="lu-s"><div class="silbox" title="Length overall 288.6 m — drawn at 80% of the longest hull ever floated"><svg viewBox="0 24 480 109" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 80%);color:#A9CCE3;--sil-funnel:#1B5FA8">
+<g fill="currentColor"><path d="M464 130L470 114.5L468 100.5L56 97L20 94.1L16 115.4L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 75.9L62.3 73.3L63.3 70.9L64.9 68.8L67 67.2L69.4 66.2L72 65.9L444 65.9L444 100.5L62 100.5Z"/>
+<path d="M76 53.7L76.3 51.4L77.2 49.2L78.6 47.3L80.5 45.9L82.7 45L85 44.7L436 44.7L436 66.9L76 66.9Z"/>
+<path d="M69 50.6L80 50.6L80 55.7L69 55.7Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 29.9L333.1 29.9L329.1 46.7L314.1 46.7Z"/>
+<path d="M86 31.9L87.6 31.9L87.6 44.7L86 44.7Z"/></g></svg></div></span><span class="lu-n">Ventura</span></a><a class="lu" href="/ships/diamond-princess" style="flex:290.2 1 0"><span class="lu-s"><div class="silbox" title="Length overall 290.2 m — drawn at 80% of the longest hull ever floated"><svg viewBox="0 25 480 108" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 80%);color:#B39DDB;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.5L468 100.6L56 97.1L20 94.2L16 115.4L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 76.2L62.3 73.6L63.3 71.2L64.9 69.1L67 67.5L69.4 66.5L72 66.2L444 66.2L444 100.6L62 100.6Z"/>
+<path d="M76 54.1L76.3 51.8L77.2 49.6L78.6 47.7L80.5 46.3L82.7 45.4L85 45.1L436 45.1L436 67.2L76 67.2Z"/>
+<path d="M69 51L80 51L80 56L69 56Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 30.4L333.1 30.4L329.1 47.1L314.1 47.1Z"/>
+<path d="M86 32.4L87.6 32.4L87.6 45.1L86 45.1Z"/></g></svg></div></span><span class="lu-n">Diamond Princess</span></a><a class="lu" href="/ships/sapphire-princess" style="flex:290.2 1 0"><span class="lu-s"><div class="silbox" title="Length overall 290.2 m — drawn at 80% of the longest hull ever floated"><svg viewBox="0 25 480 108" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 80%);color:#B39DDB;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.5L468 100.6L56 97.1L20 94.2L16 115.4L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 76.2L62.3 73.6L63.3 71.2L64.9 69.1L67 67.5L69.4 66.5L72 66.2L444 66.2L444 100.6L62 100.6Z"/>
+<path d="M76 54.1L76.3 51.8L77.2 49.6L78.6 47.7L80.5 46.3L82.7 45.4L85 45.1L436 45.1L436 67.2L76 67.2Z"/>
+<path d="M69 51L80 51L80 56L69 56Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 30.4L333.1 30.4L329.1 47.1L314.1 47.1Z"/>
+<path d="M86 32.4L87.6 32.4L87.6 45.1L86 45.1Z"/></g></svg></div></span><span class="lu-n">Sapphire Princess</span></a><a class="lu" href="/ships/azura" style="flex:290 1 0"><span class="lu-s"><div class="silbox" title="Length overall 290 m — drawn at 80% of the longest hull ever floated"><svg viewBox="0 25 480 108" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 80%);color:#A9CCE3;--sil-funnel:#1B5FA8">
+<g fill="currentColor"><path d="M464 130L470 114.5L468 100.6L56 97.1L20 94.2L16 115.4L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 76.1L62.3 73.5L63.3 71.1L64.9 69.1L67 67.5L69.4 66.5L72 66.1L444 66.1L444 100.6L62 100.6Z"/>
+<path d="M76 54L76.3 51.7L77.2 49.5L78.6 47.7L80.5 46.2L82.7 45.3L85 45L436 45L436 67.1L76 67.1Z"/>
+<path d="M69 50.9L80 50.9L80 56L69 56Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 30.3L333.1 30.3L329.1 47L314.1 47Z"/>
+<path d="M86 32.3L87.6 32.3L87.6 45L86 45Z"/></g></svg></div></span><span class="lu-n">Azura</span></a><a class="lu" href="/ships/costa-pacifica" style="flex:290 1 0"><span class="lu-s"><div class="silbox" title="Length overall 290 m — drawn at 80% of the longest hull ever floated"><svg viewBox="0 28 480 105" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 80%);color:#1F5C9E;--sil-funnel:#F2C230">
+<g fill="currentColor"><path d="M464 130L470 114.5L468 100.6L56 97.1L20 94.2L16 115.4L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 77.1L62.3 74.5L63.3 72.1L64.9 70L67 68.5L69.4 67.5L72 67.1L444 67.1L444 100.6L62 100.6Z"/>
+<path d="M77 55.6L77.3 53.3L78.2 51.1L79.6 49.3L81.5 47.8L83.7 46.9L86 46.6L436 46.6L436 68.1L77 68.1Z"/>
+<path d="M70 52.4L81 52.4L81 57.3L70 57.3Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 33.5L333.1 33.5L329.1 48.6L314.1 48.6Z"/>
+<path d="M87 33.9L88.6 33.9L88.6 46.6L87 46.6Z"/></g></svg></div></span><span class="lu-n">Costa Pacifica</span></a><a class="lu" href="/ships/costa-serena" style="flex:290 1 0"><span class="lu-s"><div class="silbox" title="Length overall 290 m — drawn at 80% of the longest hull ever floated"><svg viewBox="0 28 480 105" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 80%);color:#1F5C9E;--sil-funnel:#F2C230">
+<g fill="currentColor"><path d="M464 130L470 114.5L468 100.6L56 97.1L20 94.2L16 115.4L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 77.1L62.3 74.5L63.3 72.1L64.9 70L67 68.5L69.4 67.5L72 67.1L444 67.1L444 100.6L62 100.6Z"/>
+<path d="M77 55.6L77.3 53.3L78.2 51.1L79.6 49.3L81.5 47.8L83.7 46.9L86 46.6L436 46.6L436 68.1L77 68.1Z"/>
+<path d="M70 52.4L81 52.4L81 57.3L70 57.3Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 33.5L333.1 33.5L329.1 48.6L314.1 48.6Z"/>
+<path d="M87 33.9L88.6 33.9L88.6 46.6L87 46.6Z"/></g></svg></div></span><span class="lu-n">Costa Serena</span></a><a class="lu" href="/ships/ruby-princess" style="flex:290 1 0"><span class="lu-s"><div class="silbox" title="Length overall 290 m — drawn at 80% of the longest hull ever floated"><svg viewBox="0 23 480 110" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 80%);color:#B39DDB;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.5L468 100.6L56 97.1L20 94.2L16 115.4L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 75.1L62.3 72.6L63.3 70.1L64.9 68.1L67 66.5L69.4 65.5L72 65.1L444 65.1L444 100.6L62 100.6Z"/>
+<path d="M77 52.4L77.3 50.1L78.2 47.9L79.6 46.1L81.5 44.7L83.7 43.8L86 43.4L436 43.4L436 66.1L77 66.1Z"/>
+<path d="M70 49.5L81 49.5L81 54.7L70 54.7Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 28.8L333.1 28.8L329.1 45.4L314.1 45.4Z"/>
+<path d="M87 30.8L88.6 30.8L88.6 43.4L87 43.4Z"/></g></svg></div></span><span class="lu-n">Ruby Princess</span></a><a class="lu" href="/ships/costa-fascinosa" style="flex:290 1 0"><span class="lu-s"><div class="silbox" title="Length overall 290 m — drawn at 80% of the longest hull ever floated"><svg viewBox="0 28 480 105" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 80%);color:#1F5C9E;--sil-funnel:#F2C230">
+<g fill="currentColor"><path d="M464 130L470 114.5L468 100.6L56 97.1L20 94.2L16 115.4L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 77.1L62.3 74.5L63.3 72.1L64.9 70L67 68.5L69.4 67.5L72 67.1L444 67.1L444 100.6L62 100.6Z"/>
+<path d="M77 55.6L77.3 53.3L78.2 51.1L79.6 49.3L81.5 47.8L83.7 46.9L86 46.6L436 46.6L436 68.1L77 68.1Z"/>
+<path d="M70 52.4L81 52.4L81 57.3L70 57.3Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 33.5L333.1 33.5L329.1 48.6L314.1 48.6Z"/>
+<path d="M87 33.9L88.6 33.9L88.6 46.6L87 46.6Z"/></g></svg></div></span><span class="lu-n">Costa Fascinosa</span></a><a class="lu" href="/ships/costa-favolosa" style="flex:290 1 0"><span class="lu-s"><div class="silbox" title="Length overall 290 m — drawn at 80% of the longest hull ever floated"><svg viewBox="0 28 480 105" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 80%);color:#1F5C9E;--sil-funnel:#F2C230">
+<g fill="currentColor"><path d="M464 130L470 114.5L468 100.6L56 97.1L20 94.2L16 115.4L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 77.1L62.3 74.5L63.3 72.1L64.9 70L67 68.5L69.4 67.5L72 67.1L444 67.1L444 100.6L62 100.6Z"/>
+<path d="M77 55.6L77.3 53.3L78.2 51.1L79.6 49.3L81.5 47.8L83.7 46.9L86 46.6L436 46.6L436 68.1L77 68.1Z"/>
+<path d="M70 52.4L81 52.4L81 57.3L70 57.3Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 33.5L333.1 33.5L329.1 48.6L314.1 48.6Z"/>
+<path d="M87 33.9L88.6 33.9L88.6 46.6L87 46.6Z"/></g></svg></div></span><span class="lu-n">Costa Favolosa</span></a><a class="lu" href="/ships/queen-anne" style="flex:322.51 1 0"><span class="lu-s"><div class="silbox" title="Length overall 322.51 m — drawn at 84% of the longest hull ever floated"><svg viewBox="0 32 480 101" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 84%);color:#33383F;--sil-funnel:#C8102E">
+<g fill="currentColor"><path d="M464 130L470 114.9L468 102.3L56 99.2L20 96.6L16 115.6L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 79.6L62.3 77L63.3 74.6L64.9 72.5L67 70.9L69.4 69.9L72 69.6L444 69.6L444 102.3L62 102.3Z"/>
+<path d="M78 58.5L78.3 56.2L79.2 54L80.6 52.2L82.5 50.7L84.7 49.8L87 49.5L436 49.5L436 70.6L78 70.6Z"/>
+<path d="M71 55.2L82 55.2L82 60L71 60Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 37.6L333.1 37.6L329.1 51.5L314.1 51.5Z"/>
+<path d="M88 38.1L89.6 38.1L89.6 49.5L88 49.5Z"/></g></svg></div></span><span class="lu-n">Queen Anne</span></a><a class="lu" href="/ships/caribbean-princess" style="flex:289.9 1 0"><span class="lu-s"><div class="silbox" title="Length overall 289.9 m — drawn at 80% of the longest hull ever floated"><svg viewBox="0 25 480 108" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 80%);color:#B39DDB;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.5L468 100.5L56 97.1L20 94.2L16 115.4L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 76.1L62.3 73.5L63.3 71.1L64.9 69L67 67.5L69.4 66.5L72 66.1L444 66.1L444 100.5L62 100.5Z"/>
+<path d="M76 54L76.3 51.7L77.2 49.5L78.6 47.6L80.5 46.2L82.7 45.3L85 45L436 45L436 67.1L76 67.1Z"/>
+<path d="M69 50.9L80 50.9L80 56L69 56Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 30.3L333.1 30.3L329.1 47L314.1 47Z"/>
+<path d="M86 32.3L87.6 32.3L87.6 45L86 45Z"/></g></svg></div></span><span class="lu-n">Caribbean Princess</span></a><a class="lu" href="/ships/grand-princess" style="flex:289.9 1 0"><span class="lu-s"><div class="silbox" title="Length overall 289.9 m — drawn at 80% of the longest hull ever floated"><svg viewBox="0 26 480 107" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 80%);color:#B39DDB;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.5L468 100.5L56 97.1L20 94.2L16 115.4L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 77.1L62.3 74.5L63.3 72.1L64.9 70L67 68.4L69.4 67.4L72 67.1L444 67.1L444 100.5L62 100.5Z"/>
+<path d="M75 55.6L75.3 53.3L76.2 51.1L77.6 49.2L79.5 47.8L81.7 46.9L84 46.6L436 46.6L436 68.1L75 68.1Z"/>
+<path d="M68 52.3L79 52.3L79 57.3L68 57.3Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 31.9L333.1 31.9L329.1 48.6L314.1 48.6Z"/>
+<path d="M85 33.9L86.6 33.9L86.6 46.6L85 46.6Z"/></g></svg></div></span><span class="lu-n">Grand Princess</span></a><a class="lu" href="/ships/costa-fortuna" style="flex:272.19 1 0"><span class="lu-s"><div class="silbox" title="Length overall 272.19 m — drawn at 79% of the longest hull ever floated"><svg viewBox="0 26 480 107" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 79%);color:#1F5C9E;--sil-funnel:#F2C230">
+<g fill="currentColor"><path d="M464 130L470 114.3L468 99.4L56 95.7L20 92.7L16 115.2L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 75.9L62.3 73.3L63.3 70.9L64.9 68.8L67 67.2L69.4 66.2L72 65.9L444 65.9L444 99.4L62 99.4Z"/>
+<path d="M75 54.3L75.3 52L76.2 49.8L77.6 48L79.5 46.5L81.7 45.6L84 45.3L436 45.3L436 66.9L75 66.9Z"/>
+<path d="M68 51.1L79 51.1L79 56L68 56Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 31.5L333.1 31.5L329.1 47.3L314.1 47.3Z"/>
+<path d="M85 31.8L86.6 31.8L86.6 45.3L85 45.3Z"/></g></svg></div></span><span class="lu-n">Costa Fortuna</span></a><a class="lu" href="/ships/rotterdam" style="flex:299.8 1 0"><span class="lu-s"><div class="silbox" title="Length overall 299.8 m — drawn at 81% of the longest hull ever floated"><svg viewBox="0 28 480 105" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 81%);color:#12385E;--sil-funnel:#CBD5E0">
 <g fill="currentColor"><path d="M464 130L470 114.6L468 101.1L56 97.7L20 95L16 115.5L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
 <path d="M62 76.9L62.3 74.3L63.3 71.9L64.9 69.8L67 68.2L69.4 67.2L72 66.9L444 66.9L444 101.1L62 101.1Z"/>
 <path d="M88 54.9L88.3 52.6L89.2 50.4L90.6 48.5L92.5 47.1L94.7 46.2L97 45.9L436 45.9L436 67.9L88 67.9Z"/>
 <path d="M81 51.8L92 51.8L92 56.8L81 56.8Z"/>
-<path d="M318.1 33.1L333.1 33.1L329.1 47.9L314.1 47.9Z"/>
-<path d="M98 33.6L99.6 33.6L99.6 45.9L98 45.9Z"/></g></svg></div></span><span class="lu-n">Rotterdam</span></a></div>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 33.1L333.1 33.1L329.1 47.9L314.1 47.9Z"/>
+<path d="M98 33.6L99.6 33.6L99.6 45.9L98 45.9Z"/></g></svg></div></span><span class="lu-n">Rotterdam</span></a><a class="lu" href="/ships/nieuw-statendam" style="flex:297.2 1 0"><span class="lu-s"><div class="silbox" title="Length overall 297.2 m — drawn at 81% of the longest hull ever floated"><svg viewBox="0 27 480 106" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 81%);color:#12385E;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.6L468 101L56 97.6L20 94.8L16 115.4L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 76.4L62.3 73.8L63.3 71.4L64.9 69.4L67 67.8L69.4 66.8L72 66.4L444 66.4L444 101L62 101Z"/>
+<path d="M88 54.3L88.3 51.9L89.2 49.8L90.6 47.9L92.5 46.5L94.7 45.6L97 45.3L436 45.3L436 67.4L88 67.4Z"/>
+<path d="M81 51.2L92 51.2L92 56.3L81 56.3Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 32.4L333.1 32.4L329.1 47.3L314.1 47.3Z"/>
+<path d="M98 32.9L99.6 32.9L99.6 45.3L98 45.3Z"/></g></svg></div></span><span class="lu-n">Nieuw Statendam</span></a><a class="lu" href="/ships/koningsdam" style="flex:299.9 1 0"><span class="lu-s"><div class="silbox" title="Length overall 299.9 m — drawn at 81% of the longest hull ever floated"><svg viewBox="0 28 480 105" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 81%);color:#12385E;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.6L468 101.1L56 97.8L20 95L16 115.5L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 76.9L62.3 74.3L63.3 71.9L64.9 69.8L67 68.2L69.4 67.2L72 66.9L444 66.9L444 101.1L62 101.1Z"/>
+<path d="M88 54.9L88.3 52.6L89.2 50.4L90.6 48.5L92.5 47.1L94.7 46.2L97 45.9L436 45.9L436 67.9L88 67.9Z"/>
+<path d="M81 51.8L92 51.8L92 56.8L81 56.8Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 33.2L333.1 33.2L329.1 47.9L314.1 47.9Z"/>
+<path d="M98 33.6L99.6 33.6L99.6 45.9L98 45.9Z"/></g></svg></div></span><span class="lu-n">Koningsdam</span></a><a class="lu" href="/ships/costa-deliziosa" style="flex:294 1 0"><span class="lu-s"><div class="silbox" title="Length overall 294 m — drawn at 81% of the longest hull ever floated"><svg viewBox="0 29 480 104" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 81%);color:#1F5C9E;--sil-funnel:#F2C230">
+<g fill="currentColor"><path d="M464 130L470 114.6L468 100.8L56 97.3L20 94.5L16 115.4L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 77.8L62.3 75.2L63.3 72.8L64.9 70.7L67 69.1L69.4 68.1L72 67.8L444 67.8L444 100.8L62 100.8Z"/>
+<path d="M76 56.6L76.3 54.3L77.2 52.1L78.6 50.2L80.5 48.8L82.7 47.9L85 47.6L436 47.6L436 68.8L76 68.8Z"/>
+<path d="M69 53.3L80 53.3L80 58.1L69 58.1Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 34.6L333.1 34.6L329.1 49.6L314.1 49.6Z"/>
+<path d="M86 35.1L87.6 35.1L87.6 47.6L86 47.6Z"/></g></svg></div></span><span class="lu-n">Costa Deliziosa</span></a><a class="lu" href="/ships/celebrity-constellation" style="flex:294 1 0"><span class="lu-s"><div class="silbox" title="Length overall 294 m — drawn at 81% of the longest hull ever floated"><svg viewBox="0 31 480 102" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 81%);color:#82C7A5;--sil-funnel:#16263D">
+<g fill="currentColor"><path d="M464 130L470 114.6L468 100.8L56 97.3L20 94.5L16 115.4L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 78.8L62.3 76.2L63.3 73.8L64.9 71.7L67 70.1L69.4 69.1L72 68.8L444 68.8L444 100.8L62 100.8Z"/>
+<path d="M75 58.2L75.3 55.8L76.2 53.7L77.6 51.8L79.5 50.4L81.7 49.5L84 49.2L436 49.2L436 69.8L75 69.8Z"/>
+<path d="M68 54.7L79 54.7L79 59.4L68 59.4Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 36.2L333.1 36.2L329.1 51.2L314.1 51.2Z"/>
+<path d="M85 36.6L86.6 36.6L86.6 49.2L85 49.2Z"/></g></svg></div></span><span class="lu-n">Celebrity Constellation</span></a><a class="lu" href="/ships/celebrity-summit" style="flex:294 1 0"><span class="lu-s"><div class="silbox" title="Length overall 294 m — drawn at 81% of the longest hull ever floated"><svg viewBox="0 31 480 102" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 81%);color:#82C7A5;--sil-funnel:#16263D">
+<g fill="currentColor"><path d="M464 130L470 114.6L468 100.8L56 97.3L20 94.5L16 115.4L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 78.8L62.3 76.2L63.3 73.8L64.9 71.7L67 70.1L69.4 69.1L72 68.8L444 68.8L444 100.8L62 100.8Z"/>
+<path d="M75 58.2L75.3 55.8L76.2 53.7L77.6 51.8L79.5 50.4L81.7 49.5L84 49.2L436 49.2L436 69.8L75 69.8Z"/>
+<path d="M68 54.7L79 54.7L79 59.4L68 59.4Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 36.2L333.1 36.2L329.1 51.2L314.1 51.2Z"/>
+<path d="M85 36.6L86.6 36.6L86.6 49.2L85 49.2Z"/></g></svg></div></span><span class="lu-n">Celebrity Summit</span></a><a class="lu" href="/ships/celebrity-infinity" style="flex:294 1 0"><span class="lu-s"><div class="silbox" title="Length overall 294 m — drawn at 81% of the longest hull ever floated"><svg viewBox="0 31 480 102" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 81%);color:#82C7A5;--sil-funnel:#16263D">
+<g fill="currentColor"><path d="M464 130L470 114.6L468 100.8L56 97.3L20 94.5L16 115.4L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 78.8L62.3 76.2L63.3 73.8L64.9 71.7L67 70.1L69.4 69.1L72 68.8L444 68.8L444 100.8L62 100.8Z"/>
+<path d="M75 58.2L75.3 55.8L76.2 53.7L77.6 51.8L79.5 50.4L81.7 49.5L84 49.2L436 49.2L436 69.8L75 69.8Z"/>
+<path d="M68 54.7L79 54.7L79 59.4L68 59.4Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 36.2L333.1 36.2L329.1 51.2L314.1 51.2Z"/>
+<path d="M85 36.6L86.6 36.6L86.6 49.2L85 49.2Z"/></g></svg></div></span><span class="lu-n">Celebrity Infinity</span></a><a class="lu" href="/ships/queen-elizabeth" style="flex:294 1 0"><span class="lu-s"><div class="silbox" title="Length overall 294 m — drawn at 81% of the longest hull ever floated"><svg viewBox="0 29 480 104" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 81%);color:#33383F;--sil-funnel:#C8102E">
+<g fill="currentColor"><path d="M464 130L470 114.6L468 100.8L56 97.3L20 94.5L16 115.4L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 77.8L62.3 75.2L63.3 72.8L64.9 70.7L67 69.1L69.4 68.1L72 67.8L444 67.8L444 100.8L62 100.8Z"/>
+<path d="M76 56.6L76.3 54.3L77.2 52.1L78.6 50.2L80.5 48.8L82.7 47.9L85 47.6L436 47.6L436 68.8L76 68.8Z"/>
+<path d="M69 53.3L80 53.3L80 58.1L69 58.1Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 34.6L333.1 34.6L329.1 49.6L314.1 49.6Z"/>
+<path d="M86 35.1L87.6 35.1L87.6 47.6L86 47.6Z"/></g></svg></div></span><span class="lu-n">Queen Elizabeth</span></a><a class="lu" href="/ships/celebrity-millennium" style="flex:294 1 0"><span class="lu-s"><div class="silbox" title="Length overall 294 m — drawn at 81% of the longest hull ever floated"><svg viewBox="0 31 480 102" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 81%);color:#82C7A5;--sil-funnel:#16263D">
+<g fill="currentColor"><path d="M464 130L470 114.6L468 100.8L56 97.3L20 94.5L16 115.4L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 78.8L62.3 76.2L63.3 73.8L64.9 71.7L67 70.1L69.4 69.1L72 68.8L444 68.8L444 100.8L62 100.8Z"/>
+<path d="M75 58.2L75.3 55.8L76.2 53.7L77.6 51.8L79.5 50.4L81.7 49.5L84 49.2L436 49.2L436 69.8L75 69.8Z"/>
+<path d="M68 54.7L79 54.7L79 59.4L68 59.4Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 36.2L333.1 36.2L329.1 51.2L314.1 51.2Z"/>
+<path d="M85 36.6L86.6 36.6L86.6 49.2L85 49.2Z"/></g></svg></div></span><span class="lu-n">Celebrity Millennium</span></a><a class="lu" href="/ships/queen-victoria" style="flex:294 1 0"><span class="lu-s"><div class="silbox" title="Length overall 294 m — drawn at 81% of the longest hull ever floated"><svg viewBox="0 29 480 104" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 81%);color:#33383F;--sil-funnel:#C8102E">
+<g fill="currentColor"><path d="M464 130L470 114.6L468 100.8L56 97.3L20 94.5L16 115.4L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 77.8L62.3 75.2L63.3 72.8L64.9 70.7L67 69.1L69.4 68.1L72 67.8L444 67.8L444 100.8L62 100.8Z"/>
+<path d="M76 56.6L76.3 54.3L77.2 52.1L78.6 50.2L80.5 48.8L82.7 47.9L85 47.6L436 47.6L436 68.8L76 68.8Z"/>
+<path d="M69 53.3L80 53.3L80 58.1L69 58.1Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 34.6L333.1 34.6L329.1 49.6L314.1 49.6Z"/>
+<path d="M86 35.1L87.6 35.1L87.6 47.6L86 47.6Z"/></g></svg></div></span><span class="lu-n">Queen Victoria</span></a><a class="lu" href="/ships/nieuw-amsterdam" style="flex:285.3 1 0"><span class="lu-s"><div class="silbox" title="Length overall 285.3 m — drawn at 80% of the longest hull ever floated"><svg viewBox="0 28 480 105" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 80%);color:#12385E;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.5L468 100.3L56 96.7L20 93.8L16 115.3L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 77.3L62.3 74.7L63.3 72.3L64.9 70.2L67 68.6L69.4 67.6L72 67.3L444 67.3L444 100.3L62 100.3Z"/>
+<path d="M82 56.1L82.3 53.7L83.2 51.6L84.6 49.7L86.5 48.3L88.7 47.4L91 47.1L436 47.1L436 68.3L82 68.3Z"/>
+<path d="M75 52.7L86 52.7L86 57.6L75 57.6Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 33.8L333.1 33.8L329.1 49.1L314.1 49.1Z"/>
+<path d="M92 34.2L93.6 34.2L93.6 47.1L92 47.1Z"/></g></svg></div></span><span class="lu-n">Nieuw Amsterdam</span></a><a class="lu" href="/ships/eurodam" style="flex:285.3 1 0"><span class="lu-s"><div class="silbox" title="Length overall 285.3 m — drawn at 80% of the longest hull ever floated"><svg viewBox="0 28 480 105" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 80%);color:#12385E;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.5L468 100.3L56 96.7L20 93.8L16 115.3L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 77.3L62.3 74.7L63.3 72.3L64.9 70.2L67 68.6L69.4 67.6L72 67.3L444 67.3L444 100.3L62 100.3Z"/>
+<path d="M82 56.1L82.3 53.7L83.2 51.6L84.6 49.7L86.5 48.3L88.7 47.4L91 47.1L436 47.1L436 68.3L82 68.3Z"/>
+<path d="M75 52.7L86 52.7L86 57.6L75 57.6Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 33.8L333.1 33.8L329.1 49.1L314.1 49.1Z"/>
+<path d="M92 34.2L93.6 34.2L93.6 47.1L92 47.1Z"/></g></svg></div></span><span class="lu-n">Eurodam</span></a><a class="lu" href="/ships/arcadia" style="flex:289.9 1 0"><span class="lu-s"><div class="silbox" title="Length overall 289.9 m — drawn at 80% of the longest hull ever floated"><svg viewBox="0 30 480 103" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 80%);color:#A9CCE3;--sil-funnel:#1B5FA8">
+<g fill="currentColor"><path d="M464 130L470 114.5L468 100.5L56 97.1L20 94.2L16 115.4L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 79.1L62.3 76.5L63.3 74.1L64.9 72L67 70.4L69.4 69.4L72 69.1L444 69.1L444 100.5L62 100.5Z"/>
+<path d="M74 58.8L74.3 56.4L75.2 54.3L76.6 52.4L78.5 51L80.7 50.1L83 49.8L436 49.8L436 70.1L74 70.1Z"/>
+<path d="M67 55.2L78 55.2L78 59.8L67 59.8Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 35.1L333.1 35.1L329.1 51.8L314.1 51.8Z"/>
+<path d="M84 37.1L85.6 37.1L85.6 49.8L84 49.8Z"/></g></svg></div></span><span class="lu-n">Arcadia</span></a><a class="lu" href="/ships/disney-magic" style="flex:294 1 0"><span class="lu-s"><div class="silbox" title="Length overall 294 m — drawn at 81% of the longest hull ever floated"><svg viewBox="0 26 480 107" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 81%);color:#F8A5C2;--sil-funnel:#D8232A">
+<g fill="currentColor"><path d="M464 130L470 114.6L468 100.8L56 97.3L20 94.5L16 115.4L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 78.8L62.3 76.2L63.3 73.8L64.9 71.7L67 70.1L69.4 69.1L72 68.8L444 68.8L444 100.8L62 100.8Z"/>
+<path d="M74 58.2L74.3 55.8L75.2 53.7L76.6 51.8L78.5 50.4L80.7 49.5L83 49.2L436 49.2L436 69.8L74 69.8Z"/>
+<path d="M67 54.7L78 54.7L78 59.4L67 59.4Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 31.5L333.1 31.5L329.1 51.2L314.1 51.2Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M344.1 31.5L359.1 31.5L355.1 51.2L340.1 51.2Z"/>
+<path d="M84 36.6L85.6 36.6L85.6 49.2L84 49.2Z"/></g></svg></div></span><span class="lu-n">Disney Magic</span></a><a class="lu" href="/ships/disney-wonder" style="flex:294 1 0"><span class="lu-s"><div class="silbox" title="Length overall 294 m — drawn at 81% of the longest hull ever floated"><svg viewBox="0 26 480 107" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 81%);color:#F8A5C2;--sil-funnel:#D8232A">
+<g fill="currentColor"><path d="M464 130L470 114.6L468 100.8L56 97.3L20 94.5L16 115.4L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 78.8L62.3 76.2L63.3 73.8L64.9 71.7L67 70.1L69.4 69.1L72 68.8L444 68.8L444 100.8L62 100.8Z"/>
+<path d="M74 58.2L74.3 55.8L75.2 53.7L76.6 51.8L78.5 50.4L80.7 49.5L83 49.2L436 49.2L436 69.8L74 69.8Z"/>
+<path d="M67 54.7L78 54.7L78 59.4L67 59.4Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 31.5L333.1 31.5L329.1 51.2L314.1 51.2Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M344.1 31.5L359.1 31.5L355.1 51.2L340.1 51.2Z"/>
+<path d="M84 36.6L85.6 36.6L85.6 49.2L84 49.2Z"/></g></svg></div></span><span class="lu-n">Disney Wonder</span></a><a class="lu" href="/ships/noordam" style="flex:285 1 0"><span class="lu-s"><div class="silbox" title="Length overall 285 m — drawn at 80% of the longest hull ever floated"><svg viewBox="0 30 480 103" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 80%);color:#12385E;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.4L468 100.2L56 96.7L20 93.8L16 115.3L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 78.2L62.3 75.6L63.3 73.2L64.9 71.2L67 69.6L69.4 68.6L72 68.2L444 68.2L444 100.2L62 100.2Z"/>
+<path d="M79 57.6L79.3 55.3L80.2 53.1L81.6 51.2L83.5 49.8L85.7 48.9L88 48.6L436 48.6L436 69.2L79 69.2Z"/>
+<path d="M72 54.1L83 54.1L83 58.8L72 58.8Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 35.3L333.1 35.3L329.1 50.6L314.1 50.6Z"/>
+<path d="M89 35.7L90.6 35.7L90.6 48.6L89 48.6Z"/></g></svg></div></span><span class="lu-n">Noordam</span></a><a class="lu" href="/ships/westerdam" style="flex:285 1 0"><span class="lu-s"><div class="silbox" title="Length overall 285 m — drawn at 80% of the longest hull ever floated"><svg viewBox="0 30 480 103" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 80%);color:#12385E;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.4L468 100.2L56 96.7L20 93.8L16 115.3L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 78.2L62.3 75.6L63.3 73.2L64.9 71.2L67 69.6L69.4 68.6L72 68.2L444 68.2L444 100.2L62 100.2Z"/>
+<path d="M79 57.6L79.3 55.3L80.2 53.1L81.6 51.2L83.5 49.8L85.7 48.9L88 48.6L436 48.6L436 69.2L79 69.2Z"/>
+<path d="M72 54.1L83 54.1L83 58.8L72 58.8Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 35.3L333.1 35.3L329.1 50.6L314.1 50.6Z"/>
+<path d="M89 35.7L90.6 35.7L90.6 48.6L89 48.6Z"/></g></svg></div></span><span class="lu-n">Westerdam</span></a><a class="lu" href="/ships/oosterdam" style="flex:285 1 0"><span class="lu-s"><div class="silbox" title="Length overall 285 m — drawn at 80% of the longest hull ever floated"><svg viewBox="0 30 480 103" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 80%);color:#12385E;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.4L468 100.2L56 96.7L20 93.8L16 115.3L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 78.2L62.3 75.6L63.3 73.2L64.9 71.2L67 69.6L69.4 68.6L72 68.2L444 68.2L444 100.2L62 100.2Z"/>
+<path d="M79 57.6L79.3 55.3L80.2 53.1L81.6 51.2L83.5 49.8L85.7 48.9L88 48.6L436 48.6L436 69.2L79 69.2Z"/>
+<path d="M72 54.1L83 54.1L83 58.8L72 58.8Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 35.3L333.1 35.3L329.1 50.6L314.1 50.6Z"/>
+<path d="M89 35.7L90.6 35.7L90.6 48.6L89 48.6Z"/></g></svg></div></span><span class="lu-n">Oosterdam</span></a><a class="lu" href="/ships/zuiderdam" style="flex:285 1 0"><span class="lu-s"><div class="silbox" title="Length overall 285 m — drawn at 80% of the longest hull ever floated"><svg viewBox="0 30 480 103" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 80%);color:#12385E;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114.4L468 100.2L56 96.7L20 93.8L16 115.3L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 78.2L62.3 75.6L63.3 73.2L64.9 71.2L67 69.6L69.4 68.6L72 68.2L444 68.2L444 100.2L62 100.2Z"/>
+<path d="M79 57.6L79.3 55.3L80.2 53.1L81.6 51.2L83.5 49.8L85.7 48.9L88 48.6L436 48.6L436 69.2L79 69.2Z"/>
+<path d="M72 54.1L83 54.1L83 58.8L72 58.8Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 35.3L333.1 35.3L329.1 50.6L314.1 50.6Z"/>
+<path d="M89 35.7L90.6 35.7L90.6 48.6L89 48.6Z"/></g></svg></div></span><span class="lu-n">Zuiderdam</span></a><a class="lu" href="/ships/aurora" style="flex:270 1 0"><span class="lu-s"><div class="silbox" title="Length overall 270 m — drawn at 78% of the longest hull ever floated"><svg viewBox="0 25 480 108" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 78%);color:#A9CCE3;--sil-funnel:#1B5FA8">
+<g fill="currentColor"><path d="M464 130L470 114.3L468 99.3L56 95.5L20 92.4L16 115.2L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 76.5L62.3 73.9L63.3 71.5L64.9 69.4L67 67.9L69.4 66.9L72 66.5L444 66.5L444 99.3L62 99.3Z"/>
+<path d="M73 55.4L73.3 53.1L74.2 50.9L75.6 49.1L77.5 47.7L79.7 46.8L82 46.4L436 46.4L436 67.5L73 67.5Z"/>
+<path d="M66 52.1L77 52.1L77 56.9L66 56.9Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 30.8L333.1 30.8L329.1 48.4L314.1 48.4Z"/>
+<path d="M83 32.8L84.6 32.8L84.6 46.4L83 46.4Z"/></g></svg></div></span><span class="lu-n">Aurora</span></a><a class="lu" href="/ships/aidastella" style="flex:253.26 1 0"><span class="lu-s"><div class="silbox" title="Length overall 253.26 m — drawn at 76% of the longest hull ever floated"><svg viewBox="0 25 480 108" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 76%);color:#9B72C4;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114L468 98L56 94L20 90.8L16 115L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 75.4L62.3 72.8L63.3 70.4L64.9 68.3L67 66.7L69.4 65.7L72 65.4L444 65.4L444 98L62 98Z"/>
+<path d="M73 54.3L73.3 52L74.2 49.8L75.6 48L77.5 46.6L79.7 45.7L82 45.3L436 45.3L436 66.4L73 66.4Z"/>
+<path d="M66 51L77 51L77 55.8L66 55.8Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 32.4L333.1 32.4L329.1 47.3L314.1 47.3Z"/>
+<path d="M83 30.8L84.6 30.8L84.6 45.3L83 45.3Z"/></g></svg></div></span><span class="lu-n">AIDAstella</span></a><a class="lu" href="/ships/aidamar" style="flex:253.3 1 0"><span class="lu-s"><div class="silbox" title="Length overall 253.3 m — drawn at 76% of the longest hull ever floated"><svg viewBox="0 25 480 108" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 76%);color:#9B72C4;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114L468 98L56 94L20 90.8L16 115L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 75.4L62.3 72.8L63.3 70.4L64.9 68.3L67 66.7L69.4 65.7L72 65.4L444 65.4L444 98L62 98Z"/>
+<path d="M73 54.4L73.3 52L74.2 49.9L75.6 48L77.5 46.6L79.7 45.7L82 45.4L436 45.4L436 66.4L73 66.4Z"/>
+<path d="M66 51L77 51L77 55.8L66 55.8Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 32.5L333.1 32.5L329.1 47.4L314.1 47.4Z"/>
+<path d="M83 30.8L84.6 30.8L84.6 45.4L83 45.4Z"/></g></svg></div></span><span class="lu-n">AIDAmar</span></a><a class="lu" href="/ships/aidasol" style="flex:253.33 1 0"><span class="lu-s"><div class="silbox" title="Length overall 253.33 m — drawn at 76% of the longest hull ever floated"><svg viewBox="0 25 480 108" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 76%);color:#9B72C4;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114L468 98L56 94L20 90.8L16 115L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 75.4L62.3 72.8L63.3 70.4L64.9 68.3L67 66.7L69.4 65.7L72 65.4L444 65.4L444 98L62 98Z"/>
+<path d="M73 54.4L73.3 52L74.2 49.9L75.6 48L77.5 46.6L79.7 45.7L82 45.4L436 45.4L436 66.4L73 66.4Z"/>
+<path d="M66 51L77 51L77 55.8L66 55.8Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 32.5L333.1 32.5L329.1 47.4L314.1 47.4Z"/>
+<path d="M83 30.8L84.6 30.8L84.6 45.4L83 45.4Z"/></g></svg></div></span><span class="lu-n">AIDAsol</span></a><a class="lu" href="/ships/aidablu" style="flex:253.3 1 0"><span class="lu-s"><div class="silbox" title="Length overall 253.3 m — drawn at 76% of the longest hull ever floated"><svg viewBox="0 25 480 108" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 76%);color:#9B72C4;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114L468 98L56 94L20 90.8L16 115L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 75.4L62.3 72.8L63.3 70.4L64.9 68.3L67 66.7L69.4 65.7L72 65.4L444 65.4L444 98L62 98Z"/>
+<path d="M73 54.4L73.3 52L74.2 49.9L75.6 48L77.5 46.6L79.7 45.7L82 45.4L436 45.4L436 66.4L73 66.4Z"/>
+<path d="M66 51L77 51L77 55.8L66 55.8Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 32.5L333.1 32.5L329.1 47.4L314.1 47.4Z"/>
+<path d="M83 30.8L84.6 30.8L84.6 45.4L83 45.4Z"/></g></svg></div></span><span class="lu-n">AIDAblu</span></a><a class="lu" href="/ships/aidaluna" style="flex:251.9 1 0"><span class="lu-s"><div class="silbox" title="Length overall 251.9 m — drawn at 76% of the longest hull ever floated"><svg viewBox="0 27 480 106" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 76%);color:#9B72C4;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114L468 97.9L56 93.9L20 90.6L16 115L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 76.2L62.3 73.6L63.3 71.2L64.9 69.1L67 67.6L69.4 66.6L72 66.2L444 66.2L444 97.9L62 97.9Z"/>
+<path d="M72 55.8L72.3 53.5L73.2 51.3L74.6 49.4L76.5 48L78.7 47.1L81 46.8L436 46.8L436 67.2L72 67.2Z"/>
+<path d="M65 52.2L76 52.2L76 56.9L65 56.9Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 33.8L333.1 33.8L329.1 48.8L314.1 48.8Z"/>
+<path d="M82 32.2L83.6 32.2L83.6 46.8L82 46.8Z"/></g></svg></div></span><span class="lu-n">AIDAluna</span></a><a class="lu" href="/ships/aidabella" style="flex:251.9 1 0"><span class="lu-s"><div class="silbox" title="Length overall 251.9 m — drawn at 76% of the longest hull ever floated"><svg viewBox="0 27 480 106" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 76%);color:#9B72C4;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114L468 97.9L56 93.9L20 90.6L16 115L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 76.2L62.3 73.6L63.3 71.2L64.9 69.1L67 67.6L69.4 66.6L72 66.2L444 66.2L444 97.9L62 97.9Z"/>
+<path d="M72 55.8L72.3 53.5L73.2 51.3L74.6 49.4L76.5 48L78.7 47.1L81 46.8L436 46.8L436 67.2L72 67.2Z"/>
+<path d="M65 52.2L76 52.2L76 56.9L65 56.9Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 33.8L333.1 33.8L329.1 48.8L314.1 48.8Z"/>
+<path d="M82 32.2L83.6 32.2L83.6 46.8L82 46.8Z"/></g></svg></div></span><span class="lu-n">AIDAbella</span></a><a class="lu" href="/ships/aidadiva" style="flex:251.89 1 0"><span class="lu-s"><div class="silbox" title="Length overall 251.89 m — drawn at 76% of the longest hull ever floated"><svg viewBox="0 27 480 106" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 76%);color:#9B72C4;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 114L468 97.9L56 93.9L20 90.6L16 115L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 76.2L62.3 73.6L63.3 71.2L64.9 69.1L67 67.5L69.4 66.5L72 66.2L444 66.2L444 97.9L62 97.9Z"/>
+<path d="M72 55.8L72.3 53.4L73.2 51.3L74.6 49.4L76.5 48L78.7 47.1L81 46.8L436 46.8L436 67.2L72 67.2Z"/>
+<path d="M65 52.2L76 52.2L76 56.9L65 56.9Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 33.8L333.1 33.8L329.1 48.8L314.1 48.8Z"/>
+<path d="M82 32.2L83.6 32.2L83.6 46.8L82 46.8Z"/></g></svg></div></span><span class="lu-n">AIDAdiva</span></a><a class="lu" href="/ships/zaandam" style="flex:237.1 1 0"><span class="lu-s"><div class="silbox" title="Length overall 237.1 m — drawn at 74% of the longest hull ever floated"><svg viewBox="0 23 480 110" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 74%);color:#12385E;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 113.7L468 96.7L56 92.4L20 88.9L16 114.8L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 74.2L62.3 71.6L63.3 69.2L64.9 67.1L67 65.5L69.4 64.5L72 64.2L444 64.2L444 96.7L62 96.7Z"/>
+<path d="M74 53.3L74.3 50.9L75.2 48.8L76.6 46.9L78.5 45.5L80.7 44.6L83 44.3L436 44.3L436 65.2L74 65.2Z"/>
+<path d="M67 49.8L78 49.8L78 54.6L67 54.6Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 28.7L333.1 28.7L329.1 46.3L314.1 46.3Z"/>
+<path d="M84 28.8L85.6 28.8L85.6 44.3L84 44.3Z"/></g></svg></div></span><span class="lu-n">Zaandam</span></a><a class="lu" href="/ships/volendam" style="flex:237.9 1 0"><span class="lu-s"><div class="silbox" title="Length overall 237.9 m — drawn at 75% of the longest hull ever floated"><svg viewBox="0 24 480 109" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:var(--silw, 75%);color:#12385E;--sil-funnel:#CBD5E0">
+<g fill="currentColor"><path d="M464 130L470 113.7L468 96.7L56 92.5L20 89L16 114.8L22 121L12 122.5L10 126L13 129L22 129L32 130Z"/>
+<path d="M62 74.4L62.3 71.8L63.3 69.4L64.9 67.3L67 65.7L69.4 64.7L72 64.4L444 64.4L444 96.7L62 96.7Z"/>
+<path d="M74 53.5L74.3 51.2L75.2 49L76.6 47.2L78.5 45.7L80.7 44.8L83 44.5L436 44.5L436 65.4L74 65.4Z"/>
+<path d="M67 50.1L78 50.1L78 54.8L67 54.8Z"/>
+<path fill="var(--sil-funnel,inherit)" d="M318.1 29L333.1 29L329.1 46.5L314.1 46.5Z"/>
+<path d="M84 29.1L85.6 29.1L85.6 44.5L84 44.5Z"/></g></svg></div></span><span class="lu-n">Volendam</span></a></div>
 <div class="recrow" style="margin-top:18px">
 <a class="recchip" href="/categories/cruise-ships">All cruise ships &amp; liners &rarr;</a>
 <a class="recchip" href="/records/most-passengers">Capacity records &rarr;</a>
 <a class="recchip" href="/compare#legend-of-the-seas,titanic">Your ship vs the Titanic &rarr;</a>
 </div>
-<p class="disclosure">As an Amazon Associate, ships.fyi earns from qualifying purchases. Some links in our guides are affiliate links — if you buy or book through them we may earn a small commission at no extra cost to you. It never changes what we recommend.</p>
+<p class="disclosure">As an Amazon Associate, ships.fyi earns from qualifying purchases. Some links in our guides are affiliate links — if you buy through them we may earn a small commission at no extra cost to you. It never changes what we recommend.</p>
 </div></section>
 </main>
 
@@ -536,7 +1368,7 @@
 </div>
 <div>
 <p class="mf-h">Cruise ships &amp; liners</p>
-<ul><li><a href="/ships/legend-of-the-seas">Legend of the Seas</a></li><li><a href="/ships/icon-of-the-seas">Icon of the Seas</a></li><li><a href="/ships/star-of-the-seas">Star of the Seas</a></li><li><a href="/ships/wonder-of-the-seas">Wonder of the Seas</a></li><li><a href="/ships/symphony-of-the-seas">Symphony of the Seas</a></li><li><a href="/ships/harmony-of-the-seas">Harmony of the Seas</a></li><li><a href="/ships/oasis-of-the-seas">Oasis of the Seas</a></li><li><a href="/ships/msc-world-europa">MSC World Europa</a></li><li><a href="/ships/arvia">Arvia</a></li><li><a href="/ships/costa-smeralda">Costa Smeralda</a></li><li><a href="/#fleet-cruise"><b>All 19 &rarr;</b></a></li></ul>
+<ul><li><a href="/ships/legend-of-the-seas">Legend of the Seas</a></li><li><a href="/ships/icon-of-the-seas">Icon of the Seas</a></li><li><a href="/ships/star-of-the-seas">Star of the Seas</a></li><li><a href="/ships/wonder-of-the-seas">Wonder of the Seas</a></li><li><a href="/ships/symphony-of-the-seas">Symphony of the Seas</a></li><li><a href="/ships/harmony-of-the-seas">Harmony of the Seas</a></li><li><a href="/ships/oasis-of-the-seas">Oasis of the Seas</a></li><li><a href="/ships/msc-world-america">MSC World America</a></li><li><a href="/ships/msc-world-europa">MSC World Europa</a></li><li><a href="/ships/disney-adventure">Disney Adventure</a></li><li><a href="/#fleet-cruise"><b>All 116 &rarr;</b></a></li></ul>
 </div>
 <div>
 <p class="mf-h">Container ships</p>
@@ -547,8 +1379,10 @@
 <ul><li><a href="/ships/prelude-flng">Prelude FLNG</a></li><li><a href="/ships/seawise-giant">Seawise Giant</a></li><li><a href="/ships/batillus">Batillus</a></li><li><a href="/ships/pierre-guillaumat">Pierre Guillaumat</a></li><li><a href="/ships/esso-atlantic">Esso Atlantic</a></li><li><a href="/ships/pioneering-spirit">Pioneering Spirit</a></li><li><a href="/ships/ti-europe">TI Europe</a></li><li><a href="/ships/ti-oceania">TI Oceania</a></li><li><a href="/ships/vale-brasil">Vale Brasil</a></li><li><a href="/ships/mozah">Mozah</a></li><li><a href="/#fleet-giants"><b>All 12 &rarr;</b></a></li></ul>
 </div>
 <div>
-<p class="mf-h">Reference</p>
-<ul><li><a href="/cruise">Get cruise-ready</a></li><li><a href="/cruise/packing-list">Cruise packing list</a></li><li><a href="/cruise/seasickness">Beat seasickness</a></li><li><a href="/cruise/port-safety">Port safety</a></li><li><a href="/categories">Ship categories</a></li><li><a href="/#lines">All 27 lines</a></li><li><a href="/shipyards">Shipyards</a></li><li><a href="/records/longest-ships">Longest ships</a></li><li><a href="/canal-fit">Canal-Fit Checker</a></li><li><a href="/ships-in-storm">Ships in storm</a></li><li><a href="/compare">Compare ships</a></li><li><a href="/blog">Blog</a></li><li><a href="/explained">Explained</a></li><li><a href="/methodology">Methodology</a></li><li><a href="/quiz">The Silhouette Quiz</a></li></ul>
+<p class="mf-h">Guides</p>
+<ul><li><a href="/cruise">Get cruise-ready</a></li><li><a href="/cruise/first-cruise-guide">First cruise guide</a></li><li><a href="/cruise/packing-list">Cruise packing list</a></li><li><a href="/cruise/seasickness">Beat seasickness</a></li><li><a href="/cruise/fear-of-cruising">Scared to cruise?</a></li><li><a href="/cruise/port-safety">Port safety</a></li><li><a href="/cruise/how-big-is-a-cruise-ship">How big is a cruise ship?</a></li><li><a href="/ships-in-storm">Ships in storm</a></li></ul>
+<p class="mf-h mt">Reference</p>
+<ul><li><a href="/categories">Ship categories</a></li><li><a href="/#lines">All 27 lines</a></li><li><a href="/shipyards">Shipyards</a></li><li><a href="/records/longest-ships">Longest ships</a></li><li><a href="/canal-fit">Canal-Fit Checker</a></li><li><a href="/compare">Compare ships</a></li><li><a href="/explained">Explained</a></li><li><a href="/blog">Blog</a></li><li><a href="/methodology">Methodology</a></li><li><a href="/quiz">The Silhouette Quiz</a></li></ul>
 </div>
 </div>
 <div class="mf-gens">
@@ -569,18 +1403,115 @@
 <a href="/ships/wonder-of-the-seas">Wonder of the Seas<span class="cc">BS</span></a>
 <a href="/ships/symphony-of-the-seas">Symphony of the Seas<span class="cc">BS</span></a>
 <a href="/ships/oasis-of-the-seas">Oasis of the Seas<span class="cc">BS</span></a>
+<a href="/ships/sun-princess">Sun Princess<span class="cc">BM</span></a>
 <a href="/ships/queen-mary-2">Queen Mary 2<span class="cc">BM</span></a>
 <a href="/ships/star-princess">Star Princess<span class="cc">BM</span></a>
 <a href="/ships/arvia">Arvia<span class="cc">BM</span></a>
 <a href="/ships/carnival-jubilee">Carnival Jubilee<span class="cc">PA</span></a>
+<a href="/ships/carnival-celebration">Carnival Celebration<span class="cc">BS</span></a>
+<a href="/ships/mardi-gras">Mardi Gras<span class="cc">BS</span></a>
+<a href="/ships/iona">Iona<span class="cc">BM</span></a>
+<a href="/ships/disney-adventure">Disney Adventure<span class="cc">BS</span></a>
 <a href="/ships/disney-wish">Disney Wish<span class="cc">BS</span></a>
-<a href="/ships/aidanova">AIDA Nova<span class="cc">IT</span></a>
+<a href="/ships/disney-destiny">Disney Destiny<span class="cc">BS</span></a>
+<a href="/ships/disney-treasure">Disney Treasure<span class="cc">BS</span></a>
+<a href="/ships/disney-fantasy">Disney Fantasy<span class="cc">BS</span></a>
+<a href="/ships/disney-dream">Disney Dream<span class="cc">BS</span></a>
+<a href="/ships/msc-seascape">MSC Seascape<span class="cc">MT</span></a>
+<a href="/ships/msc-seashore">MSC Seashore<span class="cc">MT</span></a>
+<a href="/ships/aidanova">AIDAnova<span class="cc">IT</span></a>
 <a href="/ships/costa-smeralda">Costa Smeralda<span class="cc">IT</span></a>
+<a href="/ships/costa-toscana">Costa Toscana<span class="cc">IT</span></a>
+<a href="/ships/aidacosma">AIDAcosma<span class="cc">IT</span></a>
+<a href="/ships/norwegian-encore">Norwegian Encore<span class="cc">BS</span></a>
+<a href="/ships/norwegian-bliss">Norwegian Bliss<span class="cc">BS</span></a>
+<a href="/ships/norwegian-joy">Norwegian Joy<span class="cc">BS</span></a>
 <a href="/ships/msc-world-europa">MSC World Europa<span class="cc">MT</span></a>
+<a href="/ships/msc-world-america">MSC World America<span class="cc">MT</span></a>
+<a href="/ships/msc-virtuosa">MSC Virtuosa<span class="cc">MT</span></a>
+<a href="/ships/msc-grandiosa">MSC Grandiosa<span class="cc">MT</span></a>
+<a href="/ships/msc-euribia">MSC Euribia<span class="cc">MT</span></a>
+<a href="/ships/discovery-princess">Discovery Princess<span class="cc">BM</span></a>
+<a href="/ships/enchanted-princess">Enchanted Princess<span class="cc">BM</span></a>
+<a href="/ships/sky-princess">Sky Princess<span class="cc">BM</span></a>
+<a href="/ships/majestic-princess">Majestic Princess<span class="cc">BM</span></a>
+<a href="/ships/regal-princess">Regal Princess<span class="cc">BM</span></a>
+<a href="/ships/royal-princess">Royal Princess<span class="cc">BM</span></a>
+<a href="/ships/britannia">Britannia<span class="cc">BM</span></a>
+<a href="/ships/norwegian-epic">Norwegian Epic<span class="cc">BS</span></a>
+<a href="/ships/celebrity-ascent">Celebrity Ascent<span class="cc">MT</span></a>
+<a href="/ships/celebrity-beyond">Celebrity Beyond<span class="cc">MT</span></a>
 <a href="/ships/celebrity-xcel">Celebrity Xcel<span class="cc">MT</span></a>
+<a href="/ships/norwegian-escape">Norwegian Escape<span class="cc">BS</span></a>
+<a href="/ships/norwegian-getaway">Norwegian Getaway<span class="cc">BS</span></a>
+<a href="/ships/norwegian-breakaway">Norwegian Breakaway<span class="cc">BS</span></a>
+<a href="/ships/carnival-vista">Carnival Vista<span class="cc">PA</span></a>
+<a href="/ships/carnival-horizon">Carnival Horizon<span class="cc">PA</span></a>
+<a href="/ships/carnival-panorama">Carnival Panorama<span class="cc">PA</span></a>
+<a href="/ships/msc-seaview">MSC Seaview<span class="cc">MT</span></a>
+<a href="/ships/msc-seaside">MSC Seaside<span class="cc">MT</span></a>
+<a href="/ships/queen-anne">Queen Anne<span class="cc">BM</span></a>
 <a href="/ships/norwegian-aqua">Norwegian Aqua<span class="cc">BS</span></a>
+<a href="/ships/norwegian-luna">Norwegian Luna<span class="cc">BS</span></a>
+<a href="/ships/celebrity-reflection">Celebrity Reflection<span class="cc">MT</span></a>
+<a href="/ships/celebrity-silhouette">Celebrity Silhouette<span class="cc">MT</span></a>
+<a href="/ships/celebrity-eclipse">Celebrity Eclipse<span class="cc">MT</span></a>
+<a href="/ships/celebrity-equinox">Celebrity Equinox<span class="cc">MT</span></a>
+<a href="/ships/celebrity-solstice">Celebrity Solstice<span class="cc">MT</span></a>
+<a href="/ships/msc-meraviglia">MSC Meraviglia<span class="cc">MT</span></a>
+<a href="/ships/msc-bellissima">MSC Bellissima<span class="cc">MT</span></a>
+<a href="/ships/carnival-dream">Carnival Dream<span class="cc">PA</span></a>
+<a href="/ships/carnival-magic">Carnival Magic<span class="cc">PA</span></a>
+<a href="/ships/carnival-breeze">Carnival Breeze<span class="cc">PA</span></a>
+<a href="/ships/celebrity-apex">Celebrity Apex<span class="cc">MT</span></a>
+<a href="/ships/celebrity-edge">Celebrity Edge<span class="cc">MT</span></a>
+<a href="/ships/costa-diadema">Costa Diadema<span class="cc">IT</span></a>
+<a href="/ships/aidaperla">AIDAperla<span class="cc">IT</span></a>
+<a href="/ships/aidaprima">AIDAprima<span class="cc">IT</span></a>
+<a href="/ships/koningsdam">Koningsdam<span class="cc">NL</span></a>
 <a href="/ships/rotterdam">Rotterdam<span class="cc">NL</span></a>
+<a href="/ships/nieuw-statendam">Nieuw Statendam<span class="cc">NL</span></a>
+<a href="/ships/norwegian-viva">Norwegian Viva<span class="cc">BS</span></a>
+<a href="/ships/norwegian-prima">Norwegian Prima<span class="cc">BS</span></a>
+<a href="/ships/celebrity-constellation">Celebrity Constellation<span class="cc">MT</span></a>
+<a href="/ships/celebrity-summit">Celebrity Summit<span class="cc">MT</span></a>
+<a href="/ships/celebrity-infinity">Celebrity Infinity<span class="cc">MT</span></a>
+<a href="/ships/celebrity-millennium">Celebrity Millennium<span class="cc">MT</span></a>
+<a href="/ships/disney-magic">Disney Magic<span class="cc">BS</span></a>
+<a href="/ships/disney-wonder">Disney Wonder<span class="cc">BS</span></a>
+<a href="/ships/queen-elizabeth">Queen Elizabeth<span class="cc">BM</span></a>
+<a href="/ships/queen-victoria">Queen Victoria<span class="cc">BM</span></a>
+<a href="/ships/costa-deliziosa">Costa Deliziosa<span class="cc">IT</span></a>
+<a href="/ships/diamond-princess">Diamond Princess<span class="cc">GB</span></a>
+<a href="/ships/sapphire-princess">Sapphire Princess<span class="cc">GB</span></a>
+<a href="/ships/ruby-princess">Ruby Princess<span class="cc">BM</span></a>
+<a href="/ships/azura">Azura<span class="cc">BM</span></a>
+<a href="/ships/costa-fascinosa">Costa Fascinosa<span class="cc">IT</span></a>
+<a href="/ships/costa-favolosa">Costa Favolosa<span class="cc">IT</span></a>
+<a href="/ships/costa-pacifica">Costa Pacifica<span class="cc">IT</span></a>
+<a href="/ships/costa-serena">Costa Serena<span class="cc">IT</span></a>
+<a href="/ships/caribbean-princess">Caribbean Princess<span class="cc">BM</span></a>
+<a href="/ships/grand-princess">Grand Princess<span class="cc">BM</span></a>
+<a href="/ships/arcadia">Arcadia<span class="cc">BM</span></a>
+<a href="/ships/ventura">Ventura<span class="cc">BM</span></a>
+<a href="/ships/nieuw-amsterdam">Nieuw Amsterdam<span class="cc">NL</span></a>
+<a href="/ships/eurodam">Eurodam<span class="cc">NL</span></a>
+<a href="/ships/noordam">Noordam<span class="cc">NL</span></a>
+<a href="/ships/westerdam">Westerdam<span class="cc">NL</span></a>
+<a href="/ships/oosterdam">Oosterdam<span class="cc">NL</span></a>
+<a href="/ships/zuiderdam">Zuiderdam<span class="cc">NL</span></a>
+<a href="/ships/costa-fortuna">Costa Fortuna<span class="cc">IT</span></a>
+<a href="/ships/aurora">Aurora<span class="cc">BM</span></a>
 <a href="/ships/titanic">RMS Titanic<span class="cc">GB</span></a>
+<a href="/ships/aidasol">AIDAsol<span class="cc">IT</span></a>
+<a href="/ships/aidamar">AIDAmar<span class="cc">IT</span></a>
+<a href="/ships/aidablu">AIDAblu<span class="cc">IT</span></a>
+<a href="/ships/aidastella">AIDAstella<span class="cc">IT</span></a>
+<a href="/ships/aidaluna">AIDAluna<span class="cc">IT</span></a>
+<a href="/ships/aidabella">AIDAbella<span class="cc">IT</span></a>
+<a href="/ships/aidadiva">AIDAdiva<span class="cc">IT</span></a>
+<a href="/ships/volendam">Volendam<span class="cc">NL</span></a>
+<a href="/ships/zaandam">Zaandam<span class="cc">NL</span></a>
 <span class="mf-gh">Container ships</span>
 <a href="/ships/mol-triumph">MOL Triumph<span class="cc">PA</span></a>
 <a href="/ships/barzan">Barzan<span class="cc">MT</span></a>
