@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+<!-- One colour, three places: this meta, html{background} in CSS, and the panel background — so the mobile browser bar reads as one continuous surface. -->
+<meta name="theme-color" content="#FAFBFC">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="color-scheme" content="light only">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="ships.fyi" href="/feed.xml">
+
+<title>Captain — free ship game, 16 real ships, no download</title>
+<meta name="description" content="Steer Titanic, Icon of the Seas or Seawise Giant across open sea. Hunt treasure, bank it at port, learn why draught decides everything. Free, in your browser.">
+<link rel="canonical" href="https://ships.fyi/play">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ships.fyi">
+<meta property="og:url" content="https://ships.fyi/play">
+<meta property="og:title" content="Captain — free ship game, 16 real ships, no download">
+<meta property="og:description" content="Steer Titanic, Icon of the Seas or Seawise Giant across open sea. Hunt treasure, bank it at port, learn why draught decides everything. Free, in your browser.">
+<meta property="og:image" content="https://ships.fyi/assets/img/og/default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Captain — a free ship game from ships.fyi">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Captain — free ship game, 16 real ships, no download">
+<meta name="twitter:description" content="Steer Titanic, Icon of the Seas or Seawise Giant across open sea. Hunt treasure, bank it at port, learn why draught decides everything. Free, in your browser.">
+<meta name="twitter:image" content="https://ships.fyi/assets/img/og/default.png">
+<meta name="twitter:image:alt" content="Captain — a free ship game from ships.fyi">
+
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16.png">
+<link rel="icon" href="/assets/img/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="/assets/site.webmanifest">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoGame","name":"Captain","alternateName":"Captain \u2014 the ships.fyi ship game","url":"https://ships.fyi/play","description":"Steer Titanic, Icon of the Seas or Seawise Giant across open sea. Hunt treasure, bank it at port, learn why draught decides everything. Free, in your browser.","image":"https://ships.fyi/assets/img/og/default.png","inLanguage":"en-GB","genre":["Simulation","Casual","Educational"],"gamePlatform":"Web browser","applicationCategory":"GameApplication","operatingSystem":"Any modern web browser","playMode":"https://schema.org/SinglePlayer","isFamilyFriendly":true,"isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"GBP","availability":"https://schema.org/InStock"},"publisher":{"@type":"Organization","name":"ships.fyi","url":"https://ships.fyi/"},"about":{"@type":"Thing","name":"Ship handling and naval architecture"},"keywords":"free ship game, ship games, shipping game, cargo ship game, boat game, ship simulator, browser game"}</script>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ships.fyi","item":"https://ships.fyi/"},{"@type":"ListItem","position":2,"name":"Captain \u2014 ship game","item":"https://ships.fyi/play"}]}</script>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is this ship game free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Captain is free to play in your browser with no account, no download and no in-app purchases."}},{"@type":"Question","name":"Do I need to download anything?","acceptedAnswer":{"@type":"Answer","text":"No. It runs in the browser on phone, tablet or desktop. There is nothing to install."}},{"@type":"Question","name":"Can I play it on my phone?","acceptedAnswer":{"@type":"Answer","text":"Yes. It is built for touch first, with an analogue joystick for the rudder and a notched engine telegraph. It also plays on desktop with arrow keys."}},{"@type":"Question","name":"Which ships can I command?","acceptedAnswer":{"@type":"Answer","text":"Sixteen real vessels drawn to their true dimensions, including Titanic, Queen Mary 2, Icon of the Seas, Wonder of the Seas, AIDAnova, Emma M\u00e6rsk, Ever Given, Ever Ace, MSC Irina, Exxon Valdez, Seawise Giant, Esso Atlantic, Batillus, Pioneering Spirit, a harbour tug and a harbour ferry."}},{"@type":"Question","name":"Why can my ship not reach the treasure?","acceptedAnswer":{"@type":"Answer","text":"Treasure chests sit in less than 16 metres of water. If your ship draws more than that she physically cannot get to them, and going in anyway will put her aground. Draught decides where you can sail, which is the point of the game."}},{"@type":"Question","name":"What is squat?","acceptedAnswer":{"@type":"Answer","text":"A moving ship sits lower in the water than a stopped one. The faster she goes the deeper she sits, so speed in shallow water is what puts ships on the bottom. The game models it and shows it live on the HUD."}}]}</script>
+<style>
+  *{cursor:default;box-sizing:border-box}
+  a,button,[role=button]{cursor:pointer}
+  html,body{margin:0;height:100%;overflow:hidden;overscroll-behavior:none;background:#06161F;
+            color-scheme:light;forced-color-adjust:none}
+  body{font-family:"Space Grotesk",system-ui,sans-serif;
+       -webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent;
+       user-select:none;-webkit-user-select:none;touch-action:none}
+  .num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
+  canvas{display:block;position:fixed;inset:0}
+
+  #hud{position:fixed;inset:0;pointer-events:none;display:none}
+  #hud.on{display:block}
+  .pod{background:rgba(6,22,31,.84);border:1px solid rgba(255,255,255,.13);
+       border-radius:12px;padding:6px 8px 7px;color:#EAF2F6;min-width:0}
+  .pod b{display:block;font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;opacity:.5;
+         font-weight:700;margin-bottom:1px}
+  .pod span{display:block;font-size:19px;line-height:1;font-weight:700}
+  .pod span i{font-size:10px;font-style:normal;opacity:.5;margin-left:1px}
+  #hudTop{position:absolute;top:8px;left:8px;right:8px;display:flex;gap:6px;align-items:stretch}
+  #hudTop .pod{flex:1 1 0}
+  #pGold span{color:#8ED0C8}
+  #pCargo span{color:#F5C451}
+  #pCargo.laden{background:rgba(138,90,11,.92);border-color:#F0B43C}
+  #hudRow2{position:absolute;top:114px;left:8px;right:8px;display:flex;gap:6px;
+           align-items:flex-start;justify-content:space-between}
+  #pSpd{flex:0 0 auto}
+  #task{position:absolute;top:60px;left:8px;right:8px;background:rgba(6,22,31,.84);
+        border:1px solid rgba(255,255,255,.13);border-radius:12px;padding:6px 11px;color:#EAF2F6;
+        text-align:center;display:none}
+  #task.on{display:block}
+  #task b{display:block;font-size:11px;line-height:1.25;font-weight:700}
+  #task span{display:block;font-size:9.5px;opacity:.6;margin-top:2px;font-weight:700}
+  #pUkc{text-align:right}
+  #pUkc.warn{background:rgba(140,80,10,.92);border-color:#D9962A}
+  #pUkc.bad{background:rgba(150,12,44,.94);border-color:#FF6B8A}
+  #side{background:rgba(6,22,31,.84);border:1px solid rgba(255,255,255,.13);border-radius:12px;
+        padding:6px 9px;color:#EAF2F6;font-size:10.5px;line-height:1.5;flex:0 1 auto}
+  #side b{color:#8ED0C8}
+  #time{display:flex;gap:4px;pointer-events:auto;flex:0 0 auto}
+  #time button{background:rgba(6,22,31,.84);border:1px solid rgba(255,255,255,.13);border-radius:9px;
+            color:#EAF2F6;font-size:10.5px;font-weight:700;padding:5px 8px;font-family:inherit}
+  #time button.on{background:#0F766E;border-color:#22C3B3}
+  #flash{position:absolute;left:50%;top:30%;transform:translateX(-50%);color:#fff;font-size:17px;
+         font-weight:700;text-align:center;text-shadow:0 2px 12px rgba(0,0,0,.85);opacity:0;
+         transition:opacity .25s;max-width:84%}
+  #flash.on{opacity:1}
+  /* right:108px keeps it clear of the 92 px throttle column no matter how long
+     the port name is; bottom:172px clears the 150 px joystick below it */
+  #compass{position:absolute;left:8px;right:108px;bottom:172px;text-align:center;color:#F5C451;
+           font-size:11px;font-weight:700;text-shadow:0 2px 10px rgba(0,0,0,.9);opacity:.9}
+
+  #ctl{position:fixed;left:0;right:0;bottom:0;display:none;pointer-events:none;padding:0 8px 10px}
+  #ctl.on{display:block}
+  #thrWrap{position:absolute;right:8px;bottom:120px;width:92px;height:158px;pointer-events:auto;
+           touch-action:none;background:rgba(6,22,31,.86);border:1px solid rgba(255,255,255,.16);
+           border-radius:16px;overflow:hidden}
+  #thrFill{position:absolute;left:0;right:0;bottom:50%;background:rgba(15,118,110,.55)}
+  #thrFill.astern{background:rgba(194,18,63,.55)}
+  #thrMid{position:absolute;left:6px;right:6px;top:50%;height:1px;background:rgba(255,255,255,.3)}
+  #thrKnob{position:absolute;left:5px;right:5px;height:26px;border-radius:9px;background:#0F766E;
+           border:2px solid #22C3B3}
+  #thrKnob.astern{background:#8A0F30;border-color:#FF6B8A}
+  #thrLbl{position:absolute;left:0;right:0;top:5px;text-align:center;font-size:8px;letter-spacing:.13em;
+          text-transform:uppercase;color:#EAF2F6;opacity:.5;font-weight:700}
+  #thrVal{position:absolute;left:0;right:0;bottom:5px;text-align:center;font-size:10.5px;font-weight:700;
+          color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.85)}
+  #thrLbl,#thrFill,#thrMid,#thrKnob,#thrVal{pointer-events:none}
+  #row{display:flex;gap:10px;align-items:flex-end}
+  #joy{position:relative;width:150px;height:150px;flex:none;pointer-events:auto;border-radius:50%;
+       background:radial-gradient(circle at 50% 50%, rgba(15,118,110,.18) 0%, rgba(6,22,31,.88) 62%);
+       border:1px solid rgba(255,255,255,.18);touch-action:none}
+  #joyRing{position:absolute;inset:14px;border-radius:50%;border:1px dashed rgba(255,255,255,.13)}
+  #joyH{position:absolute;left:12px;right:12px;top:50%;height:1px;background:rgba(255,255,255,.10)}
+  #joyV{position:absolute;top:12px;bottom:12px;left:50%;width:1px;background:rgba(255,255,255,.10)}
+  #joyK{position:absolute;width:60px;height:60px;left:50%;top:50%;margin:-30px 0 0 -30px;border-radius:50%;
+        background:#0F766E;border:2px solid #2ED3C0;box-shadow:0 4px 14px rgba(0,0,0,.45);
+        transition:transform .12s ease,background .1s,border-color .1s}
+  #joy.on #joyK{transition:background .1s,border-color .1s}
+  #joyK.thr{background:#8A5A0B;border-color:#F0B43C}
+  #joyRing,#joyH,#joyV,#joyK{pointer-events:none}
+  #centre{flex:1;display:flex;flex-direction:column;gap:6px;justify-content:flex-end}
+  #rudRead{background:rgba(6,22,31,.86);border:1px solid rgba(255,255,255,.16);border-radius:13px;
+           padding:9px 6px;text-align:center;font-size:11px;font-weight:700;color:#8ED0C8}
+  #thrRead{background:rgba(6,22,31,.86);border:1px solid rgba(255,255,255,.16);border-radius:13px;
+           padding:9px 6px;text-align:center;font-size:11px;font-weight:700;color:#F0B43C}
+  #thrRead.off{color:#5A6B78}
+  #dpBtn{background:rgba(6,22,31,.86);border:1px solid rgba(255,255,255,.16);border-radius:13px;
+         color:#EAF2F6;font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+         padding:11px 4px;text-align:center;pointer-events:auto;width:100%;font-family:inherit}
+  #dpBtn.on{background:#8A5A0B;border-color:#F0B43C;color:#fff}
+
+  .panel{position:fixed;inset:0;overflow-y:auto;-webkit-overflow-scrolling:touch;background:#FAFBFC;
+         padding:22px 16px 40px;display:none;touch-action:pan-y}
+  .panel.on{display:block}
+  .inner{max-width:540px;margin:0 auto}
+  h1{font-size:38px;line-height:1.02;margin:0 0 2px;letter-spacing:-.028em;color:#0E141C}
+  h1 em{font-style:normal;color:#0F766E}
+  .lede{font-size:14.5px;line-height:1.55;color:#56677A;margin:0 0 16px}
+  .lede b{color:#0E141C}
+  h2{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#56677A;margin:20px 0 9px;font-weight:700}
+  h2.first{margin-top:14px}
+  h2.big{font-size:38px;line-height:1.02;margin:0 0 6px;letter-spacing:-.028em;color:#0E141C;
+         text-transform:none;font-weight:700}
+  .brief{margin-top:26px;padding-top:4px;border-top:1px solid rgba(14,20,28,.12)}
+  .brief .lede{margin:0 0 10px}
+  .modes{display:flex;gap:8px;margin-bottom:12px}
+  .mode{flex:1;background:#fff;border:1px solid rgba(14,20,28,.12);border-radius:16px;padding:12px;
+        font-family:inherit;text-align:left}
+  .mode.on{border-color:#0F766E;box-shadow:0 0 0 2px rgba(15,118,110,.18)}
+  .mode b{display:block;font-size:15px;color:#0E141C}
+  .mode small{display:block;font-size:11.5px;color:#56677A;line-height:1.4;margin-top:4px}
+  .tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+  .tab{font-size:12px;font-weight:700;padding:7px 12px;border-radius:999px;border:1px solid rgba(14,20,28,.14);
+       background:#fff;color:#56677A;font-family:inherit}
+  .tab.on{background:#0F766E;color:#fff;border-color:#0F766E}
+  .card{background:#fff;border:1px solid rgba(14,20,28,.12);border-radius:17px;padding:11px 13px;
+        margin-bottom:7px;display:flex;align-items:center;gap:10px;width:100%;
+        font-family:inherit;text-align:left}
+  .card.sel{border-color:#0F766E;box-shadow:0 0 0 2px rgba(15,118,110,.18)}
+  .card i.sw{height:9px;border-radius:2px 5px 5px 2px;flex:none;display:block}
+  .card .tx{flex:1;min-width:0}
+  .card .tx b{display:block;font-size:14px;color:#0E141C;line-height:1.2}
+  .card .tx small{display:block;font-size:11px;color:#56677A;margin-top:2px}
+  .card .tag{font-size:9.5px;font-weight:700;padding:3px 7px;border-radius:999px;white-space:nowrap;
+             background:rgba(245,196,81,.18);color:#8A5A0B}
+  .btn{display:block;width:100%;border:0;border-radius:11px;background:#0F766E;color:#fff;font-weight:700;
+       font-size:15px;padding:14px;margin-top:14px;font-family:inherit}
+  .btn.ghost{background:transparent;color:#0F766E;border:1px solid rgba(15,118,110,.35);margin-top:8px}
+  .hint{font-size:12.5px;line-height:1.6;color:#56677A;margin-top:13px}
+  .hint b{color:#0E141C}
+  .rows{margin-top:14px;border-top:1px solid rgba(14,20,28,.12)}
+  .row{display:flex;justify-content:space-between;padding:10px 2px;border-bottom:1px solid rgba(14,20,28,.12);font-size:14px}
+  .row span{color:#56677A} .row b{color:#0E141C}
+  .verdict{background:#fff;border:1px solid rgba(14,20,28,.12);border-radius:17px;padding:15px;
+           margin-top:14px;font-size:13.5px;line-height:1.55;color:#0E141C}
+  .verdict b{color:#0F766E}
+  @media (prefers-color-scheme: dark){ html,body{background:#06161F;color-scheme:light} .panel{background:#FAFBFC} }
+  @media (prefers-reduced-motion: reduce){ *{transition:none!important} }
+  :focus-visible{outline:2px solid #0F766E;outline-offset:2px}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+           clip:rect(0 0 0 0);white-space:nowrap;border:0}
+  .skip{position:absolute;left:-9999px;top:8px;z-index:99;background:#0F766E;color:#fff;
+        padding:10px 14px;border-radius:9px;font-weight:700;font-size:14px;text-decoration:none}
+  .skip:focus{left:8px}
+  .h1sub{display:block;font-size:15px;line-height:1.4;letter-spacing:0;color:#56677A;
+         font-weight:400;margin-top:6px}
+  .shiplist{margin:0 0 4px;padding-left:18px;font-size:12.5px;line-height:1.7;color:#56677A}
+  .shiplist b{color:#0E141C;font-weight:700}
+  .faq{margin-top:4px}
+  .faq dt{font-size:13.5px;font-weight:700;color:#0E141C;margin-top:12px}
+  .faq dd{margin:4px 0 0;font-size:12.5px;line-height:1.6;color:#56677A}
+  .credit{margin-top:22px;padding-top:12px;border-top:1px solid rgba(14,20,28,.12);
+          font-size:12px;color:#56677A;line-height:1.6}
+  .credit a{color:#0F766E;font-weight:700}
+</style>
+</head>
+<body>
+<a class="skip" href="#start">Skip to the game</a>
+<noscript>
+  <p style="max-width:540px;margin:24px auto;padding:0 16px;font:15px/1.6 'Space Grotesk',system-ui,sans-serif;color:#0E141C">
+  <b>Captain</b> is a free ship game that needs JavaScript to run. Enable it and reload to steer sixteen
+  real ships — Titanic, Icon of the Seas, Ever Given, Seawise Giant and more — across open sea.
+  Meanwhile, <a href="https://ships.fyi/" style="color:#0F766E">ships.fyi</a> has the dimensions and
+  records for every one of them.</p>
+</noscript>
+
+<!-- The canvas is decorative to assistive tech: every piece of state it draws is
+     also present as text in the HUD, and the whole game is keyboard playable. -->
+<canvas id="cv" aria-hidden="true"></canvas>
+
+<p id="kbdHelp" class="sr-only">Keyboard controls: left and right arrow keys set the rudder,
+up and down arrows work the engine telegraph, W engages the bow thruster, T toggles the
+thrusters for pivoting on the spot, and M centres the wheel.</p>
+
+<div id="hud" role="group" aria-label="Voyage instruments">
+  <div id="hudTop">
+      <div class="pod" id="pGold"><b id="lblBank">Banked</b><span class="num" id="vBank" role="status" aria-live="off" aria-labelledby="lblBank">0</span></div>
+    <div class="pod" id="pCargo"><b id="lblHold">In the hold</b><span class="num" id="vCargo" aria-live="off" aria-labelledby="lblHold">0</span></div>
+    <div class="pod" id="pUkc"><b id="lblUkc">Under keel</b><span class="num" id="vUkc" aria-live="off" aria-labelledby="lblUkc">—<i>m</i></span></div>
+  </div>
+  <div id="task"><b id="vTask">—</b><span id="vProg"></span></div>
+  <div id="hudRow2">
+    <div class="pod" id="pSpd"><b>Speed</b><span class="num" id="vSpd">0.0<i>kn</i></span></div>
+    <div id="side">Sailed <b id="vDist">0.0 km</b><br>Squat <b id="vSquat">0.00 m</b></div>
+    <div id="time" role="group" aria-label="Time compression">
+      <button type="button" data-t="1" aria-pressed="false">1×</button>
+      <button type="button" data-t="10" aria-pressed="false">10×</button>
+      <button type="button" data-t="30" class="on" aria-pressed="true">30×</button>
+      <button type="button" data-t="60" aria-pressed="false">60×</button>
+    </div>
+  </div>
+  <div id="compass" role="status" aria-live="off" aria-label="Bearing to the nearest objective"></div>
+  <div id="flash" role="status" aria-live="assertive" aria-atomic="true"></div>
+</div>
+
+<div id="ctl" role="group" aria-label="Ship controls">
+  <div id="thrWrap" role="slider" aria-label="Engine telegraph" aria-valuemin="0" aria-valuemax="7"
+       aria-valuenow="5" aria-valuetext="Slow ahead" aria-hidden="true">
+    <div id="thrFill"></div><div id="thrMid"></div><div id="thrKnob"></div>
+    <div id="thrLbl">Engine</div><div id="thrVal">Stop</div>
+  </div>
+  <div id="row">
+    <div id="joy" role="application" aria-label="Wheel and bow thruster" aria-hidden="true"><div id="joyRing"></div><div id="joyH"></div><div id="joyV"></div><div id="joyK"></div></div>
+    <div id="centre">
+      <button type="button" id="dpBtn" aria-pressed="false">Thrusters</button>
+      <div id="rudRead">Amidships</div>
+      <div id="thrRead" class="off">Thruster idle</div>
+    </div>
+  </div>
+</div>
+
+<main class="panel on" id="pStart">
+  <div class="inner">
+    <h1>Captain<em>.</em><span class="h1sub">A free ship game. Sixteen real ships, open sea,
+    buried treasure, and a seabed that does not forgive.</span></h1>
+    <h2 class="first" id="hMode">How hard do you want it</h2>
+    <div class="modes" id="modes" role="radiogroup" aria-labelledby="hMode"></div>
+    <h2 id="hShip">Your ship</h2>
+    <div class="tabs" id="tabs" role="tablist" aria-labelledby="hShip"></div>
+    <div id="ships" role="radiogroup" aria-labelledby="hShip"></div>
+    <button class="btn" id="go">Take the first contract</button>
+
+    <div class="brief">
+      <h2>What you're doing out there</h2>
+      <p class="lede">Open sea in every direction. <b>Coins</b> drift in deep water; <b>treasure chests</b>
+      sit in the shallows by the islands, worth ten times as much. But gold in your hold is only
+      <b>cargo</b> — it counts for nothing until you've carried it into a harbour and banked it, and
+      if you pile her up on the way home <b>you lose every piece of it</b>.</p>
+      <p class="lede">Work through the <b>contracts</b>, and remember your <b>draught decides
+      everything</b>: where the chests are, and which harbours will even take you.</p>
+      <h2>The controls</h2>
+      <p class="hint"><b>The stick is analogue</b> — half a stick is half a rudder. Push it <b>forward</b>
+      as well and the bow thruster shoves her nose the way you're turning; it stops helping above 5 knots.
+      The <b>slider</b> is the engine, and <b>Thrusters</b> overrides it to Stop so you can pivot on the
+      spot. Watch the <b>under-keel</b> reading — speed makes you sit deeper.<br>
+      Keyboard: <b>←→</b> rudder, <b>↑↓</b> engine, <b>W</b> thruster, <b>T</b> thrusters, <b>M</b> centre.</p>
+
+      <h2>The sixteen ships</h2>
+      <p class="hint">Every hull is drawn to its true length, beam and draught, and handles accordingly.
+      Turning circle is four ship lengths, so the big ones need over a kilometre and a half to come round.</p>
+      <ul class="shiplist">
+        <li><b>Harbour tug</b> — 32 × 12.6 m, 5.5 m draught. Turns on the spot.</li>
+        <li><b>Harbour ferry</b> — 58 × 11 m, 3.2 m draught. Goes anywhere.</li>
+        <li><b>Titanic</b> — 269 × 28.19 m, 10.5 m draught. The oldest hull here.</li>
+        <li><b>AIDAnova</b> — 337 × 42 m, 8.7 m draught. Shallow for her size.</li>
+        <li><b>Queen Mary 2</b> — 345 × 41 m, 10.3 m draught. 30 knots, fastest in the game.</li>
+        <li><b>Wonder of the Seas</b> — 362 × 47 m, 9.32 m draught. Oasis class.</li>
+        <li><b>Icon of the Seas</b> — 365 × 48.65 m, 9.3 m draught. Largest cruise ship afloat.</li>
+        <li><b>Emma Mærsk</b> — 398 × 56.4 m, 15.5 m draught. The original E-class.</li>
+        <li><b>Ever Given</b> — 400 × 58.8 m, 16 m draught. Blocked the Suez in 2021.</li>
+        <li><b>Ever Ace</b> — 400 × 61.5 m, 17 m draught. 23,992 TEU.</li>
+        <li><b>MSC Irina</b> — 400 × 61.3 m, 16.5 m draught. 24,346 TEU.</li>
+        <li><b>Exxon Valdez</b> — 301 × 50.6 m, 20 m draught. Deep water only.</li>
+        <li><b>Seawise Giant</b> — 458 × 68.8 m, 24.6 m draught. Longest ship ever built.</li>
+        <li><b>Esso Atlantic</b> — 407 × 71.07 m, 25.3 m draught.</li>
+        <li><b>Batillus</b> — 414 × 63.01 m, 28.5 m draught. Deepest draught here.</li>
+        <li><b>Pioneering Spirit</b> — 382 × 123.75 m, 27 m draught. A catamaran with a 59 m bow slot,
+        and the widest ship afloat.</li>
+      </ul>
+
+      <h2>Questions</h2>
+      <dl class="faq">
+        <dt>Is this ship game free?</dt>
+        <dd>Yes. No account, no download, no in-app purchases. It runs in the browser.</dd>
+        <dt>Can I play it on my phone?</dt>
+        <dd>It's built for touch first — analogue stick for the rudder, notched telegraph for the engine.
+        It plays on desktop too, with arrow keys.</dd>
+        <dt>Why can't my ship reach the treasure?</dt>
+        <dd>Chests sit in less than 16 metres of water. If she draws more than that she physically
+        cannot get to them, and trying will put her on the bottom. Draught decides where you can sail.</dd>
+        <dt>What is squat?</dt>
+        <dd>A moving ship sits lower than a stopped one, and the faster she goes the deeper she sits.
+        It's why speed in shallow water puts ships aground. The HUD shows yours live.</dd>
+        <dt>Why does the wheel do nothing when I'm barely moving?</dt>
+        <dd>A rudder needs water flowing past it. That's what the bow thruster is for, and why the
+        <b>Thrusters</b> button exists — it stops the engines and lets you pivot on the spot.</dd>
+      </dl>
+
+      <p class="credit">Part of <a href="https://ships.fyi/">ships.fyi</a> — dimensions, records and
+      reference for the world's largest ships. Every vessel in this game is real and drawn to scale.</p>
+    </div>
+  </div>
+</main>
+
+<div class="panel" id="pOver" role="dialog" aria-label="Voyage over" aria-modal="true">
+  <div class="inner">
+    <h2 id="oTitle" class="big">Lost</h2>
+    <div class="rows" id="oRows"></div>
+    <div class="verdict" id="oVerdict"></div>
+    <button class="btn" id="again">Put to sea again</button>
+    <button class="btn ghost" id="change">Different ship</button>
+  </div>
+</div>
+
+<script>
+(function(){
+'use strict';
+
+var FLEET=[
+ {c:'Small',name:'Harbour tug',loa:32,beam:12.6,draft:5.5,kn:13,thr:1.6,dp:1.6,hull:'#D9962A',windage:0.8,note:'azimuth drives — spins on the spot'},
+ {c:'Small',name:'Harbour ferry',loa:58,beam:11,draft:3.2,kn:14,thr:0.9,dp:1.1,hull:'#0A7D45',windage:0.9,note:'3.2 m — reaches everything'},
+ {c:'Cruise',name:'Titanic',loa:269,beam:28.19,draft:10.5,kn:23,thr:0.7,dp:0.7,hull:'#22262B',windage:1.1,note:'1912 — the oldest hull here'},
+ {c:'Cruise',name:'AIDAnova',loa:337,beam:42,draft:8.7,kn:21,thr:1.2,dp:1.2,hull:'#9B72C4',windage:1.5,note:'azipods, shallow draught'},
+ {c:'Cruise',name:'Queen Mary 2',loa:345,beam:41,draft:10.3,kn:30,thr:1.0,dp:1.0,hull:'#33383F',windage:1.3,note:'30 kn — fastest here'},
+ {c:'Cruise',name:'Wonder of the Seas',loa:362,beam:47,draft:9.32,kn:22,thr:1.3,dp:1.3,hull:'#5FB8B0',windage:1.6,note:'Oasis class, azipods'},
+ {c:'Cruise',name:'Icon of the Seas',loa:365,beam:48.65,draft:9.3,kn:22,thr:1.3,dp:1.3,hull:'#5FB8B0',windage:1.6,note:'largest afloat, azipods'},
+ {c:'Container',name:'Emma Mærsk',loa:398,beam:56.4,draft:15.5,kn:25,thr:0.8,dp:0.8,hull:'#7FB3D5',windage:1.3,note:'the original E-class'},
+ {c:'Container',name:'Ever Given',loa:400,beam:58.8,draft:16,kn:22,thr:0.8,dp:0.8,hull:'#0A7D45',windage:1.4,note:'blocked the Suez in 2021'},
+ {c:'Container',name:'Ever Ace',loa:400,beam:61.5,draft:17,kn:22,thr:0.8,dp:0.8,hull:'#0A7D45',windage:1.4,note:'23,992 TEU'},
+ {c:'Container',name:'MSC Irina',loa:400,beam:61.3,draft:16.5,kn:22,thr:0.8,dp:0.8,hull:'#F5C451',windage:1.4,note:'24,346 TEU'},
+ {c:'Tanker',name:'Exxon Valdez',loa:301,beam:50.6,draft:20,kn:16.25,thr:0.7,dp:0.7,hull:'#3E4A57',windage:0.7,note:'20 m — deep water only'},
+ {c:'Tanker',name:'Seawise Giant',loa:458,beam:68.8,draft:24.6,kn:16,thr:0.6,dp:0.6,hull:'#8A5A0B',windage:0.7,note:'longest ever built'},
+ {c:'Tanker',name:'Esso Atlantic',loa:407,beam:71.07,draft:25.3,kn:16,thr:0.6,dp:0.6,hull:'#7A5A22',windage:0.7,note:'71 m in the beam'},
+ {c:'Tanker',name:'Batillus',loa:414,beam:63.01,draft:28.5,kn:16.7,thr:0.6,dp:0.6,hull:'#6B4A12',windage:0.7,note:'28.5 m — deepest here'},
+ {c:'Special',name:'Pioneering Spirit',loa:382,beam:123.75,draft:27,kn:14,thr:1.2,dp:1.2,twin:1,slot:59,hull:'#4B5563',windage:1.9,note:'catamaran · 59 m bow slot · DP3'}
+];
+var CATS=['Small','Cruise','Container','Tanker','Special'];
+var TELE=[{v:-0.6,n:'Full astern'},{v:-0.35,n:'Half astern'},{v:-0.16,n:'Slow astern'},{v:0,n:'Stop'},
+          {v:0.16,n:'Dead slow'},{v:0.32,n:'Slow ahead'},{v:0.55,n:'Half ahead'},{v:0.8,n:'Full ahead'}];
+var MODES={
+  deckhand:{name:'Deckhand',blurb:'She answers quicker, and you get three lives before the run ends.',
+            rudderGain:2.2,engineGain:2.0,autoCentre:true,lives:3},
+  captain:{name:'Captain',blurb:'True turning circle, true engine lag. One mistake ends the voyage.',
+           rudderGain:1.0,engineGain:1.0,autoCentre:true,lives:1}
+};
+var MODE='deckhand';
+function M(){return MODES[MODE];}
+
+/* A ladder of jobs. Each one gives the next voyage a point, and they escalate
+   so the pressure to carry a bigger load home builds on its own. */
+var CONTRACTS=[
+  {t:'Bank 10 gold at any port',            test:function(g){return g.banked>=10;},  goal:function(g){return g.banked+'/10 banked';}},
+  {t:'Bank 25 gold',                        test:function(g){return g.banked>=25;},  goal:function(g){return g.banked+'/25 banked';}},
+  {t:'Bring home 2 treasure chests',        test:function(g){return g.bChests>=2;},  goal:function(g){return g.bChests+'/2 chests banked';}},
+  {t:'Bank 60 gold',                        test:function(g){return g.banked>=60;},  goal:function(g){return g.banked+'/60 banked';}},
+  {t:'Land a single haul of 25 gold',       test:function(g){return g.bestHaul>=25;},goal:function(g){return 'best haul '+g.bestHaul+'/25';}},
+  {t:'Bring home 5 treasure chests',        test:function(g){return g.bChests>=5;},  goal:function(g){return g.bChests+'/5 chests banked';}},
+  {t:'Bank 150 gold',                       test:function(g){return g.banked>=150;}, goal:function(g){return g.banked+'/150 banked';}},
+  {t:'Call at 6 different ports',           test:function(g){return g.ports>=6;},    goal:function(g){return g.ports+'/6 ports visited';}},
+  {t:'Land a single haul of 60 gold',       test:function(g){return g.bestHaul>=60;},goal:function(g){return 'best haul '+g.bestHaul+'/60';}},
+  {t:'Bank 300 gold',                       test:function(g){return g.banked>=300;}, goal:function(g){return g.banked+'/300 banked';}}
+];
+
+/* =====================================================================
+   THE SEA
+
+   Open ocean in every direction, defined by noise rather than stored — so it
+   is infinite, identical every time you sail back over it, and costs no
+   memory at all. Islands are simply where the seabed comes above the surface.
+
+   Roughly 10% islands, 11% shoal, the rest navigable. The shoals are the
+   point: that is where the treasure sits, and a 25 m tanker can never
+   follow a tug in there.
+   ===================================================================== */
+var SEED=0;
+function h2(ix,iy){
+  var n=(ix*374761393+iy*668265263+SEED)|0;
+  n=Math.imul(n^(n>>>13),1274126177);
+  return ((n^(n>>>16))>>>0)/4294967295;
+}
+function sm(t){ return t*t*(3-2*t); }
+function vnoise(x,y){
+  var xi=Math.floor(x), yi=Math.floor(y), tx=sm(x-xi), ty=sm(y-yi);
+  var a=h2(xi,yi), b=h2(xi+1,yi), c=h2(xi,yi+1), d=h2(xi+1,yi+1);
+  return (a*(1-tx)+b*tx)*(1-ty)+(c*(1-tx)+d*tx)*ty;
+}
+function fbm(x,y){
+  var v=0, amp=0.5, f=1;
+  for(var i=0;i<4;i++){ v+=vnoise(x*f,y*f)*amp; amp*=0.5; f*=2; }
+  return v;
+}
+function depthAt(x,y){
+  var t=fbm(x/2600,y/2600);
+  return 60-200*Math.max(0,t-0.33);
+}
+
+/* ---- gold. Deterministic per cell, so it never respawns and never drifts. ---- */
+var CCELL=760;
+function coinAt(cx,cy){
+  var r=h2(cx*7919+13,cy*104729+7);
+  if(r>0.46) return null;
+  var x=cx*CCELL+h2(cx+91,cy+17)*CCELL, y=cy*CCELL+h2(cx+7,cy+53)*CCELL;
+  var d=depthAt(x,y);
+  if(d<5) return null;                                  /* not on the beach */
+  /* Chests live in the shallows — richer, and out of reach of anything deep. */
+  var chest = d<16 && h2(cx+3,cy+11)>0.55;
+  return {x:x,y:y,chest:chest,v:chest?10:1,key:cx+','+cy};
+}
+var TAKEN=Object.create(null);
+
+/* =====================================================================
+   PORTS
+
+   Gold you have picked up is only CARGO. It is worth nothing until you have
+   carried it into a harbour and banked it — and if you pile her up on the way
+   home you lose the lot. That is the whole game: every chest you grab makes
+   the trip back more expensive to get wrong.
+
+   Ports sit in workable water with land close by, the way real ones do.
+   ===================================================================== */
+var PCELL=6500;
+var PNAMES=['Ardvik','Bellmouth','Corran','Dunmara','Estrell','Fairhaven','Gantry Head',
+            'Halloway','Iskar','Jorvik Quay','Kell','Lanmouth','Morvan','Nystrand',
+            'Orlach','Pellworth','Quayle','Roscarrow','Stellhaven','Tarnmouth'];
+function portAt(cx,cy){
+  if(h2(cx*15485863+3,cy*32452843+11)>0.70) return null;
+  var x=cx*PCELL+h2(cx+23,cy+71)*PCELL, y=cy*PCELL+h2(cx+59,cy+37)*PCELL;
+  var d=depthAt(x,y);
+  /* A port she cannot physically enter is worse than no port — the compass would
+     spend the whole voyage pointing at a harbour that would put her on the bottom.
+     So only harbours with water for THIS hull exist at all. Deep-draught ships get
+     fewer of them and further apart, which is exactly the real trade. */
+  if(d < S.ship.draft+7) return null;
+  var shore=false;                                  /* a harbour needs a coast */
+  for(var a=0;a<6.283;a+=0.6){
+    if(depthAt(x+Math.cos(a)*2600,y+Math.sin(a)*2600)<2){ shore=true; break; }
+  }
+  if(!shore) return null;
+  return {x:x,y:y,d:d,key:cx+','+cy,
+          name:PNAMES[Math.floor(h2(cx+5,cy+9)*PNAMES.length)%PNAMES.length]};
+}
+function nearestPort(x,y){
+  var best=null,bd=1e12;
+  cellsAround(x,y,PCELL,26000,function(cx,cy){
+    var pt=portAt(cx,cy); if(!pt)return;
+    var d=Math.hypot(pt.x-x,pt.y-y);
+    if(d<bd){bd=d;best=pt;}
+  });
+  return best?{p:best,d:bd}:null;
+}
+
+/* ---- obstacles: wrecks and rock heads, in the middling depths ---- */
+var OCELL=1500;
+function obsAt(cx,cy){
+  var r=h2(cx*31337+5,cy*65537+9);
+  if(r>0.30) return null;
+  var x=cx*OCELL+h2(cx+41,cy+29)*OCELL, y=cy*OCELL+h2(cx+13,cy+67)*OCELL;
+  var d=depthAt(x,y);
+  if(d<3||d>40) return null;
+  var wreck=h2(cx+5,cy+3)>0.5;
+  return {x:x,y:y,r:wreck?150:110,wreck:wreck};
+}
+function cellsAround(x,y,cell,rad,fn){
+  var c0=Math.floor((x-rad)/cell), c1=Math.floor((x+rad)/cell);
+  var d0=Math.floor((y-rad)/cell), d1=Math.floor((y+rad)/cell);
+  for(var i=c0;i<=c1;i++) for(var j=d0;j<=d1;j++) fn(i,j);
+}
+
+/* ---------------- state ---------------- */
+var cv=document.getElementById('cv'),ctx=cv.getContext('2d');
+var W,H,DPR,SCALE,VIEW=3200;
+var S={ship:FLEET[1],cat:'Small'},G=null,raf=null,last=0,TS=30;
+function setView(){ VIEW=Math.max(1400,Math.min(5200,(S.ship?S.ship.loa:300)*11)); }
+function resize(){DPR=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;
+  cv.width=W*DPR;cv.height=H*DPR;cv.style.width=W+'px';cv.style.height=H+'px';
+  ctx.setTransform(DPR,0,0,DPR,0,0);setView();SCALE=Math.min(W,H)/VIEW;}
+addEventListener('resize',resize);resize();
+
+/* start somewhere she genuinely floats, with room to gather herself */
+function findStart(sp){
+  for(var r=0;r<24000;r+=700){
+    for(var a=0;a<6.283;a+=0.35){
+      var x=Math.cos(a)*r, y=Math.sin(a)*r, ok=true;
+      for(var i=-2;i<=2&&ok;i++){
+        for(var j=-2;j<=2&&ok;j++){
+          if(depthAt(x+i*sp.loa*0.5,y+j*sp.loa*0.5) < sp.draft+22) ok=false;
+        }
+      }
+      if(ok) return {x:x,y:y};
+    }
+  }
+  return {x:0,y:0};
+}
+function newGame(){
+  setView(); SCALE=Math.min(W,H)/VIEW;
+  SEED=(Math.random()*1e9)|0;
+  TAKEN=Object.create(null);
+  var st=findStart(S.ship);
+  G={x:st.x,y:st.y,hdg:Math.random()*6.283,spd:S.ship.kn*0.5144*0.2,rot:0,rud:0,tele:5,thrust:0,
+     over:false,dp:false,dpY:0,lives:M().lives,
+     cargo:0,cChests:0,banked:0,bChests:0,bestHaul:0,ports:0,visited:Object.create(null),
+     contract:0,docked:null,
+     gold:0,coins:0,chests:0,run:0,grace:0,wake:[],shake:0,squat:0,
+     wind:{d:Math.random()*6.28,s:4+Math.random()*7}};
+}
+
+/* ---------------- physics ---------------- */
+/* Rate a hull can pivot on the spot under DP. Opposed bow and stern thrusters
+   make a couple, so she rotates about her own centre with no way on at all —
+   which is exactly what azipods and azimuth drives are for. Scaled by length,
+   so a 32 m tug spins in half a minute and a 365 m cruise ship takes minutes. */
+function dpRate(sp){ return (sp.dp||0)*0.0105*(365/sp.loa); }
+
+function advance(st,sp,dt,wind){
+  var m=M();
+
+  if(st.dp && sp.dp){
+    /* ---- DYNAMIC POSITIONING ----
+       Engines running, telegraph overridden to Stop. The stick becomes a thruster
+       command: left and right pivot her on the spot, forward and back crawl her.
+
+       Thrusters push sideways against water that is already streaming past the
+       hull, so their authority collapses as speed rises. Below about 1.5 kn she
+       has the lot; by 6.5 kn they do nothing and the rudder is all she has. Rather
+       than refusing to engage, the mode simply hands authority back and forth
+       between the two as she slows — which is exactly what really happens. */
+    var dkn=Math.abs(st.spd)/0.5144;
+    var eff=Math.max(0,Math.min(1,1-(dkn-1.5)/5));
+    var rWant=st.rud*dpRate(sp)*eff;
+    var maxRot=Math.abs(st.spd)/(sp.loa*2.0)*m.rudderGain;
+    rWant+=st.rud*maxRot*(1-eff)*0.7;           /* rudder still bites while she has way */
+    st.rot+=(rWant-st.rot)*Math.min(1,dt/6);
+    /* A stopped telegraph does not stop a ship, and coasting is far slower than
+       the engine responding — the engine constant is how fast the plant answers,
+       hull drag is what actually takes the way off. Using the engine constant had
+       Icon of the Seas dropping from 17.6 kn to walking pace in 42 seconds, which
+       is wrong by a wide margin. Coasting gets its own, much longer constant. */
+    var surge=st.dpY*1.35;
+    var coastTc=(2+sp.loa*0.095)/m.engineGain*2.6;
+    st.spd+=(surge-st.spd)*Math.min(1,dt/coastTc);
+    st.hdg+=st.rot*dt;
+    st.x+=Math.sin(st.hdg)*st.spd*dt;
+    st.y+=Math.cos(st.hdg)*st.spd*dt;
+    if(wind){ st.x+=Math.sin(wind.d)*wind.s*0.006*sp.windage*dt;
+              st.y+=Math.cos(wind.d)*wind.s*0.006*sp.windage*dt; }
+    return st;
+  }
+
+  var demand=TELE[st.tele].v*sp.kn*0.5144;
+  st.spd+=(demand-st.spd)*Math.min(1,dt/((2+sp.loa*0.095)/m.engineGain));
+  var maxRot=Math.abs(st.spd)/(sp.loa*2.0)*m.rudderGain;
+  var want=st.rud*maxRot*(st.spd<0?-1:1);
+  if(st.thrust&&sp.thr){
+    var kn=Math.abs(st.spd)/0.5144, eff=Math.max(0,1-kn/5);
+    want+=st.thrust*sp.thr*0.010*eff;
+  }
+  st.rot+=(want-st.rot)*Math.min(1,dt/((1.5+sp.loa*0.035)/m.rudderGain));
+  st.hdg+=st.rot*dt;
+  st.x+=Math.sin(st.hdg)*st.spd*dt;
+  st.y+=Math.cos(st.hdg)*st.spd*dt;
+  var slip=st.rot*sp.loa*0.30;
+  st.x+=-Math.cos(st.hdg)*slip*dt; st.y+=Math.sin(st.hdg)*slip*dt;
+  if(wind){ st.x+=Math.sin(wind.d)*wind.s*0.009*sp.windage*dt;
+            st.y+=Math.cos(wind.d)*wind.s*0.009*sp.windage*dt; }
+  return st;
+}
+function hullMinDepth(x,y,hdg,sp){
+  var mind=1e9;
+  for(var i=-2;i<=2;i++){
+    var f=i/2*sp.loa*0.46;
+    var d=depthAt(x+Math.sin(hdg)*f,y+Math.cos(hdg)*f);
+    if(d<mind)mind=d;
+  }
+  return mind;
+}
+function obstacleHit(x,y,hdg,sp){
+  var hit=null;
+  cellsAround(x,y,OCELL,OCELL+sp.loa,function(cx,cy){
+    if(hit)return;
+    var o=obsAt(cx,cy); if(!o)return;
+    var lim=o.r+sp.beam*0.5;
+    for(var i=-2;i<=2;i++){
+      var f=i/2*sp.loa*0.46;
+      var dx=x+Math.sin(hdg)*f-o.x, dy=y+Math.cos(hdg)*f-o.y;
+      if(dx*dx+dy*dy<lim*lim){ hit=o; return; }
+    }
+  });
+  return hit;
+}
+function predict(){
+  var sp=S.ship,st={x:G.x,y:G.y,hdg:G.hdg,spd:G.spd,rot:G.rot,rud:G.rud,tele:G.tele,thrust:0,
+                    dp:G.dp,dpY:G.dpY};
+  var out=[],dt=1.2;
+  for(var t=0;t<150;t+=dt){
+    advance(st,sp,dt,G.wind);
+    if(t%3.6<dt){
+      var mind=hullMinDepth(st.x,st.y,st.hdg,sp);
+      var pvr=Math.abs(st.spd)/(sp.kn*0.5144);
+      var bad=(mind-sp.draft-sp.draft*0.14*pvr*pvr)<0;
+      if(!bad && obstacleHit(st.x,st.y,st.hdg,sp)) bad=true;
+      out.push({x:st.x,y:st.y,bad:bad});
+      if(bad)break;
+    }
+  }
+  return out;
+}
+function step(dt){
+  var sp=S.ship;
+  var px=G.x,py=G.y;
+  advance(G,sp,dt,G.wind);
+  G.run+=Math.hypot(G.x-px,G.y-py);
+  if(G.grace>0) G.grace-=dt;
+
+  var vr=Math.abs(G.spd)/(sp.kn*0.5144);
+  G.squat=sp.draft*0.14*vr*vr;
+  G.ukc=hullMinDepth(G.x,G.y,G.hdg,sp)-sp.draft-G.squat;
+
+  if(G.grace<=0){
+    if(G.ukc<0){ lose('ran her aground'); return; }
+    var o=obstacleHit(G.x,G.y,G.hdg,sp);
+    if(o){ lose(o.wreck?'struck a wreck':'struck a rock head'); return; }
+  }
+
+  /* gold */
+  cellsAround(G.x,G.y,CCELL,CCELL+sp.loa,function(cx,cy){
+    var c=coinAt(cx,cy); if(!c||TAKEN[c.key])return;
+    if(Math.hypot(c.x-G.x,c.y-G.y) < sp.loa*0.5+sp.beam*0.9){
+      TAKEN[c.key]=1; G.cargo+=c.v; G.gold+=c.v;
+      if(c.chest){ G.chests++; G.cChests++; flash('Treasure chest aboard — get it home'); }
+      else G.coins++;
+    }
+  });
+
+  /* DOCKING. Come in slow — a harbour is no place to arrive at fifteen knots. */
+  var np=nearestPort(G.x,G.y);
+  G.port=np;
+  if(np && np.d < sp.loa*0.9+240){
+    var dkn=Math.abs(G.spd)/0.5144;
+    if(dkn<6){
+      if(G.docked!==np.p.key){
+        G.docked=np.p.key;
+        if(G.cargo>0){
+          G.banked+=G.cargo; G.bChests+=G.cChests;
+          if(G.cargo>G.bestHaul) G.bestHaul=G.cargo;
+          if(!G.visited[np.p.key]){ G.visited[np.p.key]=1; G.ports++; }
+          flash('Banked '+G.cargo+' gold at '+np.p.name);
+          G.cargo=0; G.cChests=0;
+          checkContract();
+        } else {
+          if(!G.visited[np.p.key]){ G.visited[np.p.key]=1; G.ports++; checkContract(); }
+          flash(np.p.name+' — nothing in the hold');
+        }
+      }
+    } else if(G.docked!==np.p.key){
+      flash('Too fast to come alongside '+np.p.name+' — '+dkn.toFixed(0)+' kn');
+    }
+  } else if(np && np.d > sp.loa*2+600){ G.docked=null; }
+
+  if(Math.abs(G.spd)>0.3&&(!G.wake.length||
+     Math.hypot(G.x-G.wake[G.wake.length-1].x,G.y-G.wake[G.wake.length-1].y)>sp.loa*0.5))
+    G.wake.push({x:G.x,y:G.y});
+  if(G.wake.length>180)G.wake.shift();
+  if(G.shake>0)G.shake=Math.max(0,G.shake-dt*2);
+}
+function checkContract(){
+  var c=CONTRACTS[G.contract];
+  if(c && c.test(G)){
+    G.contract++;
+    var nx=CONTRACTS[G.contract];
+    flash('Contract complete\u2003\u00b7\u2003'+(nx?'Next: '+nx.t:'All contracts done — sail on'));
+  }
+}
+function lose(why){
+  G.lives--; G.shake=1; G.spd*=0.1; G.rot=0;
+  var lost=G.cargo;
+  G.cargo=0; G.cChests=0; G.docked=null;      /* the hold goes over the side */
+  if(G.lives<=0){ G.lostAtEnd=lost; end(why); return; }
+  /* shove her back to deep water and give the player a moment */
+  var best=null,bd=-1e9;
+  for(var a=0;a<6.283;a+=0.30){
+    for(var r=S.ship.loa*1.2;r<S.ship.loa*8;r+=S.ship.loa*0.7){
+      var x=G.x+Math.cos(a)*r, y=G.y+Math.sin(a)*r;
+      var d=hullMinDepth(x,y,G.hdg,S.ship)-S.ship.draft;
+      if(d>bd && !obstacleHit(x,y,G.hdg,S.ship)){ bd=d; best={x:x,y:y}; }
+      if(bd>24) break;
+    }
+    if(bd>24) break;
+  }
+  if(best){ G.x=best.x; G.y=best.y; }
+  G.grace=2.5*TS;
+  flash('You '+why+(lost>0?' and lost '+lost+' gold overboard':'')+
+        ' \u2014 '+G.lives+(G.lives===1?' life left':' lives left'));
+}
+
+/* ---------------- render ---------------- */
+function depthColour(d){
+  if(d<0)  return '#C9B27C';      /* island */
+  if(d<3)  return '#E3D3A4';      /* beach shallows */
+  if(d<8)  return '#9BDCD2';
+  if(d<16) return '#5FB9BE';
+  if(d<26) return '#2E8CA0';
+  if(d<40) return '#1B6480';
+  return '#0A3A52';
+}
+function draw(){
+  var sp=S.ship;
+  ctx.setTransform(DPR,0,0,DPR,0,0);
+  ctx.fillStyle='#0A3A52';ctx.fillRect(0,0,W,H);
+  var lead=Math.min(VIEW*0.20,Math.abs(G.spd)*24);
+  var camx=G.x+Math.sin(G.hdg)*lead, camy=G.y+Math.cos(G.hdg)*lead;
+  var cx0=W/2,cy0=H/2;
+  if(G.shake>0){cx0+=(Math.random()-.5)*G.shake*10;cy0+=(Math.random()-.5)*G.shake*10;}
+  ctx.save();
+  ctx.translate(cx0,cy0);ctx.scale(SCALE,-SCALE);ctx.translate(-camx,-camy);
+
+  var radX=W/SCALE*0.62,radY=H/SCALE*0.62;
+  var cell=Math.max(55,9/SCALE);
+  var x0=Math.floor((camx-radX)/cell)*cell,y0=Math.floor((camy-radY)/cell)*cell;
+  for(var yy=y0;yy<camy+radY;yy+=cell)
+    for(var xx=x0;xx<camx+radX;xx+=cell){
+      ctx.fillStyle=depthColour(depthAt(xx+cell/2,yy+cell/2));
+      ctx.fillRect(xx,yy,cell+1,cell+1);
+    }
+
+  /* obstacles */
+  cellsAround(camx,camy,OCELL,Math.max(radX,radY)+OCELL,function(cx,cy){
+    var o=obsAt(cx,cy); if(!o)return;
+    ctx.beginPath();ctx.arc(o.x,o.y,o.r,0,6.283);
+    ctx.fillStyle=o.wreck?'#7A1030':'#6B5A3A';ctx.fill();
+    ctx.strokeStyle='rgba(255,255,255,.55)';ctx.lineWidth=1.6/SCALE;ctx.stroke();
+    if(o.wreck){
+      ctx.strokeStyle='rgba(255,255,255,.85)';ctx.lineWidth=2.4/SCALE;
+      ctx.beginPath();
+      ctx.moveTo(o.x-o.r*.45,o.y-o.r*.45);ctx.lineTo(o.x+o.r*.45,o.y+o.r*.45);
+      ctx.moveTo(o.x-o.r*.45,o.y+o.r*.45);ctx.lineTo(o.x+o.r*.45,o.y-o.r*.45);
+      ctx.stroke();
+    }
+  });
+
+  /* Ports as chart symbols, not painted rings. The first version stroked an
+     approach circle scaled to the ship — 43% of the screen in a ferry — straight
+     over the depth bands, which buried the one thing the map is for. A symbol is
+     held at a constant SCREEN size so it stays legible in a tug and unobtrusive in
+     a tanker, and the approach ring only appears when you are actually carrying
+     cargo to that harbour. */
+  var symR=VIEW*0.026;
+  cellsAround(camx,camy,PCELL,Math.max(radX,radY)+PCELL,function(cx,cy){
+    var pt=portAt(cx,cy); if(!pt)return;
+    var target = G.cargo>0 && G.port && G.port.p.key===pt.key;
+    if(target){
+      ctx.strokeStyle='rgba(142,208,200,.30)';ctx.lineWidth=1.6/SCALE;
+      ctx.setLineDash([26,22]);
+      ctx.beginPath();ctx.arc(pt.x,pt.y,sp.loa*0.9+240,0,6.283);ctx.stroke();
+      ctx.setLineDash([]);
+    }
+    ctx.beginPath();ctx.arc(pt.x,pt.y,symR,0,6.283);
+    ctx.fillStyle=target?'#12A594':'#0F766E';ctx.fill();
+    ctx.strokeStyle='rgba(255,255,255,.9)';ctx.lineWidth=1.8/SCALE;ctx.stroke();
+    /* a small anchor stock, the way a chart marks a harbour */
+    ctx.strokeStyle='#EAF2F6';ctx.lineWidth=2.0/SCALE;
+    ctx.beginPath();
+    ctx.moveTo(pt.x,pt.y+symR*0.62);ctx.lineTo(pt.x,pt.y-symR*0.55);
+    ctx.moveTo(pt.x-symR*0.46,pt.y+symR*0.22);ctx.lineTo(pt.x+symR*0.46,pt.y+symR*0.22);
+    ctx.stroke();
+  });
+
+  /* gold */
+  cellsAround(camx,camy,CCELL,Math.max(radX,radY)+CCELL,function(cx,cy){
+    var c=coinAt(cx,cy); if(!c||TAKEN[c.key])return;
+    var s=Math.max(sp.beam*0.55,42);
+    if(c.chest){
+      ctx.fillStyle='#8A5A0B';
+      ctx.fillRect(c.x-s*0.9,c.y-s*0.62,s*1.8,s*1.24);
+      ctx.fillStyle='#F5C451';
+      ctx.fillRect(c.x-s*0.9,c.y-s*0.16,s*1.8,s*0.32);
+      ctx.strokeStyle='rgba(255,255,255,.7)';ctx.lineWidth=1.6/SCALE;
+      ctx.strokeRect(c.x-s*0.9,c.y-s*0.62,s*1.8,s*1.24);
+    } else {
+      ctx.beginPath();ctx.arc(c.x,c.y,s*0.5,0,6.283);
+      ctx.fillStyle='#F5C451';ctx.fill();
+      ctx.strokeStyle='rgba(255,255,255,.75)';ctx.lineWidth=1.4/SCALE;ctx.stroke();
+    }
+  });
+
+  if(G.wake.length>1){
+    ctx.strokeStyle='rgba(255,255,255,.13)';ctx.lineWidth=Math.max(1.5/SCALE,sp.beam*0.5);
+    ctx.beginPath();ctx.moveTo(G.wake[0].x,G.wake[0].y);
+    for(var w=1;w<G.wake.length;w++)ctx.lineTo(G.wake[w].x,G.wake[w].y);
+    ctx.stroke();
+  }
+  var P=predict();
+  if(P.length>1){
+    var bad=P[P.length-1].bad;
+    ctx.lineWidth=3/SCALE;
+    ctx.strokeStyle=bad?'rgba(255,90,120,.95)':'rgba(255,255,255,.75)';
+    ctx.setLineDash([52,36]);
+    ctx.beginPath();ctx.moveTo(G.x,G.y);
+    for(var p=0;p<P.length;p++)ctx.lineTo(P[p].x,P[p].y);
+    ctx.stroke();ctx.setLineDash([]);
+  }
+  ctx.save();ctx.translate(G.x,G.y);ctx.rotate(-G.hdg);
+  var L=sp.loa/2,B2=sp.beam/2;
+  ctx.fillStyle=sp.hull; ctx.strokeStyle='#fff'; ctx.lineWidth=1.6/SCALE;
+  if(sp.twin){
+    /* Pioneering Spirit is a catamaran: two hulls joined aft, with a 59 m slot
+       cut into the bow that the topsides of an oil platform are lifted into.
+       Drawing her as one lozenge hid the single most distinctive thing about her. */
+    var slot=(sp.slot||59)/2, hullW=B2-slot, slotEnd=-L*0.14;
+    [-1,1].forEach(function(s){
+      var inner=s*slot, outer=s*B2;
+      ctx.beginPath();
+      ctx.moveTo(inner,L*0.94);
+      ctx.lineTo(inner+s*hullW*0.34,L);
+      ctx.lineTo(outer,L*0.62);
+      ctx.lineTo(outer,-L*0.86);
+      ctx.lineTo(outer-s*hullW*0.30,-L);
+      ctx.lineTo(inner,-L);
+      ctx.lineTo(inner,slotEnd);
+      ctx.closePath(); ctx.fill(); ctx.stroke();
+    });
+    /* the transverse beam that joins them aft */
+    ctx.fillRect(-slot,-L*0.86,slot*2,L*0.30);
+    ctx.strokeRect(-slot,-L*0.86,slot*2,L*0.30);
+    /* the lifting beams across the slot */
+    ctx.strokeStyle='rgba(245,196,81,.85)'; ctx.lineWidth=2.2/SCALE;
+    for(var lb=0;lb<3;lb++){
+      var ly=L*0.86-lb*L*0.30;
+      ctx.beginPath(); ctx.moveTo(-slot,ly); ctx.lineTo(slot,ly); ctx.stroke();
+    }
+  } else {
+    ctx.beginPath();
+    ctx.moveTo(0,L);ctx.lineTo(B2*0.58,L*0.76);ctx.lineTo(B2,L*0.28);
+    ctx.lineTo(B2,-L*0.82);ctx.lineTo(B2*0.76,-L);ctx.lineTo(-B2*0.76,-L);
+    ctx.lineTo(-B2,-L*0.82);ctx.lineTo(-B2,L*0.28);ctx.lineTo(-B2*0.58,L*0.76);
+    ctx.closePath();ctx.fill();ctx.stroke();
+  }
+  ctx.restore();
+  ctx.restore();
+}
+
+/* ---------------- HUD ---------------- */
+var elBank=document.getElementById('vBank'),elCargo=document.getElementById('vCargo'),
+    elTask=document.getElementById('vTask'),elProg=document.getElementById('vProg'),
+    elSpd=document.getElementById('vSpd'),
+    elUkc=document.getElementById('vUkc'),pUkc=document.getElementById('pUkc'),
+    elDist=document.getElementById('vDist'),elSquat=document.getElementById('vSquat'),
+    elFlash=document.getElementById('flash'),elRud=document.getElementById('rudRead'),
+    elComp=document.getElementById('compass');
+function nearestGold(){
+  var sp=S.ship,best=null,bd=1e12;
+  cellsAround(G.x,G.y,CCELL,7000,function(cx,cy){
+    var c=coinAt(cx,cy); if(!c||TAKEN[c.key])return;
+    var d=Math.hypot(c.x-G.x,c.y-G.y);
+    if(d<bd){bd=d;best=c;}
+  });
+  return best?{c:best,d:bd}:null;
+}
+function hudUpdate(){
+  var kn=G.spd/0.5144;
+  elBank.textContent=G.banked;
+  elCargo.textContent=G.cargo;
+  document.getElementById('pCargo').className='pod'+(G.cargo>0?' laden':'');
+  elSpd.innerHTML=(kn<-0.05?'-':'')+Math.abs(kn).toFixed(1)+'<i>kn</i>';
+  elUkc.innerHTML=(G.ukc>95?'—':G.ukc.toFixed(1))+'<i>m</i>';
+  pUkc.className='pod'+(G.ukc<3?' bad':(G.ukc<10?' warn':''));
+  elDist.textContent=(G.run/1000).toFixed(1)+' km';
+  var ct=CONTRACTS[G.contract], tk=document.getElementById('task');
+  if(ct){ tk.classList.add('on'); elTask.textContent=ct.t; elProg.textContent=ct.goal(G); }
+  else { tk.classList.add('on'); elTask.textContent='All contracts complete'; elProg.textContent='sail on'; }
+  elSquat.textContent=G.squat.toFixed(2)+' m';
+  var deg=Math.round(Math.abs(G.rud)*35);
+  elRud.textContent=deg<1?'Amidships':deg+'\u00b0 '+(G.rud<0?'port':'stbd');
+  var tEl=document.getElementById('thrRead'), k=Math.abs(G.spd)/0.5144;
+  if(G.dp){
+    var eff=Math.max(0,Math.min(1,1-(k-1.5)/5));
+    if(eff<0.06) tEl.textContent='DP · way still on, '+k.toFixed(1)+' kn';
+    else if(eff<0.95) tEl.textContent='DP · '+Math.round(eff*100)+'% · '+k.toFixed(1)+' kn';
+    else tEl.textContent='DP · '+(dpRate(S.ship)*57.3).toFixed(2)+'\u00b0/s';
+    tEl.className=eff<0.06?'off':'';
+  }
+  else if(!S.ship.thr){ tEl.textContent='No thruster'; tEl.className='off'; }
+  else if(Math.abs(G.thrust)<0.05){ tEl.textContent='Thruster idle'; tEl.className='off'; }
+  else if(k>5){ tEl.textContent='Too fast — '+k.toFixed(1)+' kn'; tEl.className='off'; }
+  else { tEl.textContent='Bow '+Math.round(Math.abs(G.thrust)*100)+'% '+(G.thrust<0?'port':'stbd'); tEl.className=''; }
+  /* Carrying anything? Then the pointer wants you home, not deeper in. */
+  function bearing(tx,ty){
+    var br=(Math.atan2(tx-G.x,ty-G.y)*180/Math.PI-G.hdg*180/Math.PI);
+    br=((br%360)+360)%360;
+    return br<180?Math.round(br)+'\u00b0 to starboard':Math.round(360-br)+'\u00b0 to port';
+  }
+  if(G.cargo>0 && G.port){
+    elComp.style.color='#8ED0C8';
+    elComp.textContent=G.port.p.name+' '+(G.port.d/1000).toFixed(2)+' km · '+bearing(G.port.p.x,G.port.p.y);
+  } else {
+    var ng=nearestGold();
+    elComp.style.color='#F5C451';
+    elComp.textContent=ng?((ng.c.chest?'Chest ':'Gold ')+(ng.d/1000).toFixed(2)+' km · '+bearing(ng.c.x,ng.c.y)):'';
+  }
+}
+var ft=null;
+function flash(m){elFlash.textContent=m;elFlash.classList.add('on');
+  clearTimeout(ft);ft=setTimeout(function(){elFlash.classList.remove('on');},1900);}
+function loop(t){
+  if(!G||G.over)return;
+  var dt=Math.min(0.05,(t-last)/1000);last=t;
+  for(var i=0;i<TS;i++){ if(!G.over) step(dt); }
+  if(!G.over){draw();hudUpdate();raf=requestAnimationFrame(loop);}
+}
+
+/* ---------------- controls (per the Gate Runner touch guide) ---------------- */
+var joyEl=document.getElementById('joy'), joyK=document.getElementById('joyK');
+var JOY={x:0,y:0,R:52}, DEAD=0.15;
+function curve(v){
+  var a=Math.abs(v);
+  if(a<=DEAD) return 0;
+  a=(a-DEAD)/(1-DEAD);
+  return (v<0?-1:1)*(0.22*a+0.78*a*a);
+}
+function joyApply(nx,ny){
+  JOY.x=nx;JOY.y=ny;
+  if(!G||G.over){ joyK.className=''; return; }
+  if(G.dp){
+    /* under DP the stick is a thruster command in both axes */
+    G.rud=curve(nx);
+    G.dpY=curve(ny);
+    G.thrust=0;
+    joyK.className='thr';
+  } else {
+    G.rud=curve(nx);
+    var ty=ny>0?curve(ny):0;
+    G.thrust=ty>0?curve(nx)*ty:0;
+    G.dpY=0;
+    joyK.className=ny>0.15?'thr':'';
+  }
+}
+function joyKnob(dx,dy){ joyK.style.transform='translate('+dx.toFixed(1)+'px,'+dy.toFixed(1)+'px)'; }
+(function(){
+  var id=null;
+  function find(l){ for(var i=0;i<l.length;i++) if(l[i].identifier===id) return l[i]; return null; }
+  function move(cx,cy){
+    var r=joyEl.getBoundingClientRect();
+    var dx=cx-(r.left+r.width/2), dy=cy-(r.top+r.height/2), d=Math.sqrt(dx*dx+dy*dy);
+    if(d>JOY.R){ dx=dx/d*JOY.R; dy=dy/d*JOY.R; }
+    joyKnob(dx,dy); joyApply(dx/JOY.R,-dy/JOY.R);
+  }
+  function release(){
+    /* Always springs to amidships, in both modes. A real wheel holds its angle,
+       but a thumb on glass has no detent to feel and no way to know where it left
+       the rudder — so holding it just produced slow surprise turns. */
+    id=null; joyEl.classList.remove('on');
+    joyK.style.transform=''; joyApply(0,0);
+  }
+  joyEl.addEventListener('touchstart',function(e){
+    if(id!==null)return;
+    var t=e.changedTouches[0]; id=t.identifier;
+    joyEl.classList.add('on'); move(t.clientX,t.clientY); e.preventDefault();
+  },{passive:false});
+  document.addEventListener('touchmove',function(e){
+    var t=find(e.changedTouches); if(t){ move(t.clientX,t.clientY); e.preventDefault(); }
+  },{passive:false});
+  document.addEventListener('touchend',function(e){ if(find(e.changedTouches)) release(); });
+  document.addEventListener('touchcancel',function(e){ if(find(e.changedTouches)) release(); });
+  var mouse=false;
+  joyEl.addEventListener('mousedown',function(e){ mouse=true;joyEl.classList.add('on');move(e.clientX,e.clientY);e.preventDefault(); });
+  addEventListener('mousemove',function(e){ if(mouse) move(e.clientX,e.clientY); });
+  addEventListener('mouseup',function(){ if(mouse){mouse=false;release();} });
+})();
+function joySet(nx,ny){
+  var m=Math.hypot(nx,ny); if(m>1){nx/=m;ny/=m;}
+  joyKnob(nx*JOY.R,-ny*JOY.R); joyApply(nx,ny);
+  if(nx===0&&ny===0) joyK.style.transform='';
+}
+
+var thrWrap=document.getElementById('thrWrap'),thrKnob=document.getElementById('thrKnob'),
+    thrFill=document.getElementById('thrFill'),thrVal=document.getElementById('thrVal');
+function setTele(i){
+  if(!G)return;
+  var ni=Math.max(0,Math.min(TELE.length-1,i));
+  if(G.dp && ni!==3){ G.dp=false; dpBtn.classList.remove('on'); dpBtn.setAttribute('aria-pressed','false'); joyApply(JOY.x,JOY.y); }
+  G.tele=ni;
+  var v=TELE[G.tele].v;
+  thrVal.textContent=TELE[G.tele].n;
+  thrWrap.setAttribute('aria-valuenow',String(G.tele));
+  thrWrap.setAttribute('aria-valuetext',TELE[G.tele].n);
+  thrKnob.style.bottom=(6+(G.tele/(TELE.length-1))*120)+'px';
+  thrKnob.className=v<0?'astern':'';
+  thrFill.style.height=Math.abs(v)*50+'%';
+  thrFill.style.bottom=v<0?'auto':'50%'; thrFill.style.top=v<0?'50%':'auto';
+  thrFill.className=v<0?'astern':'';
+}
+(function(){
+  var id=null;
+  function find(l){ for(var i=0;i<l.length;i++) if(l[i].identifier===id) return l[i]; return null; }
+  function move(cy){
+    if(!G)return;
+    var r=thrWrap.getBoundingClientRect();
+    var f=1-(cy-r.top)/r.height;
+    setTele(Math.round(Math.max(0,Math.min(1,f))*(TELE.length-1)));
+  }
+  thrWrap.addEventListener('touchstart',function(e){
+    if(id!==null)return;
+    var t=e.changedTouches[0]; id=t.identifier; move(t.clientY); e.preventDefault();
+  },{passive:false});
+  document.addEventListener('touchmove',function(e){
+    var t=find(e.changedTouches); if(t){ move(t.clientY); e.preventDefault(); }
+  },{passive:false});
+  document.addEventListener('touchend',function(e){ if(find(e.changedTouches)) id=null; });
+  document.addEventListener('touchcancel',function(e){ if(find(e.changedTouches)) id=null; });
+  var mouse=false;
+  thrWrap.addEventListener('mousedown',function(e){ mouse=true;move(e.clientY);e.preventDefault(); });
+  addEventListener('mousemove',function(e){ if(mouse) move(e.clientY); });
+  addEventListener('mouseup',function(){ mouse=false; });
+})();
+var dpBtn=document.getElementById('dpBtn');
+function setDP(on){
+  if(!G)return;
+  var sp=S.ship;
+  G.dp=!!on;
+  dpBtn.classList.toggle('on',G.dp);
+  dpBtn.setAttribute('aria-pressed',G.dp?'true':'false');
+  if(G.dp){
+    /* The button OVERRIDES the telegraph — engines to Stop, thrusters live.
+       It never refuses. If she still has way on, the thrusters simply cannot do
+       much yet, and you watch her carry her momentum until they can. That is a
+       far better answer than a wall of text telling you no. */
+    setTele(3);
+    var kn=Math.abs(G.spd)/0.5144;
+    flash(kn>4.5 ? 'Thrusters engaged — engines stopped, waiting for her way to come off'
+                 : 'Thrusters engaged — stick pivots her on the spot');
+  }
+  joyApply(JOY.x,JOY.y);
+}
+dpBtn.addEventListener('click',function(){ setDP(!G||!G.dp); });
+
+[].forEach.call(document.querySelectorAll('#time button'),function(d){
+  d.onclick=function(){TS=+d.dataset.t;
+    [].forEach.call(document.querySelectorAll('#time button'),function(o){
+      var on=(o===d); o.classList.toggle('on',on); o.setAttribute('aria-pressed',on?'true':'false');});};
+});
+addEventListener('keydown',function(e){
+  if(!G||G.over)return;
+  if(e.key==='ArrowLeft'){e.preventDefault();joySet(JOY.x-0.2,JOY.y);}
+  if(e.key==='ArrowRight'){e.preventDefault();joySet(JOY.x+0.2,JOY.y);}
+  if(e.key==='ArrowUp'){e.preventDefault();setTele(G.tele+1);}
+  if(e.key==='ArrowDown'){e.preventDefault();setTele(G.tele-1);}
+  if(e.key==='m'||e.key==='M')joySet(0,0);
+  if(e.key==='t'||e.key==='T')setDP(!G.dp);
+  if(e.key==='w'||e.key==='W')joySet(JOY.x,1);
+});
+addEventListener('keyup',function(e){ if(G&&(e.key==='w'||e.key==='W'))joySet(JOY.x,0); });
+
+/* ---------------- select ---------------- */
+function buildModes(){
+  var box=document.getElementById('modes');box.innerHTML='';
+  Object.keys(MODES).forEach(function(k){
+    var m=MODES[k],d=document.createElement('button');
+    d.className='mode'+(MODE===k?' on':'');
+    d.setAttribute('role','radio'); d.setAttribute('aria-checked',MODE===k?'true':'false');
+    d.setAttribute('tabindex',MODE===k?'0':'-1'); d.type='button';
+    d.innerHTML='<b>'+m.name+'</b><small>'+m.blurb+'</small>';
+    d.onclick=function(){MODE=k;buildModes();};box.appendChild(d);
+  });
+}
+function buildTabs(){
+  var t=document.getElementById('tabs');t.innerHTML='';
+  CATS.forEach(function(c){
+    var d=document.createElement('button');d.type='button';
+    d.className='tab'+(S.cat===c?' on':'');d.textContent=c;
+    d.setAttribute('role','tab'); d.setAttribute('aria-selected',S.cat===c?'true':'false');
+    d.onclick=function(){S.cat=c;buildTabs();buildShips();};t.appendChild(d);
+  });
+}
+function buildShips(){
+  var box=document.getElementById('ships');box.innerHTML='';
+  FLEET.filter(function(s){return s.c===S.cat;}).forEach(function(sp){
+    /* chests sit in under 16 m, so her draught decides whether she can ever have one */
+    var reach = sp.draft<13 ? 'Can reach chests' : 'Deep water only';
+    var d=document.createElement('button');d.type='button';
+    d.className='card'+(S.ship.name===sp.name?' sel':'');
+    d.setAttribute('role','radio'); d.setAttribute('aria-checked',S.ship.name===sp.name?'true':'false');
+    d.setAttribute('aria-label',sp.name+', '+sp.loa+' metres long, '+sp.beam+' metres in the beam, '+
+      sp.draft+' metres draught. '+(sp.draft<13?'Can reach the treasure chests.':'Deep water only.'));
+    d.innerHTML='<i class="sw" style="width:'+Math.max(7,Math.round(sp.loa/458*50))+'px;background:'+sp.hull+'"></i>'+
+      '<div class="tx"><b>'+sp.name+'</b><small>'+sp.loa+' × '+sp.beam+' m · '+sp.draft+
+      ' m draught · turns in '+(sp.loa*4/1000).toFixed(2)+' km · '+sp.note+'</small></div>'+
+      '<div class="tag">'+reach+'</div>';
+    d.onclick=function(){S.ship=sp;buildShips();};box.appendChild(d);
+  });
+}
+buildModes();buildTabs();buildShips();
+
+function start(){
+  document.getElementById('pStart').classList.remove('on');
+  document.getElementById('pOver').classList.remove('on');
+  document.getElementById('hud').classList.add('on');
+  document.getElementById('ctl').classList.add('on');
+  newGame();setTele(5);joySet(0,0);TS=30;
+  dpBtn.classList.remove('on');
+  dpBtn.setAttribute('aria-pressed','false');
+  dpBtn.textContent='Thrusters';
+  [].forEach.call(document.querySelectorAll('#time button'),function(o){
+    var on=(o.dataset.t==='30'); o.classList.toggle('on',on); o.setAttribute('aria-pressed',on?'true':'false');});
+  last=performance.now();raf=requestAnimationFrame(loop);
+}
+function end(why){
+  if(G.over)return;
+  G.over=true;if(raf)cancelAnimationFrame(raf);
+  document.getElementById('hud').classList.remove('on');
+  document.getElementById('ctl').classList.remove('on');
+  var sp=S.ship;
+  document.getElementById('oTitle').textContent='You '+why;
+  document.getElementById('oRows').innerHTML=
+    r('Ship',sp.name)+
+    r('Banked',String(G.banked)+' gold')+
+    r('Lost overboard',String(G.lostAtEnd||0)+' gold')+
+    r('Chests landed',String(G.bChests))+
+    r('Best single haul',String(G.bestHaul)+' gold')+
+    r('Ports called at',String(G.ports))+
+    r('Contracts completed',String(G.contract)+' of '+CONTRACTS.length)+
+    r('Sailed',(G.run/1000).toFixed(2)+' km')+r('Mode',M().name);
+  var v='';
+  if(G.lostAtEnd>0) v+='<b>'+G.lostAtEnd+' gold</b> went over the side with her. ';
+  v += sp.draft<13
+    ? 'She draws only <b>'+sp.draft+' m</b>, so the shallows were open to you — that is where the '+
+      'chests are, and most harbours would take you.'
+    : 'She draws <b>'+sp.draft+' m</b>. Chests sit in under 16 m, so most were never reachable in this '+
+      'hull, and only harbours with <b>'+(sp.draft+7).toFixed(0)+' m</b> of water would have you. That is '+
+      'not the game being unkind — it is what draught means. Try the <b>ferry</b> or the <b>tug</b>.';
+  document.getElementById('oVerdict').innerHTML=v;
+  document.getElementById('pOver').classList.add('on');
+}
+function r(k,v){return '<div class="row"><span>'+k+'</span><b>'+v+'</b></div>';}
+document.getElementById('go').onclick=start;
+document.getElementById('again').onclick=start;
+document.getElementById('change').onclick=function(){
+  document.getElementById('pOver').classList.remove('on');
+  document.getElementById('pStart').classList.add('on');
+};
+})();
+</script>
+</body>
+</html>
