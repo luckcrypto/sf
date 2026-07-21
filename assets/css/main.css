@@ -945,3 +945,12 @@ html[dir="rtl"] .i18n-note{border-left:1px solid var(--line);border-right:3px so
 .photoCredit a{color:var(--muted);text-decoration:underline;text-underline-offset:2px}
 .photoCredit a:hover{color:var(--text)}
 @media(max-width:560px){.photoCredit{padding:9px 13px;font-size:.7rem}}
+
+/* ---------- Play game: a destination, not a menu ----------
+   Uses .mn-top so the height, radius and hover match Explore exactly; the only
+   difference is the signal colour, because it is the one nav item that goes
+   somewhere rather than opening something. */
+.mn-top.mn-play{color:var(--signal);text-decoration:none}
+.mn-top.mn-play:hover{background:rgba(15,118,110,.08);color:var(--gold-deep)}
+.mn-top.mn-play .gi{opacity:.9}
+.mn-acc-direct.mn-acc-play{color:var(--signal);font-weight:700}
