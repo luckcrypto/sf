@@ -719,6 +719,12 @@ window.shipsScore = (function () {
 
   var FREE = /^(cc[ -]?0|cc[ -]?by([ -]sa)?\b|public domain|pd[ -]|no restrictions)/i;
   var NONFREE = /(non[- ]?commercial|\bnc\b|no[- ]?deriv|\bnd\b|fair use|all rights)/i;
+  /* The article must actually be ABOUT A SHIP. "Iona" is a Scottish island,
+     "Aurora" is a light phenomenon, "Volendam" and "Rotterdam" are Dutch towns,
+     "Queen Victoria" is a monarch. Wikipedia categories are the cheap, reliable
+     way to tell — an island article is never in a cruise-ship category. */
+  var SHIPCAT = /(ships?|vessels?|ocean liners?|cruise|steamships?|maritime|shipping|boats?|hulls?)/i;
+
   /* same subject filter the offline tool uses — never an interior, model or wreck */
   var BAD = /(interior|cabin|lounge|restaurant|lego|model|plaque|menu|logo|deck[ _-]?plan|diagram|bridge|engine|propeller|lifeboat|pool|scrap|wreck|sinking|aground|under[ _-]?construction|dry[ _-]?dock|christening|night)/i;
 
@@ -750,18 +756,46 @@ window.shipsScore = (function () {
     slot.appendChild(fig);
   }
 
-  slots.forEach(function (slot) {
-    var title = slot.getAttribute('data-wiki');
-    if (!title) return;
-    api('https://en.wikipedia.org/w/api.php', {
-      action: 'query', titles: title, prop: 'pageimages',
-      piprop: 'original', pilicense: 'free', redirects: '1', formatversion: '2'
+  /* Ask Wikipedia for one candidate title. Resolves to a Commons filename only if
+     the article has a free lead image AND is categorised as a ship. */
+  function tryTitle(title) {
+    return api('https://en.wikipedia.org/w/api.php', {
+      action: 'query', titles: title, prop: 'pageimages|categories',
+      piprop: 'original', pilicense: 'free', cllimit: '60',
+      redirects: '1', formatversion: '2'
     }).then(function (j) {
       var pages = j && j.query && j.query.pages;
-      var orig = pages && pages[0] && pages[0].original;
+      var pg = pages && pages[0];
+      if (!pg || pg.missing) return null;
+      var orig = pg.original;
       if (!orig || !orig.source) return null;
+      /* THE FIX: is this article about a ship at all? */
+      var cats = pg.categories || [];
+      var isShip = false;
+      for (var i = 0; i < cats.length; i++) {
+        if (SHIPCAT.test(cats[i].title || '')) { isShip = true; break; }
+      }
+      if (!isShip) return null;
       var file = 'File:' + decodeURIComponent(orig.source.split('/').pop()).replace(/_/g, ' ');
       if (BAD.test(file)) return null;
+      return file;
+    }).catch(function () { return null; });
+  }
+
+  slots.forEach(function (slot) {
+    var exact = slot.getAttribute('data-wiki');
+    var name  = slot.getAttribute('data-name');
+    if (!name) return;
+    /* An exact cited article is trusted alone. Otherwise guess the Wikipedia
+       convention for merchant ships first, then the bare name as a last resort —
+       both still have to pass the category check. */
+    var candidates = exact ? [exact] : ['MS ' + name, name];
+
+    (function next(i) {
+      if (i >= candidates.length) return Promise.resolve(null);
+      return tryTitle(candidates[i]).then(function (f) { return f || next(i + 1); });
+    })(0).then(function (file) {
+      if (!file) return null;
       return api('https://commons.wikimedia.org/w/api.php', {
         action: 'query', titles: file, prop: 'imageinfo',
         iiprop: 'url|extmetadata', iiurlwidth: '1200',
