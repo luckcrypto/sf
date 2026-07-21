@@ -1,0 +1,403 @@
+{
+ "title": "The longest ships ever built",
+ "asOf": "2026-07-15",
+ "note": "* Prelude FLNG is included with an asterisk: at 488 m she is the longest floating structure ever built, but she has no propulsion and was moored permanently on delivery. The longest ship — a vessel that sails — is Seawise Giant. Lengths are the published LOA of each hull; sister ships share a class figure.",
+ "sources": [
+  {
+   "name": "Shell — Prelude FLNG",
+   "url": "https://www.shell.com/what-we-do/major-projects/prelude-flng.html"
+  },
+  {
+   "name": "Hong Kong Maritime Museum (Seawise Giant)",
+   "url": "https://www.hkmaritimemuseum.org/"
+  },
+  {
+   "name": "Chantiers de l'Atlantique — heritage",
+   "url": "https://chantiers-atlantique.com/en/"
+  },
+  {
+   "name": "Operator and class data cited on each linked page",
+   "url": "https://ships.fyi/methodology"
+  }
+ ],
+ "records": [
+  {
+   "rank": 1,
+   "name": "Prelude FLNG *",
+   "slug": "prelude-flng",
+   "length_m": 488.0,
+   "length_ft": "1,601 ft",
+   "year": "2013",
+   "status": "On station — non-self-propelled"
+  },
+  {
+   "rank": 2,
+   "name": "Seawise Giant",
+   "slug": "seawise-giant",
+   "length_m": 458.45,
+   "length_ft": "1,504 ft",
+   "year": "1979",
+   "status": "Scrapped 2010"
+  },
+  {
+   "rank": 3,
+   "name": "Batillus",
+   "slug": "batillus",
+   "length_m": 414.22,
+   "length_ft": "1,359 ft",
+   "year": "1976",
+   "status": "Scrapped 1985"
+  },
+  {
+   "rank": 4,
+   "name": "Bellamya",
+   "slug": null,
+   "length_m": 414.22,
+   "length_ft": "1,359 ft",
+   "year": "1976",
+   "status": "Scrapped 1986"
+  },
+  {
+   "rank": 5,
+   "name": "Pierre Guillaumat",
+   "slug": "pierre-guillaumat",
+   "length_m": 414.22,
+   "length_ft": "1,359 ft",
+   "year": "1977",
+   "status": "Scrapped 1983"
+  },
+  {
+   "rank": 6,
+   "name": "Prairial",
+   "slug": null,
+   "length_m": 414.22,
+   "length_ft": "1,359 ft",
+   "year": "1979",
+   "status": "Scrapped 2003"
+  },
+  {
+   "rank": 7,
+   "name": "Nai Superba",
+   "slug": null,
+   "length_m": 409.5,
+   "length_ft": "1,343 ft",
+   "year": "1978",
+   "status": "Scrapped 2001"
+  },
+  {
+   "rank": 8,
+   "name": "Nai Genova",
+   "slug": null,
+   "length_m": 409.5,
+   "length_ft": "1,343 ft",
+   "year": "1978",
+   "status": "Scrapped 2003"
+  },
+  {
+   "rank": 9,
+   "name": "Esso Atlantic",
+   "slug": "esso-atlantic",
+   "length_m": 406.57,
+   "length_ft": "1,334 ft",
+   "year": "1977",
+   "status": "Scrapped 2002"
+  },
+  {
+   "rank": 10,
+   "name": "Esso Pacific",
+   "slug": null,
+   "length_m": 406.57,
+   "length_ft": "1,334 ft",
+   "year": "1977",
+   "status": "Scrapped 2002"
+  },
+  {
+   "rank": 11,
+   "name": "Barzan",
+   "slug": "barzan",
+   "length_m": 400.0,
+   "length_ft": "1,312 ft",
+   "year": "2015",
+   "status": "In service"
+  },
+  {
+   "rank": 12,
+   "name": "MOL Triumph",
+   "slug": "mol-triumph",
+   "length_m": 400.0,
+   "length_ft": "1,312 ft",
+   "year": "2017",
+   "status": "In service"
+  },
+  {
+   "rank": 13,
+   "name": "OOCL Spain",
+   "slug": "oocl-spain",
+   "length_m": 399.99,
+   "length_ft": "1,312 ft",
+   "year": "2023",
+   "status": "In service"
+  },
+  {
+   "rank": 14,
+   "name": "Ever Given",
+   "slug": "ever-given",
+   "length_m": 399.94,
+   "length_ft": "1,312 ft",
+   "year": "2018",
+   "status": "In service"
+  },
+  {
+   "rank": 15,
+   "name": "HMM Algeciras",
+   "slug": "hmm-algeciras",
+   "length_m": 399.9,
+   "length_ft": "1,312 ft",
+   "year": "2020",
+   "status": "In service"
+  },
+  {
+   "rank": 16,
+   "name": "MSC Irina",
+   "slug": "msc-irina",
+   "length_m": 399.9,
+   "length_ft": "1,312 ft",
+   "year": "2023",
+   "status": "In service"
+  },
+  {
+   "rank": 17,
+   "name": "Ever Alot",
+   "slug": "ever-alot",
+   "length_m": 399.9,
+   "length_ft": "1,312 ft",
+   "year": "2022",
+   "status": "In service"
+  },
+  {
+   "rank": 18,
+   "name": "Ever Ace",
+   "slug": "ever-ace",
+   "length_m": 399.9,
+   "length_ft": "1,312 ft",
+   "year": "2021",
+   "status": "In service"
+  },
+  {
+   "rank": 19,
+   "name": "CMA CGM Jacques Saadé",
+   "slug": "cma-cgm-jacques-saade",
+   "length_m": 399.9,
+   "length_ft": "1,312 ft",
+   "year": "2020",
+   "status": "In service"
+  },
+  {
+   "rank": 20,
+   "name": "OOCL Hong Kong",
+   "slug": "oocl-hong-kong",
+   "length_m": 399.87,
+   "length_ft": "1,312 ft",
+   "year": "2017",
+   "status": "In service"
+  },
+  {
+   "rank": 21,
+   "name": "Mærsk Mc-Kinney Møller",
+   "slug": "maersk-mc-kinney-moller",
+   "length_m": 399.2,
+   "length_ft": "1,310 ft",
+   "year": "2013",
+   "status": "In service"
+  },
+  {
+   "rank": 22,
+   "name": "Madrid Mærsk",
+   "slug": "madrid-maersk",
+   "length_m": 399.0,
+   "length_ft": "1,309 ft",
+   "year": "2017",
+   "status": "In service"
+  },
+  {
+   "rank": 23,
+   "name": "Emma Mærsk",
+   "slug": "emma-maersk",
+   "length_m": 397.71,
+   "length_ft": "1,305 ft",
+   "year": "2006",
+   "status": "In service"
+  },
+  {
+   "rank": 24,
+   "name": "Berge Emperor",
+   "slug": null,
+   "length_m": 391.83,
+   "length_ft": "1,285 ft",
+   "year": "1975",
+   "status": "Scrapped 1986"
+  },
+  {
+   "rank": 25,
+   "name": "Pioneering Spirit",
+   "slug": "pioneering-spirit",
+   "length_m": 382.0,
+   "length_ft": "1,253 ft",
+   "year": "2013",
+   "status": "In service"
+  },
+  {
+   "rank": 26,
+   "name": "TI Europe",
+   "slug": "ti-europe",
+   "length_m": 380.0,
+   "length_ft": "1,247 ft",
+   "year": "2002",
+   "status": "In service"
+  },
+  {
+   "rank": 27,
+   "name": "TI Oceania",
+   "slug": "ti-oceania",
+   "length_m": 380.0,
+   "length_ft": "1,247 ft",
+   "year": "2002",
+   "status": "In service"
+  },
+  {
+   "rank": 28,
+   "name": "TI Africa",
+   "slug": null,
+   "length_m": 380.0,
+   "length_ft": "1,247 ft",
+   "year": "2002",
+   "status": "Converted to floating storage 2010"
+  },
+  {
+   "rank": 29,
+   "name": "TI Asia",
+   "slug": null,
+   "length_m": 380.0,
+   "length_ft": "1,247 ft",
+   "year": "2002",
+   "status": "Converted to floating storage 2010"
+  },
+  {
+   "rank": 30,
+   "name": "Legend of the Seas",
+   "slug": "legend-of-the-seas",
+   "length_m": 365.1,
+   "length_ft": "1,197 ft",
+   "year": "2026",
+   "status": "In service"
+  },
+  {
+   "rank": 31,
+   "name": "Icon of the Seas",
+   "slug": "icon-of-the-seas",
+   "length_m": 364.75,
+   "length_ft": "1,197 ft",
+   "year": "2024",
+   "status": "In service"
+  },
+  {
+   "rank": 32,
+   "name": "Star of the Seas",
+   "slug": "star-of-the-seas",
+   "length_m": 364.75,
+   "length_ft": "1,197 ft",
+   "year": "2025",
+   "status": "In service"
+  },
+  {
+   "rank": 33,
+   "name": "Harmony of the Seas",
+   "slug": "harmony-of-the-seas",
+   "length_m": 362.12,
+   "length_ft": "1,188 ft",
+   "year": "2016",
+   "status": "In service"
+  },
+  {
+   "rank": 34,
+   "name": "Wonder of the Seas",
+   "slug": "wonder-of-the-seas",
+   "length_m": 362.04,
+   "length_ft": "1,188 ft",
+   "year": "2022",
+   "status": "In service"
+  },
+  {
+   "rank": 35,
+   "name": "Vale Brasil (Ore Brasil)",
+   "slug": "vale-brasil",
+   "length_m": 362.0,
+   "length_ft": "1,188 ft",
+   "year": "2011",
+   "status": "In service"
+  },
+  {
+   "rank": 36,
+   "name": "Symphony of the Seas",
+   "slug": "symphony-of-the-seas",
+   "length_m": 361.01,
+   "length_ft": "1,184 ft",
+   "year": "2018",
+   "status": "In service"
+  },
+  {
+   "rank": 37,
+   "name": "Oasis of the Seas",
+   "slug": "oasis-of-the-seas",
+   "length_m": 360.0,
+   "length_ft": "1,181 ft",
+   "year": "2009",
+   "status": "In service"
+  },
+  {
+   "rank": 38,
+   "name": "Queen Mary 2",
+   "slug": "queen-mary-2",
+   "length_m": 345.03,
+   "length_ft": "1,132 ft",
+   "year": "2003",
+   "status": "In service"
+  },
+  {
+   "rank": 39,
+   "name": "Star Princess",
+   "slug": "star-princess",
+   "length_m": 345.0,
+   "length_ft": "1,133 ft",
+   "year": "2025",
+   "status": "In service"
+  },
+  {
+   "rank": 40,
+   "name": "Arvia",
+   "slug": "arvia",
+   "length_m": 345.0,
+   "length_ft": "1,131 ft",
+   "year": "2022",
+   "status": "In service"
+  },
+  {
+   "rank": 41,
+   "name": "Mozah",
+   "slug": "mozah",
+   "length_m": 345.0,
+   "length_ft": "1,132 ft",
+   "year": "2008",
+   "status": "In service"
+  },
+  {
+   "rank": 42,
+   "name": "Berge Stahl",
+   "slug": "berge-stahl",
+   "length_m": 342.08,
+   "length_ft": "1,122 ft",
+   "year": "1986",
+   "status": "Retired 2021"
+  }
+ ]
+}
