@@ -6,7 +6,6 @@
 
 <!-- One colour, three places: this meta, html{background} in CSS, and the panel background — so the mobile browser bar reads as one continuous surface. -->
 <meta name="theme-color" content="#FAFBFC">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="color-scheme" content="light only">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <link rel="alternate" type="application/rss+xml" title="ships.fyi" href="/feed.xml">
@@ -36,11 +35,14 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16.png">
 <link rel="icon" href="/assets/img/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
-<link rel="manifest" href="/assets/site.webmanifest">
+<link rel="manifest" href="/site.webmanifest">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- The site stylesheet loads FIRST so the game's own rules below still win on
+     any conflict. The nav needs it; nothing else on this page does. -->
+<link rel="stylesheet" href="/assets/css/main.css">
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoGame","name":"Captain","alternateName":"Captain \u2014 the ships.fyi ship game","url":"https://ships.fyi/play","description":"Steer Titanic, Icon of the Seas or Seawise Giant across open sea. Hunt treasure, bank it at port, learn why draught decides everything. Free, in your browser.","image":"https://ships.fyi/assets/img/og/default.png","inLanguage":"en-GB","genre":["Simulation","Casual","Educational"],"gamePlatform":"Web browser","applicationCategory":"GameApplication","operatingSystem":"Any modern web browser","playMode":"https://schema.org/SinglePlayer","isFamilyFriendly":true,"isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"GBP","availability":"https://schema.org/InStock"},"publisher":{"@type":"Organization","name":"ships.fyi","url":"https://ships.fyi/"},"about":{"@type":"Thing","name":"Ship handling and naval architecture"},"keywords":"free ship game, ship games, shipping game, cargo ship game, boat game, ship simulator, browser game"}</script>
 
@@ -50,7 +52,11 @@
 <style>
   *{cursor:default;box-sizing:border-box}
   a,button,[role=button]{cursor:pointer}
-  html,body{margin:0;height:100%;overflow:hidden;overscroll-behavior:none;background:#06161F;
+  /* Chrome colour is the site's, not the game's. The sea is drawn on the canvas
+     (position:fixed;inset:0), so this background never shows during play — it
+     only backs the browser chrome and the overscroll area, exactly as on the
+     other 233 pages. All seven chrome sources agree at #FAFBFC. */
+  html,body{margin:0;height:100%;overflow:hidden;overscroll-behavior:none;background:#FAFBFC;
             color-scheme:light;forced-color-adjust:none}
   body{font-family:"Space Grotesk",system-ui,sans-serif;
        -webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent;
@@ -140,9 +146,11 @@
   #dpBtn.on{background:#8A5A0B;border-color:#F0B43C;color:#fff}
 
   .panel{position:fixed;inset:0;overflow-y:auto;-webkit-overflow-scrolling:touch;background:#FAFBFC;
-         padding:22px 16px 40px;display:none;touch-action:pan-y}
+         padding:0;display:none;touch-action:pan-y}
   .panel.on{display:block}
-  .inner{max-width:540px;margin:0 auto}
+  /* padding moved off the panel so the nav can run full-bleed and stick */
+  .inner{max-width:540px;margin:0 auto;padding:22px 16px 40px}
+  #pOver .inner{padding-top:26px}
   h1{font-size:38px;line-height:1.02;margin:0 0 2px;letter-spacing:-.028em;color:#0E141C}
   h1 em{font-style:normal;color:#0F766E}
   .lede{font-size:14.5px;line-height:1.55;color:#56677A;margin:0 0 16px}
@@ -184,7 +192,13 @@
   .verdict{background:#fff;border:1px solid rgba(14,20,28,.12);border-radius:17px;padding:15px;
            margin-top:14px;font-size:13.5px;line-height:1.55;color:#0E141C}
   .verdict b{color:#0F766E}
-  @media (prefers-color-scheme: dark){ html,body{background:#06161F;color-scheme:light} .panel{background:#FAFBFC} }
+  /* Forced-dark defence — same block as main.css. Without this, Brave on Android
+     inverts the page and recomputes the toolbar colour itself, ignoring theme-color. */
+  @media (prefers-color-scheme: dark){
+    html,body{background:#FAFBFC;color:#0E141C;color-scheme:light}
+    .panel{background:#FAFBFC}
+    .mn-shell{background:#FAFBFC}
+  }
   @media (prefers-reduced-motion: reduce){ *{transition:none!important} }
   :focus-visible{outline:2px solid #0F766E;outline-offset:2px}
   .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
@@ -205,7 +219,7 @@
 </style>
 </head>
 <body>
-<a class="skip" href="#start">Skip to the game</a>
+<a class="skip" href="#content">Skip to the game</a>
 <noscript>
   <p style="max-width:540px;margin:24px auto;padding:0 16px;font:15px/1.6 'Space Grotesk',system-ui,sans-serif;color:#0E141C">
   <b>Captain</b> is a free ship game that needs JavaScript to run. Enable it and reload to steer sixteen
@@ -260,7 +274,8 @@ thrusters for pivoting on the spot, and M centres the wheel.</p>
 </div>
 
 <main class="panel on" id="pStart">
-  <div class="inner">
+  <!--MEGANAV-->
+  <div class="inner" id="content">
     <h1>Captain<em>.</em><span class="h1sub">A free ship game. Sixteen real ships, open sea,
     buried treasure, and a seabed that does not forgive.</span></h1>
     <h2 class="first" id="hMode">How hard do you want it</h2>
@@ -341,6 +356,12 @@ thrusters for pivoting on the spot, and M centres the wheel.</p>
     <button class="btn ghost" id="change">Different ship</button>
   </div>
 </div>
+
+<!-- Nav behaviour. search-index.js (60 KB) comes with it so the nav's search
+     button actually works rather than opening an empty dialog; ships-data.js
+     (169 KB) is deliberately NOT loaded, because nothing on this page needs it. -->
+<script src="/assets/js/search-index.js" defer></script>
+<script src="/assets/js/site.js" defer></script>
 
 <script>
 (function(){
