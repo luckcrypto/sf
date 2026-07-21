@@ -6,7 +6,6 @@
 
 <!-- One colour, three places: this meta, html{background} in CSS, and the panel background — so the mobile browser bar reads as one continuous surface. -->
 <meta name="theme-color" content="#FAFBFC">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="color-scheme" content="light only">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <link rel="alternate" type="application/rss+xml" title="ships.fyi" href="/feed.xml">
@@ -36,7 +35,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16.png">
 <link rel="icon" href="/assets/img/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
-<link rel="manifest" href="/assets/site.webmanifest">
+<link rel="manifest" href="/site.webmanifest">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,7 +52,11 @@
 <style>
   *{cursor:default;box-sizing:border-box}
   a,button,[role=button]{cursor:pointer}
-  html,body{margin:0;height:100%;overflow:hidden;overscroll-behavior:none;background:#06161F;
+  /* Chrome colour is the site's, not the game's. The sea is drawn on the canvas
+     (position:fixed;inset:0), so this background never shows during play — it
+     only backs the browser chrome and the overscroll area, exactly as on the
+     other 233 pages. All seven chrome sources agree at #FAFBFC. */
+  html,body{margin:0;height:100%;overflow:hidden;overscroll-behavior:none;background:#FAFBFC;
             color-scheme:light;forced-color-adjust:none}
   body{font-family:"Space Grotesk",system-ui,sans-serif;
        -webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent;
@@ -189,7 +192,13 @@
   .verdict{background:#fff;border:1px solid rgba(14,20,28,.12);border-radius:17px;padding:15px;
            margin-top:14px;font-size:13.5px;line-height:1.55;color:#0E141C}
   .verdict b{color:#0F766E}
-  @media (prefers-color-scheme: dark){ html,body{background:#06161F;color-scheme:light} .panel{background:#FAFBFC} }
+  /* Forced-dark defence — same block as main.css. Without this, Brave on Android
+     inverts the page and recomputes the toolbar colour itself, ignoring theme-color. */
+  @media (prefers-color-scheme: dark){
+    html,body{background:#FAFBFC;color:#0E141C;color-scheme:light}
+    .panel{background:#FAFBFC}
+    .mn-shell{background:#FAFBFC}
+  }
   @media (prefers-reduced-motion: reduce){ *{transition:none!important} }
   :focus-visible{outline:2px solid #0F766E;outline-offset:2px}
   .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
