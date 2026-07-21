@@ -41,6 +41,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- The site stylesheet loads FIRST so the game's own rules below still win on
+     any conflict. The nav needs it; nothing else on this page does. -->
+<link rel="stylesheet" href="/assets/css/main.css">
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoGame","name":"Captain","alternateName":"Captain \u2014 the ships.fyi ship game","url":"https://ships.fyi/play","description":"Steer Titanic, Icon of the Seas or Seawise Giant across open sea. Hunt treasure, bank it at port, learn why draught decides everything. Free, in your browser.","image":"https://ships.fyi/assets/img/og/default.png","inLanguage":"en-GB","genre":["Simulation","Casual","Educational"],"gamePlatform":"Web browser","applicationCategory":"GameApplication","operatingSystem":"Any modern web browser","playMode":"https://schema.org/SinglePlayer","isFamilyFriendly":true,"isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"GBP","availability":"https://schema.org/InStock"},"publisher":{"@type":"Organization","name":"ships.fyi","url":"https://ships.fyi/"},"about":{"@type":"Thing","name":"Ship handling and naval architecture"},"keywords":"free ship game, ship games, shipping game, cargo ship game, boat game, ship simulator, browser game"}</script>
 
@@ -140,9 +143,11 @@
   #dpBtn.on{background:#8A5A0B;border-color:#F0B43C;color:#fff}
 
   .panel{position:fixed;inset:0;overflow-y:auto;-webkit-overflow-scrolling:touch;background:#FAFBFC;
-         padding:22px 16px 40px;display:none;touch-action:pan-y}
+         padding:0;display:none;touch-action:pan-y}
   .panel.on{display:block}
-  .inner{max-width:540px;margin:0 auto}
+  /* padding moved off the panel so the nav can run full-bleed and stick */
+  .inner{max-width:540px;margin:0 auto;padding:22px 16px 40px}
+  #pOver .inner{padding-top:26px}
   h1{font-size:38px;line-height:1.02;margin:0 0 2px;letter-spacing:-.028em;color:#0E141C}
   h1 em{font-style:normal;color:#0F766E}
   .lede{font-size:14.5px;line-height:1.55;color:#56677A;margin:0 0 16px}
@@ -205,7 +210,7 @@
 </style>
 </head>
 <body>
-<a class="skip" href="#start">Skip to the game</a>
+<a class="skip" href="#content">Skip to the game</a>
 <noscript>
   <p style="max-width:540px;margin:24px auto;padding:0 16px;font:15px/1.6 'Space Grotesk',system-ui,sans-serif;color:#0E141C">
   <b>Captain</b> is a free ship game that needs JavaScript to run. Enable it and reload to steer sixteen
@@ -260,7 +265,568 @@ thrusters for pivoting on the spot, and M centres the wheel.</p>
 </div>
 
 <main class="panel on" id="pStart">
-  <div class="inner">
+  <nav class="mn" id="mn" data-current="" aria-label="Primary">
+<div class="mn-shell">
+<div class="mn-bar">
+<a class="mn-logo" href="/" aria-label="ships.fyi home"><span class="mn-mark" aria-hidden="true"><span class="mm-b">LOA</span></span><span class="lw">ships<b><i class="ld">.</i><span class="fw"><span class="fwt">fyi</span></span></b></span></a>
+<div class="mn-groups">
+<a class="mn-top mn-play" href="/play"><svg class="gi" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="7"/><path d="M8.4 7.3 13.4 10l-5 2.7z"/></svg>Play game</a>
+<div class="mn-group" data-key="menu">
+<button class="mn-top" type="button" aria-expanded="false" aria-haspopup="true"><svg class="gi" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h14M3 10h14M3 15h9"/></svg>Explore<i class="caret"></i></button>
+<div class="mn-panel" role="menu">
+<div class="mn-panel-inner" style="grid-template-columns:1.05fr 1fr 1.15fr 1fr">
+<div>
+<div class="mn-col-h">Cruise ships &amp; liners</div>
+<div class="mn-sub-h">Royal Caribbean</div>
+<a class="mn-link" href="/ships/legend-of-the-seas"><span class="lbl">Legend of the Seas</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/icon-of-the-seas"><span class="lbl">Icon of the Seas</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/star-of-the-seas"><span class="lbl">Star of the Seas</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/harmony-of-the-seas"><span class="lbl">Harmony of the Seas</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/wonder-of-the-seas"><span class="lbl">Wonder of the Seas</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/symphony-of-the-seas"><span class="lbl">Symphony of the Seas</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/oasis-of-the-seas"><span class="lbl">Oasis of the Seas</span><span class="cc">BS</span></a>
+<div class="mn-sub-h">Cunard</div>
+<a class="mn-link" href="/ships/queen-mary-2"><span class="lbl">Queen Mary 2</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/queen-anne"><span class="lbl">Queen Anne</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/queen-elizabeth"><span class="lbl">Queen Elizabeth</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/queen-victoria"><span class="lbl">Queen Victoria</span><span class="cc">BM</span></a>
+<div class="mn-sub-h">MSC Cruises</div>
+<a class="mn-link" href="/ships/msc-seascape"><span class="lbl">MSC Seascape</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/msc-seashore"><span class="lbl">MSC Seashore</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/msc-world-europa"><span class="lbl">MSC World Europa</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/msc-world-america"><span class="lbl">MSC World America</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/msc-virtuosa"><span class="lbl">MSC Virtuosa</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/msc-grandiosa"><span class="lbl">MSC Grandiosa</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/msc-euribia"><span class="lbl">MSC Euribia</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/msc-seaview"><span class="lbl">MSC Seaview</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/msc-seaside"><span class="lbl">MSC Seaside</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/msc-meraviglia"><span class="lbl">MSC Meraviglia</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/msc-bellissima"><span class="lbl">MSC Bellissima</span><span class="cc">MT</span></a>
+<div class="mn-sub-h">Carnival Cruise Line</div>
+<a class="mn-link" href="/ships/carnival-jubilee"><span class="lbl">Carnival Jubilee</span><span class="cc">PA</span></a>
+<a class="mn-link" href="/ships/carnival-celebration"><span class="lbl">Carnival Celebration</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/mardi-gras"><span class="lbl">Mardi Gras</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/carnival-vista"><span class="lbl">Carnival Vista</span><span class="cc">PA</span></a>
+<a class="mn-link" href="/ships/carnival-horizon"><span class="lbl">Carnival Horizon</span><span class="cc">PA</span></a>
+<a class="mn-link" href="/ships/carnival-panorama"><span class="lbl">Carnival Panorama</span><span class="cc">PA</span></a>
+<a class="mn-link" href="/ships/carnival-dream"><span class="lbl">Carnival Dream</span><span class="cc">PA</span></a>
+<a class="mn-link" href="/ships/carnival-magic"><span class="lbl">Carnival Magic</span><span class="cc">PA</span></a>
+<a class="mn-link" href="/ships/carnival-breeze"><span class="lbl">Carnival Breeze</span><span class="cc">PA</span></a>
+<div class="mn-sub-h">Norwegian Cruise Line</div>
+<a class="mn-link" href="/ships/norwegian-encore"><span class="lbl">Norwegian Encore</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/norwegian-bliss"><span class="lbl">Norwegian Bliss</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/norwegian-joy"><span class="lbl">Norwegian Joy</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/norwegian-epic"><span class="lbl">Norwegian Epic</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/norwegian-escape"><span class="lbl">Norwegian Escape</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/norwegian-getaway"><span class="lbl">Norwegian Getaway</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/norwegian-breakaway"><span class="lbl">Norwegian Breakaway</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/norwegian-aqua"><span class="lbl">Norwegian Aqua</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/norwegian-luna"><span class="lbl">Norwegian Luna</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/norwegian-viva"><span class="lbl">Norwegian Viva</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/norwegian-prima"><span class="lbl">Norwegian Prima</span><span class="cc">BS</span></a>
+<div class="mn-sub-h">Princess Cruises</div>
+<a class="mn-link" href="/ships/sun-princess"><span class="lbl">Sun Princess</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/star-princess"><span class="lbl">Star Princess</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/discovery-princess"><span class="lbl">Discovery Princess</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/enchanted-princess"><span class="lbl">Enchanted Princess</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/sky-princess"><span class="lbl">Sky Princess</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/majestic-princess"><span class="lbl">Majestic Princess</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/regal-princess"><span class="lbl">Regal Princess</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/royal-princess"><span class="lbl">Royal Princess</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/diamond-princess"><span class="lbl">Diamond Princess</span><span class="cc">GB</span></a>
+<a class="mn-link" href="/ships/sapphire-princess"><span class="lbl">Sapphire Princess</span><span class="cc">GB</span></a>
+<a class="mn-link" href="/ships/ruby-princess"><span class="lbl">Ruby Princess</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/caribbean-princess"><span class="lbl">Caribbean Princess</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/grand-princess"><span class="lbl">Grand Princess</span><span class="cc">BM</span></a>
+<div class="mn-sub-h">Celebrity Cruises</div>
+<a class="mn-link" href="/ships/celebrity-ascent"><span class="lbl">Celebrity Ascent</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/celebrity-beyond"><span class="lbl">Celebrity Beyond</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/celebrity-xcel"><span class="lbl">Celebrity Xcel</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/celebrity-reflection"><span class="lbl">Celebrity Reflection</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/celebrity-silhouette"><span class="lbl">Celebrity Silhouette</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/celebrity-eclipse"><span class="lbl">Celebrity Eclipse</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/celebrity-equinox"><span class="lbl">Celebrity Equinox</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/celebrity-solstice"><span class="lbl">Celebrity Solstice</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/celebrity-apex"><span class="lbl">Celebrity Apex</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/celebrity-edge"><span class="lbl">Celebrity Edge</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/celebrity-constellation"><span class="lbl">Celebrity Constellation</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/celebrity-summit"><span class="lbl">Celebrity Summit</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/celebrity-infinity"><span class="lbl">Celebrity Infinity</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/celebrity-millennium"><span class="lbl">Celebrity Millennium</span><span class="cc">MT</span></a>
+<div class="mn-sub-h">Disney Cruise Line</div>
+<a class="mn-link" href="/ships/disney-adventure"><span class="lbl">Disney Adventure</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/disney-wish"><span class="lbl">Disney Wish</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/disney-destiny"><span class="lbl">Disney Destiny</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/disney-treasure"><span class="lbl">Disney Treasure</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/disney-fantasy"><span class="lbl">Disney Fantasy</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/disney-dream"><span class="lbl">Disney Dream</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/disney-magic"><span class="lbl">Disney Magic</span><span class="cc">BS</span></a>
+<a class="mn-link" href="/ships/disney-wonder"><span class="lbl">Disney Wonder</span><span class="cc">BS</span></a>
+<div class="mn-sub-h">P&amp;O Cruises</div>
+<a class="mn-link" href="/ships/arvia"><span class="lbl">Arvia</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/iona"><span class="lbl">Iona</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/britannia"><span class="lbl">Britannia</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/azura"><span class="lbl">Azura</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/arcadia"><span class="lbl">Arcadia</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/ventura"><span class="lbl">Ventura</span><span class="cc">BM</span></a>
+<a class="mn-link" href="/ships/aurora"><span class="lbl">Aurora</span><span class="cc">BM</span></a>
+<div class="mn-sub-h">Holland America Line</div>
+<a class="mn-link" href="/ships/koningsdam"><span class="lbl">Koningsdam</span><span class="cc">NL</span></a>
+<a class="mn-link" href="/ships/rotterdam"><span class="lbl">Rotterdam</span><span class="cc">NL</span></a>
+<a class="mn-link" href="/ships/nieuw-statendam"><span class="lbl">Nieuw Statendam</span><span class="cc">NL</span></a>
+<a class="mn-link" href="/ships/nieuw-amsterdam"><span class="lbl">Nieuw Amsterdam</span><span class="cc">NL</span></a>
+<a class="mn-link" href="/ships/eurodam"><span class="lbl">Eurodam</span><span class="cc">NL</span></a>
+<a class="mn-link" href="/ships/noordam"><span class="lbl">Noordam</span><span class="cc">NL</span></a>
+<a class="mn-link" href="/ships/westerdam"><span class="lbl">Westerdam</span><span class="cc">NL</span></a>
+<a class="mn-link" href="/ships/oosterdam"><span class="lbl">Oosterdam</span><span class="cc">NL</span></a>
+<a class="mn-link" href="/ships/zuiderdam"><span class="lbl">Zuiderdam</span><span class="cc">NL</span></a>
+<a class="mn-link" href="/ships/volendam"><span class="lbl">Volendam</span><span class="cc">NL</span></a>
+<a class="mn-link" href="/ships/zaandam"><span class="lbl">Zaandam</span><span class="cc">NL</span></a>
+<div class="mn-sub-h">AIDA Cruises</div>
+<a class="mn-link" href="/ships/aidanova"><span class="lbl">AIDAnova</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/aidacosma"><span class="lbl">AIDAcosma</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/aidaperla"><span class="lbl">AIDAperla</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/aidaprima"><span class="lbl">AIDAprima</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/aidasol"><span class="lbl">AIDAsol</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/aidamar"><span class="lbl">AIDAmar</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/aidablu"><span class="lbl">AIDAblu</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/aidastella"><span class="lbl">AIDAstella</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/aidaluna"><span class="lbl">AIDAluna</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/aidabella"><span class="lbl">AIDAbella</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/aidadiva"><span class="lbl">AIDAdiva</span><span class="cc">IT</span></a>
+<div class="mn-sub-h">Costa Cruises</div>
+<a class="mn-link" href="/ships/costa-smeralda"><span class="lbl">Costa Smeralda</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/costa-toscana"><span class="lbl">Costa Toscana</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/costa-diadema"><span class="lbl">Costa Diadema</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/costa-deliziosa"><span class="lbl">Costa Deliziosa</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/costa-fascinosa"><span class="lbl">Costa Fascinosa</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/costa-favolosa"><span class="lbl">Costa Favolosa</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/costa-pacifica"><span class="lbl">Costa Pacifica</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/costa-serena"><span class="lbl">Costa Serena</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/ships/costa-fortuna"><span class="lbl">Costa Fortuna</span><span class="cc">IT</span></a>
+<div class="mn-sub-h">White Star Line</div>
+<a class="mn-link" href="/ships/titanic"><span class="lbl">RMS Titanic</span><span class="cc">GB</span></a>
+</div>
+<div>
+<div class="mn-col-h">Container ships</div>
+<div class="mn-sub-h">Evergreen</div>
+<a class="mn-link" href="/ships/ever-given"><span class="lbl">Ever Given</span><span class="cc">PA</span></a>
+<a class="mn-link" href="/ships/ever-alot"><span class="lbl">Ever Alot</span><span class="cc">PA</span></a>
+<a class="mn-link" href="/ships/ever-ace"><span class="lbl">Ever Ace</span><span class="cc">PA</span></a>
+<div class="mn-sub-h">MSC</div>
+<a class="mn-link" href="/ships/msc-irina"><span class="lbl">MSC Irina</span><span class="cc">LR</span></a>
+<div class="mn-sub-h">Maersk</div>
+<a class="mn-link" href="/ships/maersk-mc-kinney-moller"><span class="lbl">Mærsk Mc-Kinney Møller</span><span class="cc">DK</span></a>
+<a class="mn-link" href="/ships/madrid-maersk"><span class="lbl">Madrid Mærsk</span><span class="cc">DK</span></a>
+<a class="mn-link" href="/ships/emma-maersk"><span class="lbl">Emma Mærsk</span><span class="cc">DK</span></a>
+<div class="mn-sub-h">COSCO Shipping</div>
+<a class="mn-link" href="/ships/oocl-spain"><span class="lbl">OOCL Spain</span><span class="cc">HK</span></a>
+<a class="mn-link" href="/ships/oocl-hong-kong"><span class="lbl">OOCL Hong Kong</span><span class="cc">HK</span></a>
+<div class="mn-sub-h">CMA CGM</div>
+<a class="mn-link" href="/ships/cma-cgm-jacques-saade"><span class="lbl">CMA CGM Jacques Saadé</span><span class="cc">FR</span></a>
+<div class="mn-sub-h">HMM</div>
+<a class="mn-link" href="/ships/hmm-algeciras"><span class="lbl">HMM Algeciras</span><span class="cc">PA</span></a>
+<div class="mn-sub-h">Ocean Network Express</div>
+<a class="mn-link" href="/ships/mol-triumph"><span class="lbl">MOL Triumph</span><span class="cc">PA</span></a>
+<div class="mn-sub-h">Hapag-Lloyd</div>
+<a class="mn-link" href="/ships/barzan"><span class="lbl">Barzan</span><span class="cc">MT</span></a>
+<div class="mn-sub-h">Pan-Atlantic Steamship (Sea-Land)</div>
+<a class="mn-link" href="/ships/ideal-x"><span class="lbl">SS Ideal X</span><span class="cc">US</span></a>
+<div class="mn-col-h mt">Tankers &amp; giants</div>
+<a class="mn-link" href="/ships/seawise-giant"><span class="lbl">Seawise Giant</span><span class="cc">LR</span></a>
+<a class="mn-link" href="/ships/pioneering-spirit"><span class="lbl">Pioneering Spirit</span><span class="cc">MT</span></a>
+<a class="mn-link" href="/ships/prelude-flng"><span class="lbl">Prelude FLNG</span><span class="cc">AU</span></a>
+<a class="mn-link" href="/ships/batillus"><span class="lbl">Batillus</span><span class="cc">FR</span></a>
+<a class="mn-link" href="/ships/pierre-guillaumat"><span class="lbl">Pierre Guillaumat</span><span class="cc">FR</span></a>
+<a class="mn-link" href="/ships/esso-atlantic"><span class="lbl">Esso Atlantic</span><span class="cc">LR</span></a>
+<a class="mn-link" href="/ships/ti-europe"><span class="lbl">TI Europe</span><span class="cc">BE</span></a>
+<a class="mn-link" href="/ships/ti-oceania"><span class="lbl">TI Oceania</span><span class="cc">BE</span></a>
+<a class="mn-link" href="/ships/vale-brasil"><span class="lbl">Vale Brasil</span><span class="cc">SG</span></a>
+<a class="mn-link" href="/ships/mozah"><span class="lbl">Mozah</span><span class="cc">MH</span></a>
+<a class="mn-link" href="/ships/berge-stahl"><span class="lbl">Berge Stahl</span><span class="cc">NO</span></a>
+<a class="mn-link" href="/ships/exxon-valdez"><span class="lbl">Exxon Valdez</span><span class="cc">US</span></a>
+<a class="mn-link" href="/categories"><span class="lbl">All ship categories</span><span class="arr">&rarr;</span></a>
+</div>
+<div>
+<div class="mn-col-h">Cruise lines</div>
+<a class="mn-link" href="/lines/royal-caribbean"><span class="lbl">Royal Caribbean</span><span class="cc">US</span></a>
+<a class="mn-link" href="/lines/carnival"><span class="lbl">Carnival Cruise Line</span><span class="cc">US</span></a>
+<a class="mn-link" href="/lines/msc-cruises"><span class="lbl">MSC Cruises</span><span class="cc">CH</span></a>
+<a class="mn-link" href="/lines/norwegian"><span class="lbl">Norwegian Cruise Line</span><span class="cc">US</span></a>
+<a class="mn-link" href="/lines/disney-cruise-line"><span class="lbl">Disney Cruise Line</span><span class="cc">US</span></a>
+<a class="mn-link" href="/lines/cunard"><span class="lbl">Cunard</span><span class="cc">GB</span></a>
+<a class="mn-link" href="/lines/costa"><span class="lbl">Costa Cruises</span><span class="cc">IT</span></a>
+<a class="mn-link" href="/lines/aida"><span class="lbl">AIDA Cruises</span><span class="cc">DE</span></a>
+<a class="mn-link" href="/lines/white-star-line"><span class="lbl">White Star Line</span><span class="cc">GB</span></a>
+<a class="mn-link" href="/lines/princess-cruises"><span class="lbl">Princess Cruises</span><span class="cc">US</span></a>
+<a class="mn-link" href="/lines/p-and-o"><span class="lbl">P&amp;O Cruises</span><span class="cc">GB</span></a>
+<a class="mn-link" href="/lines/celebrity"><span class="lbl">Celebrity Cruises</span><span class="cc">US</span></a>
+<a class="mn-link" href="/lines/holland-america"><span class="lbl">Holland America Line</span><span class="cc">US</span></a>
+<div class="mn-col-h mt">Shipping lines</div>
+<div class="mn-2col">
+<a class="mn-link" href="/lines/msc"><span class="lbl">MSC</span><span class="cc">CH</span></a>
+<a class="mn-link" href="/lines/maersk"><span class="lbl">Maersk</span><span class="cc">DK</span></a>
+<a class="mn-link" href="/lines/cma-cgm"><span class="lbl">CMA CGM</span><span class="cc">FR</span></a>
+<a class="mn-link" href="/lines/cosco"><span class="lbl">COSCO Shipping</span><span class="cc">CN</span></a>
+<a class="mn-link" href="/lines/hapag-lloyd"><span class="lbl">Hapag-Lloyd</span><span class="cc">DE</span></a>
+<a class="mn-link" href="/lines/one"><span class="lbl">Ocean Network Express</span><span class="cc">JP</span></a>
+<a class="mn-link" href="/lines/evergreen"><span class="lbl">Evergreen</span><span class="cc">TW</span></a>
+<a class="mn-link" href="/lines/hmm"><span class="lbl">HMM</span><span class="cc">KR</span></a>
+<a class="mn-link" href="/lines/yang-ming"><span class="lbl">Yang Ming</span><span class="cc">TW</span></a>
+<a class="mn-link" href="/lines/zim"><span class="lbl">ZIM</span><span class="cc">IL</span></a>
+</div>
+<div class="mn-col-h mt">Specialists</div>
+<a class="mn-link" href="/lines/cmb-tech"><span class="lbl">CMB.TECH (Euronav)</span><span class="cc">BE</span></a>
+<a class="mn-link" href="/lines/nakilat"><span class="lbl">Nakilat</span><span class="cc">QA</span></a>
+<a class="mn-link" href="/lines/allseas"><span class="lbl">Allseas</span><span class="cc">CH</span></a>
+<a class="mn-link" href="/lines/berge-bulk"><span class="lbl">Berge Bulk</span><span class="cc">SG</span></a>
+</div>
+<div>
+<div class="mn-col-h">Guides</div>
+<a class="mn-link" href="/cruise"><span class="lbl">Get cruise-ready</span><span class="arr">&rarr;</span></a>
+<a class="mn-link" href="/cruise/first-cruise-guide"><span class="lbl">First cruise guide</span><span class="arr">&rarr;</span></a>
+<a class="mn-link" href="/cruise/packing-list"><span class="lbl">Cruise packing list</span><span class="arr">&rarr;</span></a>
+<a class="mn-link" href="/cruise/seasickness"><span class="lbl">Beat seasickness</span><span class="arr">&rarr;</span></a>
+<a class="mn-link" href="/cruise/fear-of-cruising"><span class="lbl">Scared to cruise?</span><span class="arr">&rarr;</span></a>
+<a class="mn-link" href="/cruise/port-safety"><span class="lbl">Port safety</span><span class="arr">&rarr;</span></a>
+<a class="mn-link" href="/cruise/how-big-is-a-cruise-ship"><span class="lbl">How big is a cruise ship?</span><span class="arr">&rarr;</span></a>
+<div class="mn-col-h mt">Explore &amp; learn</div>
+<a class="mn-link" href="/ships-in-storm"><span class="lbl">Ships in storm</span><span class="arr">&rarr;</span></a>
+<a class="mn-link" href="/records"><span class="lbl">Records board</span><span class="arr">&rarr;</span></a>
+<a class="mn-link" href="/explained"><span class="lbl">Explained</span><span class="arr">&rarr;</span></a>
+<a class="mn-link" href="/canal-fit"><span class="lbl">Canal-Fit Checker</span><span class="arr">&rarr;</span></a>
+<a class="mn-link" href="/quiz"><span class="lbl">Silhouette quiz</span><span class="arr">&rarr;</span></a>
+<a class="mn-link" href="/play"><span class="lbl">Captain — ship game</span><span class="arr">&rarr;</span></a>
+<div class="mn-col-h mt">Latest</div>
+<a class="mn-link" href="/blog/ever-given-six-days"><span class="lbl">The six days that stopped world trade</span><span class="arr">&rarr;</span></a>
+<a class="mn-link" href="/blog/why-ships-stopped-growing"><span class="lbl">Why the biggest ships stopped growing</span><span class="arr">&rarr;</span></a>
+<a class="mn-link" href="/blog"><span class="lbl">All blog posts</span><span class="arr">&rarr;</span></a>
+<a class="mn-link" href="/methodology"><span class="lbl">Methodology</span><span class="arr">&rarr;</span></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<button class="mn-search" type="button" id="mnSearchBtn" aria-label="Search the site" aria-haspopup="dialog"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="9" r="5.4"/><path d="m13.2 13.2 3.3 3.3"/></svg><span>Search</span><kbd>/</kbd></button>
+<a class="mn-cta" href="/compare">Compare</a>
+<button class="mn-search-icon" type="button" id="mnSearchBtn2" aria-label="Search the site"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="9" r="5.4"/><path d="m13.2 13.2 3.3 3.3"/></svg></button>
+<button class="mn-burger" id="mnBurger" type="button" aria-label="Open menu" aria-expanded="false"><span></span></button>
+</div>
+</div>
+<aside class="mn-drawer" id="mnDrawer" aria-label="Menu">
+<div class="mn-drawer-scroll">
+<div class="mn-acc">
+<button class="mn-acc-top" type="button" aria-expanded="false"><span class="lhs">Cruise ships &amp; liners</span><i class="caret"></i></button>
+<div class="mn-acc-body"><div class="mn-acc-in">
+<div class="mn-acc2">
+<button class="mn-acc2-top" type="button" aria-expanded="false"><span class="lhs">Royal Caribbean</span><span class="rhs"><span class="n">7</span><i class="caret"></i></span></button>
+<div class="mn-acc2-body"><div class="mn-acc2-in">
+<a class="mn-mlink" href="/ships/legend-of-the-seas"><span>Legend of the Seas</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/icon-of-the-seas"><span>Icon of the Seas</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/star-of-the-seas"><span>Star of the Seas</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/harmony-of-the-seas"><span>Harmony of the Seas</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/wonder-of-the-seas"><span>Wonder of the Seas</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/symphony-of-the-seas"><span>Symphony of the Seas</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/oasis-of-the-seas"><span>Oasis of the Seas</span><span class="cc">BS</span></a>
+</div></div>
+</div>
+<div class="mn-acc2">
+<button class="mn-acc2-top" type="button" aria-expanded="false"><span class="lhs">Cunard</span><span class="rhs"><span class="n">4</span><i class="caret"></i></span></button>
+<div class="mn-acc2-body"><div class="mn-acc2-in">
+<a class="mn-mlink" href="/ships/queen-mary-2"><span>Queen Mary 2</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/queen-anne"><span>Queen Anne</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/queen-elizabeth"><span>Queen Elizabeth</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/queen-victoria"><span>Queen Victoria</span><span class="cc">BM</span></a>
+</div></div>
+</div>
+<div class="mn-acc2">
+<button class="mn-acc2-top" type="button" aria-expanded="false"><span class="lhs">MSC Cruises</span><span class="rhs"><span class="n">11</span><i class="caret"></i></span></button>
+<div class="mn-acc2-body"><div class="mn-acc2-in">
+<a class="mn-mlink" href="/ships/msc-seascape"><span>MSC Seascape</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/msc-seashore"><span>MSC Seashore</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/msc-world-europa"><span>MSC World Europa</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/msc-world-america"><span>MSC World America</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/msc-virtuosa"><span>MSC Virtuosa</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/msc-grandiosa"><span>MSC Grandiosa</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/msc-euribia"><span>MSC Euribia</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/msc-seaview"><span>MSC Seaview</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/msc-seaside"><span>MSC Seaside</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/msc-meraviglia"><span>MSC Meraviglia</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/msc-bellissima"><span>MSC Bellissima</span><span class="cc">MT</span></a>
+</div></div>
+</div>
+<div class="mn-acc2">
+<button class="mn-acc2-top" type="button" aria-expanded="false"><span class="lhs">Carnival Cruise Line</span><span class="rhs"><span class="n">9</span><i class="caret"></i></span></button>
+<div class="mn-acc2-body"><div class="mn-acc2-in">
+<a class="mn-mlink" href="/ships/carnival-jubilee"><span>Carnival Jubilee</span><span class="cc">PA</span></a>
+<a class="mn-mlink" href="/ships/carnival-celebration"><span>Carnival Celebration</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/mardi-gras"><span>Mardi Gras</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/carnival-vista"><span>Carnival Vista</span><span class="cc">PA</span></a>
+<a class="mn-mlink" href="/ships/carnival-horizon"><span>Carnival Horizon</span><span class="cc">PA</span></a>
+<a class="mn-mlink" href="/ships/carnival-panorama"><span>Carnival Panorama</span><span class="cc">PA</span></a>
+<a class="mn-mlink" href="/ships/carnival-dream"><span>Carnival Dream</span><span class="cc">PA</span></a>
+<a class="mn-mlink" href="/ships/carnival-magic"><span>Carnival Magic</span><span class="cc">PA</span></a>
+<a class="mn-mlink" href="/ships/carnival-breeze"><span>Carnival Breeze</span><span class="cc">PA</span></a>
+</div></div>
+</div>
+<div class="mn-acc2">
+<button class="mn-acc2-top" type="button" aria-expanded="false"><span class="lhs">Norwegian Cruise Line</span><span class="rhs"><span class="n">11</span><i class="caret"></i></span></button>
+<div class="mn-acc2-body"><div class="mn-acc2-in">
+<a class="mn-mlink" href="/ships/norwegian-encore"><span>Norwegian Encore</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/norwegian-bliss"><span>Norwegian Bliss</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/norwegian-joy"><span>Norwegian Joy</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/norwegian-epic"><span>Norwegian Epic</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/norwegian-escape"><span>Norwegian Escape</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/norwegian-getaway"><span>Norwegian Getaway</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/norwegian-breakaway"><span>Norwegian Breakaway</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/norwegian-aqua"><span>Norwegian Aqua</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/norwegian-luna"><span>Norwegian Luna</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/norwegian-viva"><span>Norwegian Viva</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/norwegian-prima"><span>Norwegian Prima</span><span class="cc">BS</span></a>
+</div></div>
+</div>
+<div class="mn-acc2">
+<button class="mn-acc2-top" type="button" aria-expanded="false"><span class="lhs">Princess Cruises</span><span class="rhs"><span class="n">13</span><i class="caret"></i></span></button>
+<div class="mn-acc2-body"><div class="mn-acc2-in">
+<a class="mn-mlink" href="/ships/sun-princess"><span>Sun Princess</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/star-princess"><span>Star Princess</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/discovery-princess"><span>Discovery Princess</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/enchanted-princess"><span>Enchanted Princess</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/sky-princess"><span>Sky Princess</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/majestic-princess"><span>Majestic Princess</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/regal-princess"><span>Regal Princess</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/royal-princess"><span>Royal Princess</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/diamond-princess"><span>Diamond Princess</span><span class="cc">GB</span></a>
+<a class="mn-mlink" href="/ships/sapphire-princess"><span>Sapphire Princess</span><span class="cc">GB</span></a>
+<a class="mn-mlink" href="/ships/ruby-princess"><span>Ruby Princess</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/caribbean-princess"><span>Caribbean Princess</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/grand-princess"><span>Grand Princess</span><span class="cc">BM</span></a>
+</div></div>
+</div>
+<div class="mn-acc2">
+<button class="mn-acc2-top" type="button" aria-expanded="false"><span class="lhs">Celebrity Cruises</span><span class="rhs"><span class="n">14</span><i class="caret"></i></span></button>
+<div class="mn-acc2-body"><div class="mn-acc2-in">
+<a class="mn-mlink" href="/ships/celebrity-ascent"><span>Celebrity Ascent</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/celebrity-beyond"><span>Celebrity Beyond</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/celebrity-xcel"><span>Celebrity Xcel</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/celebrity-reflection"><span>Celebrity Reflection</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/celebrity-silhouette"><span>Celebrity Silhouette</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/celebrity-eclipse"><span>Celebrity Eclipse</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/celebrity-equinox"><span>Celebrity Equinox</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/celebrity-solstice"><span>Celebrity Solstice</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/celebrity-apex"><span>Celebrity Apex</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/celebrity-edge"><span>Celebrity Edge</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/celebrity-constellation"><span>Celebrity Constellation</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/celebrity-summit"><span>Celebrity Summit</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/celebrity-infinity"><span>Celebrity Infinity</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/celebrity-millennium"><span>Celebrity Millennium</span><span class="cc">MT</span></a>
+</div></div>
+</div>
+<div class="mn-acc2">
+<button class="mn-acc2-top" type="button" aria-expanded="false"><span class="lhs">Disney Cruise Line</span><span class="rhs"><span class="n">8</span><i class="caret"></i></span></button>
+<div class="mn-acc2-body"><div class="mn-acc2-in">
+<a class="mn-mlink" href="/ships/disney-adventure"><span>Disney Adventure</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/disney-wish"><span>Disney Wish</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/disney-destiny"><span>Disney Destiny</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/disney-treasure"><span>Disney Treasure</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/disney-fantasy"><span>Disney Fantasy</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/disney-dream"><span>Disney Dream</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/disney-magic"><span>Disney Magic</span><span class="cc">BS</span></a>
+<a class="mn-mlink" href="/ships/disney-wonder"><span>Disney Wonder</span><span class="cc">BS</span></a>
+</div></div>
+</div>
+<div class="mn-acc2">
+<button class="mn-acc2-top" type="button" aria-expanded="false"><span class="lhs">P&amp;O Cruises</span><span class="rhs"><span class="n">7</span><i class="caret"></i></span></button>
+<div class="mn-acc2-body"><div class="mn-acc2-in">
+<a class="mn-mlink" href="/ships/arvia"><span>Arvia</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/iona"><span>Iona</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/britannia"><span>Britannia</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/azura"><span>Azura</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/arcadia"><span>Arcadia</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/ventura"><span>Ventura</span><span class="cc">BM</span></a>
+<a class="mn-mlink" href="/ships/aurora"><span>Aurora</span><span class="cc">BM</span></a>
+</div></div>
+</div>
+<div class="mn-acc2">
+<button class="mn-acc2-top" type="button" aria-expanded="false"><span class="lhs">Holland America Line</span><span class="rhs"><span class="n">11</span><i class="caret"></i></span></button>
+<div class="mn-acc2-body"><div class="mn-acc2-in">
+<a class="mn-mlink" href="/ships/koningsdam"><span>Koningsdam</span><span class="cc">NL</span></a>
+<a class="mn-mlink" href="/ships/rotterdam"><span>Rotterdam</span><span class="cc">NL</span></a>
+<a class="mn-mlink" href="/ships/nieuw-statendam"><span>Nieuw Statendam</span><span class="cc">NL</span></a>
+<a class="mn-mlink" href="/ships/nieuw-amsterdam"><span>Nieuw Amsterdam</span><span class="cc">NL</span></a>
+<a class="mn-mlink" href="/ships/eurodam"><span>Eurodam</span><span class="cc">NL</span></a>
+<a class="mn-mlink" href="/ships/noordam"><span>Noordam</span><span class="cc">NL</span></a>
+<a class="mn-mlink" href="/ships/westerdam"><span>Westerdam</span><span class="cc">NL</span></a>
+<a class="mn-mlink" href="/ships/oosterdam"><span>Oosterdam</span><span class="cc">NL</span></a>
+<a class="mn-mlink" href="/ships/zuiderdam"><span>Zuiderdam</span><span class="cc">NL</span></a>
+<a class="mn-mlink" href="/ships/volendam"><span>Volendam</span><span class="cc">NL</span></a>
+<a class="mn-mlink" href="/ships/zaandam"><span>Zaandam</span><span class="cc">NL</span></a>
+</div></div>
+</div>
+<div class="mn-acc2">
+<button class="mn-acc2-top" type="button" aria-expanded="false"><span class="lhs">AIDA Cruises</span><span class="rhs"><span class="n">11</span><i class="caret"></i></span></button>
+<div class="mn-acc2-body"><div class="mn-acc2-in">
+<a class="mn-mlink" href="/ships/aidanova"><span>AIDAnova</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/aidacosma"><span>AIDAcosma</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/aidaperla"><span>AIDAperla</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/aidaprima"><span>AIDAprima</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/aidasol"><span>AIDAsol</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/aidamar"><span>AIDAmar</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/aidablu"><span>AIDAblu</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/aidastella"><span>AIDAstella</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/aidaluna"><span>AIDAluna</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/aidabella"><span>AIDAbella</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/aidadiva"><span>AIDAdiva</span><span class="cc">IT</span></a>
+</div></div>
+</div>
+<div class="mn-acc2">
+<button class="mn-acc2-top" type="button" aria-expanded="false"><span class="lhs">Costa Cruises</span><span class="rhs"><span class="n">9</span><i class="caret"></i></span></button>
+<div class="mn-acc2-body"><div class="mn-acc2-in">
+<a class="mn-mlink" href="/ships/costa-smeralda"><span>Costa Smeralda</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/costa-toscana"><span>Costa Toscana</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/costa-diadema"><span>Costa Diadema</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/costa-deliziosa"><span>Costa Deliziosa</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/costa-fascinosa"><span>Costa Fascinosa</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/costa-favolosa"><span>Costa Favolosa</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/costa-pacifica"><span>Costa Pacifica</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/costa-serena"><span>Costa Serena</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/ships/costa-fortuna"><span>Costa Fortuna</span><span class="cc">IT</span></a>
+</div></div>
+</div>
+<div class="mn-acc2">
+<button class="mn-acc2-top" type="button" aria-expanded="false"><span class="lhs">White Star Line</span><span class="rhs"><span class="n">1</span><i class="caret"></i></span></button>
+<div class="mn-acc2-body"><div class="mn-acc2-in">
+<a class="mn-mlink" href="/ships/titanic"><span>RMS Titanic</span><span class="cc">GB</span></a>
+</div></div>
+</div>
+</div></div>
+</div>
+<div class="mn-acc">
+<button class="mn-acc-top" type="button" aria-expanded="false"><span class="lhs">Container ships</span><i class="caret"></i></button>
+<div class="mn-acc-body"><div class="mn-acc-in">
+<div class="mn-sub-h">Evergreen</div>
+<a class="mn-mlink" href="/ships/ever-given"><span>Ever Given</span><span class="cc">PA</span></a>
+<a class="mn-mlink" href="/ships/ever-alot"><span>Ever Alot</span><span class="cc">PA</span></a>
+<a class="mn-mlink" href="/ships/ever-ace"><span>Ever Ace</span><span class="cc">PA</span></a>
+<div class="mn-sub-h">MSC</div>
+<a class="mn-mlink" href="/ships/msc-irina"><span>MSC Irina</span><span class="cc">LR</span></a>
+<div class="mn-sub-h">Maersk</div>
+<a class="mn-mlink" href="/ships/maersk-mc-kinney-moller"><span>Mærsk Mc-Kinney Møller</span><span class="cc">DK</span></a>
+<a class="mn-mlink" href="/ships/madrid-maersk"><span>Madrid Mærsk</span><span class="cc">DK</span></a>
+<a class="mn-mlink" href="/ships/emma-maersk"><span>Emma Mærsk</span><span class="cc">DK</span></a>
+<div class="mn-sub-h">COSCO Shipping</div>
+<a class="mn-mlink" href="/ships/oocl-spain"><span>OOCL Spain</span><span class="cc">HK</span></a>
+<a class="mn-mlink" href="/ships/oocl-hong-kong"><span>OOCL Hong Kong</span><span class="cc">HK</span></a>
+<div class="mn-sub-h">CMA CGM</div>
+<a class="mn-mlink" href="/ships/cma-cgm-jacques-saade"><span>CMA CGM Jacques Saadé</span><span class="cc">FR</span></a>
+<div class="mn-sub-h">HMM</div>
+<a class="mn-mlink" href="/ships/hmm-algeciras"><span>HMM Algeciras</span><span class="cc">PA</span></a>
+<div class="mn-sub-h">Ocean Network Express</div>
+<a class="mn-mlink" href="/ships/mol-triumph"><span>MOL Triumph</span><span class="cc">PA</span></a>
+<div class="mn-sub-h">Hapag-Lloyd</div>
+<a class="mn-mlink" href="/ships/barzan"><span>Barzan</span><span class="cc">MT</span></a>
+<div class="mn-sub-h">Pan-Atlantic Steamship (Sea-Land)</div>
+<a class="mn-mlink" href="/ships/ideal-x"><span>SS Ideal X</span><span class="cc">US</span></a>
+</div></div>
+</div>
+<div class="mn-acc">
+<button class="mn-acc-top" type="button" aria-expanded="false"><span class="lhs">Tankers &amp; giants</span><i class="caret"></i></button>
+<div class="mn-acc-body"><div class="mn-acc-in">
+<a class="mn-mlink" href="/ships/seawise-giant"><span>Seawise Giant</span><span class="cc">LR</span></a>
+<a class="mn-mlink" href="/ships/pioneering-spirit"><span>Pioneering Spirit</span><span class="cc">MT</span></a>
+<a class="mn-mlink" href="/ships/prelude-flng"><span>Prelude FLNG</span><span class="cc">AU</span></a>
+<a class="mn-mlink" href="/ships/batillus"><span>Batillus</span><span class="cc">FR</span></a>
+<a class="mn-mlink" href="/ships/pierre-guillaumat"><span>Pierre Guillaumat</span><span class="cc">FR</span></a>
+<a class="mn-mlink" href="/ships/esso-atlantic"><span>Esso Atlantic</span><span class="cc">LR</span></a>
+<a class="mn-mlink" href="/ships/ti-europe"><span>TI Europe</span><span class="cc">BE</span></a>
+<a class="mn-mlink" href="/ships/ti-oceania"><span>TI Oceania</span><span class="cc">BE</span></a>
+<a class="mn-mlink" href="/ships/vale-brasil"><span>Vale Brasil</span><span class="cc">SG</span></a>
+<a class="mn-mlink" href="/ships/mozah"><span>Mozah</span><span class="cc">MH</span></a>
+<a class="mn-mlink" href="/ships/berge-stahl"><span>Berge Stahl</span><span class="cc">NO</span></a>
+<a class="mn-mlink" href="/ships/exxon-valdez"><span>Exxon Valdez</span><span class="cc">US</span></a>
+</div></div>
+</div>
+<div class="mn-acc">
+<button class="mn-acc-top" type="button" aria-expanded="false"><span class="lhs">Cruise lines</span><i class="caret"></i></button>
+<div class="mn-acc-body"><div class="mn-acc-in">
+<a class="mn-mlink" href="/lines/royal-caribbean"><span>Royal Caribbean</span><span class="cc">US</span></a>
+<a class="mn-mlink" href="/lines/carnival"><span>Carnival Cruise Line</span><span class="cc">US</span></a>
+<a class="mn-mlink" href="/lines/msc-cruises"><span>MSC Cruises</span><span class="cc">CH</span></a>
+<a class="mn-mlink" href="/lines/norwegian"><span>Norwegian Cruise Line</span><span class="cc">US</span></a>
+<a class="mn-mlink" href="/lines/disney-cruise-line"><span>Disney Cruise Line</span><span class="cc">US</span></a>
+<a class="mn-mlink" href="/lines/cunard"><span>Cunard</span><span class="cc">GB</span></a>
+<a class="mn-mlink" href="/lines/costa"><span>Costa Cruises</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/lines/aida"><span>AIDA Cruises</span><span class="cc">DE</span></a>
+<a class="mn-mlink" href="/lines/white-star-line"><span>White Star Line</span><span class="cc">GB</span></a>
+<a class="mn-mlink" href="/lines/princess-cruises"><span>Princess Cruises</span><span class="cc">US</span></a>
+<a class="mn-mlink" href="/lines/p-and-o"><span>P&amp;O Cruises</span><span class="cc">GB</span></a>
+<a class="mn-mlink" href="/lines/celebrity"><span>Celebrity Cruises</span><span class="cc">US</span></a>
+<a class="mn-mlink" href="/lines/holland-america"><span>Holland America Line</span><span class="cc">US</span></a>
+</div></div>
+</div>
+<div class="mn-acc">
+<button class="mn-acc-top" type="button" aria-expanded="false"><span class="lhs">Shipping lines</span><i class="caret"></i></button>
+<div class="mn-acc-body"><div class="mn-acc-in">
+<a class="mn-mlink" href="/lines/msc"><span>MSC</span><span class="cc">CH</span></a>
+<a class="mn-mlink" href="/lines/maersk"><span>Maersk</span><span class="cc">DK</span></a>
+<a class="mn-mlink" href="/lines/cma-cgm"><span>CMA CGM</span><span class="cc">FR</span></a>
+<a class="mn-mlink" href="/lines/cosco"><span>COSCO Shipping</span><span class="cc">CN</span></a>
+<a class="mn-mlink" href="/lines/hapag-lloyd"><span>Hapag-Lloyd</span><span class="cc">DE</span></a>
+<a class="mn-mlink" href="/lines/one"><span>Ocean Network Express</span><span class="cc">JP</span></a>
+<a class="mn-mlink" href="/lines/evergreen"><span>Evergreen</span><span class="cc">TW</span></a>
+<a class="mn-mlink" href="/lines/hmm"><span>HMM</span><span class="cc">KR</span></a>
+<a class="mn-mlink" href="/lines/yang-ming"><span>Yang Ming</span><span class="cc">TW</span></a>
+<a class="mn-mlink" href="/lines/zim"><span>ZIM</span><span class="cc">IL</span></a>
+</div></div>
+</div>
+<div class="mn-acc">
+<button class="mn-acc-top" type="button" aria-expanded="false"><span class="lhs">Specialists</span><i class="caret"></i></button>
+<div class="mn-acc-body"><div class="mn-acc-in">
+<a class="mn-mlink" href="/lines/cmb-tech"><span>CMB.TECH (Euronav)</span><span class="cc">BE</span></a>
+<a class="mn-mlink" href="/lines/nakilat"><span>Nakilat</span><span class="cc">QA</span></a>
+<a class="mn-mlink" href="/lines/allseas"><span>Allseas</span><span class="cc">CH</span></a>
+<a class="mn-mlink" href="/lines/berge-bulk"><span>Berge Bulk</span><span class="cc">SG</span></a>
+</div></div>
+</div>
+<div class="mn-acc">
+<button class="mn-acc-top" type="button" aria-expanded="false"><span class="lhs">Shipyards &amp; categories</span><i class="caret"></i></button>
+<div class="mn-acc-body"><div class="mn-acc-in">
+<a class="mn-mlink" href="/categories/cruise-ships"><span>Cruise ships &amp; liners</span><span class="cc">116</span></a>
+<a class="mn-mlink" href="/categories/container-ships"><span>Container ships</span><span class="cc">14</span></a>
+<a class="mn-mlink" href="/categories/tankers"><span>Tankers</span><span class="cc">7</span></a>
+<a class="mn-mlink" href="/categories/gas-carriers"><span>Gas carriers</span><span class="cc">2</span></a>
+<a class="mn-mlink" href="/categories/bulk-carriers"><span>Bulk carriers</span><span class="cc">2</span></a>
+<a class="mn-mlink" href="/categories/heavy-lift-giants"><span>Heavy-lift &amp; special giants</span><span class="cc">1</span></a>
+<a class="mn-mlink" href="/shipyards/meyer-turku"><span>Meyer Turku</span><span class="cc">FI</span></a>
+<a class="mn-mlink" href="/shipyards/meyer-werft"><span>Meyer Werft</span><span class="cc">DE</span></a>
+<a class="mn-mlink" href="/shipyards/chantiers-de-latlantique"><span>Chantiers de l'Atlantique</span><span class="cc">FR</span></a>
+<a class="mn-mlink" href="/shipyards/fincantieri"><span>Fincantieri</span><span class="cc">IT</span></a>
+<a class="mn-mlink" href="/shipyards/harland-wolff"><span>Harland &amp; Wolff</span><span class="cc">GB</span></a>
+<a class="mn-mlink" href="/shipyards/hyundai"><span>HD Hyundai Heavy Industries</span><span class="cc">KR</span></a>
+<a class="mn-mlink" href="/shipyards/samsung-heavy"><span>Samsung Heavy Industries</span><span class="cc">KR</span></a>
+<a class="mn-mlink" href="/shipyards/hanwha-ocean"><span>Hanwha Ocean (ex-DSME)</span><span class="cc">KR</span></a>
+<a class="mn-mlink" href="/shipyards/hudong-zhonghua"><span>Hudong-Zhonghua</span><span class="cc">CN</span></a>
+<a class="mn-mlink" href="/shipyards/yangzijiang"><span>Yangzijiang</span><span class="cc">CN</span></a>
+<a class="mn-mlink" href="/shipyards/imabari"><span>Imabari Shipbuilding</span><span class="cc">JP</span></a>
+<a class="mn-mlink" href="/shipyards/odense"><span>Odense Steel Shipyard</span><span class="cc">DK</span></a>
+<a class="mn-mlink" href="/shipyards/sumitomo"><span>Sumitomo Heavy Industries</span><span class="cc">JP</span></a>
+</div></div>
+</div>
+<a class="mn-acc-direct mn-acc-play" href="/play">Play game</a>
+<a class="mn-acc-direct" href="/cruise">Get cruise-ready</a>
+<a class="mn-acc-direct" href="/ships-in-storm">Ships in storm</a>
+<a class="mn-acc-direct" href="/records/longest-ships">Records</a>
+<a class="mn-acc-direct" href="/compare">Compare ships</a>
+<a class="mn-acc-direct" href="/canal-fit">Canal-Fit Checker</a>
+<a class="mn-acc-direct" href="/quiz">Silhouette quiz</a>
+<a class="mn-acc-direct" href="/blog">Blog</a>
+<a class="mn-acc-direct" href="/explained">Explained</a>
+</div>
+<div class="mn-drawer-foot"><a class="mn-cta" href="/#fleet">Explore the fleet</a></div>
+</aside>
+</nav>
+  <div class="inner" id="content">
     <h1>Captain<em>.</em><span class="h1sub">A free ship game. Sixteen real ships, open sea,
     buried treasure, and a seabed that does not forgive.</span></h1>
     <h2 class="first" id="hMode">How hard do you want it</h2>
@@ -341,6 +907,12 @@ thrusters for pivoting on the spot, and M centres the wheel.</p>
     <button class="btn ghost" id="change">Different ship</button>
   </div>
 </div>
+
+<!-- Nav behaviour. search-index.js (60 KB) comes with it so the nav's search
+     button actually works rather than opening an empty dialog; ships-data.js
+     (169 KB) is deliberately NOT loaded, because nothing on this page needs it. -->
+<script src="/assets/js/search-index.js" defer></script>
+<script src="/assets/js/site.js" defer></script>
 
 <script>
 (function(){
