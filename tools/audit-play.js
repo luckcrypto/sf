@@ -93,5 +93,19 @@ T(!/localStorage|sessionStorage/.test(js),'no browser storage');
 T(/color-scheme/.test(head),'colour scheme declared');
 T(/forced-color-adjust/.test(cssNS),'forced-colors handled');
 
+/* ---- mobile browser chrome: /play behaves exactly like every other page ----
+   The sea is drawn on the canvas (position:fixed;inset:0), so the page background
+   is free to be the site's colour. All seven chrome sources agree; nothing is
+   set by JS, because Brave will not reliably repaint chrome touched after parse. */
+T((head.match(/name="theme-color"/gi)||[]).length===1, 'exactly one theme-color tag');
+T(/name="theme-color"\s+content="#FAFBFC"\s*>/i.test(head), 'theme-color is the site value #FAFBFC');
+T(!/name="theme-color"[^>]*media=/i.test(head), 'no dark-variant theme-color tag');
+T(!/getElementById\(['"]themeColour/.test(js), 'theme-color is NOT injected by JS');
+T(/name="color-scheme"\s+content="light only"/i.test(head), 'color-scheme is "light only" (blocks forced-dark)');
+T(cssNS.includes('html,body{margin:0;height:100%;overflow:hidden;overscroll-behavior:none;background:#FAFBFC'),
+  'html,body background is #FAFBFC, same as the site');
+T(/@media\(prefers-color-scheme:dark\)\{html,body\{background:#FAFBFC/i.test(cssNS),
+  'forced-dark re-assertion present');
+
 console.log('\n  '+pass+' passed, '+fail+' failed');
 process.exit(fail?1:0);
