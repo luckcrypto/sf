@@ -4,8 +4,8 @@
   "description": "The visual reference for ships — sourced spec tables, every operator, true-scale comparisons.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#F7F5F0",
-  "theme_color": "#0F766E",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF",
   "icons": [
     {
       "src": "/assets/img/icon-192.png",
