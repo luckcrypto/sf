@@ -1,0 +1,72 @@
+{
+ "asOf": "2026-07-15",
+ "note": "Published limiting dimensions for each gauge. Suez has no length limit and its beam limit trades against draft — the figures here are the maximum-draft case. Malaccamax is a depth constraint, not a canal rule.",
+ "canals": [
+  {
+   "slug": "panamax",
+   "name": "Panamax",
+   "what": "Panama Canal — original 1914 locks",
+   "loa_m": 289.56,
+   "beam_m": 32.31,
+   "draft_m": 12.04,
+   "note": "The gauge that named a ship type. Air draft 57.91 m under the Bridge of the Americas.",
+   "source": "Panama Canal Authority",
+   "url": "https://pancanal.com/en/"
+  },
+  {
+   "slug": "neopanamax",
+   "name": "Neopanamax",
+   "what": "Panama Canal — 2016 expansion locks",
+   "loa_m": 366,
+   "beam_m": 51.25,
+   "draft_m": 15.2,
+   "note": "The expanded locks that reshaped world trade routes in 2016. Same 57.91 m air draft.",
+   "source": "Panama Canal Authority",
+   "url": "https://pancanal.com/en/"
+  },
+  {
+   "slug": "suezmax",
+   "name": "Suezmax",
+   "what": "Suez Canal — fully laden transit",
+   "loa_m": null,
+   "beam_m": 50,
+   "draft_m": 20.1,
+   "note": "No length limit; beam trades against draft (up to 77.5 m at reduced draft — the megamax container ships transit this way). Figures shown are the maximum-draft case. Air draft 68 m.",
+   "source": "Suez Canal Authority",
+   "url": "https://www.suezcanal.gov.eg/English/Pages/default.aspx"
+  },
+  {
+   "slug": "malaccamax",
+   "name": "Malaccamax",
+   "what": "Strait of Malacca — depth of the Asia–Europe shortcut",
+   "loa_m": null,
+   "beam_m": null,
+   "draft_m": 25,
+   "note": "A geographic depth limit of roughly 25 m, not a rulebook. The half-million-tonne ULCCs failed it and detoured via Lombok.",
+   "source": "Marine Department Malaysia",
+   "url": "https://www.marine.gov.my/"
+  },
+  {
+   "slug": "seawaymax",
+   "name": "Seawaymax",
+   "what": "St Lawrence Seaway locks",
+   "loa_m": 225.6,
+   "beam_m": 23.77,
+   "draft_m": 8.08,
+   "note": "The small gauge that shapes every Great Lakes ship. Air draft 35.5 m.",
+   "source": "St Lawrence Seaway Management Corporation",
+   "url": "https://greatlakes-seaway.com/"
+  },
+  {
+   "slug": "chinamax",
+   "name": "Chinamax",
+   "what": "Chinese ore-terminal standard",
+   "loa_m": 360,
+   "beam_m": 65,
+   "draft_m": 24,
+   "note": "A port standard rather than a waterway — the envelope the 400,000 t Valemax fleet was designed to fill exactly.",
+   "source": "Vale — shipping",
+   "url": "https://vale.com/"
+  }
+ ]
+}
