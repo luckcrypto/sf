@@ -310,6 +310,7 @@ function navHTML(current) {
 <div class="mn-bar">
 ${BRAND('mn-logo')}
 <div class="mn-groups">
+<a class="mn-top mn-play" href="/play"><svg class="gi" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="7"/><path d="M8.4 7.3 13.4 10l-5 2.7z"/></svg>Play game</a>
 <div class="mn-group" data-key="menu">
 <button class="mn-top" type="button" aria-expanded="false" aria-haspopup="true"><svg class="gi" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h14M3 10h14M3 15h9"/></svg>Explore<i class="caret"></i></button>
 <div class="mn-panel" role="menu">
@@ -411,13 +412,13 @@ ${TY.map(t => mlink('/categories/' + t.slug, t.name, String(byType(t).length))).
 ${YD.map(m => mlink('/shipyards/' + m.slug, m.name, m.cc)).join('\n')}
 </div></div>
 </div>
+<a class="mn-acc-direct mn-acc-play" href="/play">Play game</a>
 <a class="mn-acc-direct" href="/cruise">Get cruise-ready</a>
 <a class="mn-acc-direct" href="/ships-in-storm">Ships in storm</a>
 <a class="mn-acc-direct" href="/records/longest-ships">Records</a>
 <a class="mn-acc-direct" href="/compare">Compare ships</a>
 <a class="mn-acc-direct" href="/canal-fit">Canal-Fit Checker</a>
 <a class="mn-acc-direct" href="/quiz">Silhouette quiz</a>
-<a class="mn-acc-direct" href="/play">Captain — ship game</a>
 <a class="mn-acc-direct" href="/blog">Blog</a>
 <a class="mn-acc-direct" href="/explained">Explained</a>
 </div>
@@ -1459,7 +1460,11 @@ ${CANALS.canals.map(c => `<article class="acard"><h3>${esc(c.name)}</h3><p class
    lands in the sitemap and the link audit like every other page. */
 {
   const gameSrc = path.join(ROOT, 'templates', 'play.html');
-  const game = fs.readFileSync(gameSrc, 'utf8');
+  /* The real site nav is injected into the start panel. It cannot live outside
+     the panel, because the panel is a fixed full-viewport layer — and it does not
+     need to: the panel is hidden the moment a voyage begins, so the nav goes with
+     it and the game gets the whole screen back. */
+  const game = fs.readFileSync(gameSrc, 'utf8').replace('<!--MEGANAV-->', navHTML(''));
   fs.writeFileSync(path.join(SITE, 'play.html'), game);
   BUILT_PAGES.push({ file: 'play.html', urlPath: '/play', indexable: true });
   pages.push({ path: '/play', sitemap: true });
