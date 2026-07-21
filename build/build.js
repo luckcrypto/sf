@@ -3025,10 +3025,15 @@ ${feedItems}
 
 
 /* ---------- web app manifest (generated — never let it drift from the brand) ---------- */
-fs.writeFileSync(path.join(SITE, 'assets', 'site.webmanifest'), JSON.stringify({
+/* Emitted at the SITE ROOT, not under assets/. A manifest's scope defaults to its
+   own directory, so /assets/site.webmanifest was scoped to /assets/ — which contains
+   no pages, and does not contain start_url "/". A manifest whose start_url falls
+   outside its scope is invalid, and Android Chrome discards it wholesale, theme_color
+   with it. Root placement plus an explicit scope is what the working sister site does. */
+fs.writeFileSync(path.join(SITE, 'site.webmanifest'), JSON.stringify({
   name: 'ships.fyi', short_name: 'ships.fyi',
   description: DATA.site.description,
-  start_url: '/', display: 'standalone',
+  start_url: '/', scope: '/', display: 'standalone',
   /* MUST match <meta name="theme-color"> in layout.html and the .mn-shell
      background, or Android Chrome tints the browser bar a different colour
      from the nav. The teal signal colour does not belong here. */
