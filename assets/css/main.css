@@ -560,7 +560,18 @@ td.win::after{content:" ▲";font-size:.7em;opacity:.75}
 .fsort-lbl{align-self:center;font-size:.72rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-right:2px}
 
 .acard{position:relative}
-.addcmp{position:absolute;top:12px;right:12px;z-index:2;width:34px;height:34px;border-radius:10px;border:1px solid var(--line);background:#FFFFFF;color:var(--muted);font-size:.95rem;cursor:pointer;transition:color .15s ease,border-color .15s ease,background .15s ease}
+/* ---- whole card is one link target ----------------------------------------
+   The h3 link is stretched over the entire card with a pseudo-element, rather
+   than wrapping the <article> in an <a>. Wrapping would nest the compare button
+   inside a link — invalid HTML and unusable with a keyboard or screen reader.
+   This keeps exactly ONE link to the ship and leaves the markup crawlable. */
+.acard h3 a::after{content:"";position:absolute;inset:0;z-index:1}
+.acard{cursor:pointer}
+/* Anything interactive must sit ABOVE that overlay or it stops being clickable.
+   The compare button carries z-index:3 on its own rule below. */
+.acard a.mini{position:relative;z-index:2}
+.acard .silbox{position:relative;z-index:2}
+.addcmp{position:absolute;top:12px;right:12px;z-index:3;width:34px;height:34px;border-radius:10px;border:1px solid var(--line);background:#FFFFFF;color:var(--muted);font-size:.95rem;cursor:pointer;transition:color .15s ease,border-color .15s ease,background .15s ease}
 .addcmp:hover{color:var(--text);border-color:var(--line-2)}
 .addcmp[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:#FFFFFF}
 .addcmp:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
